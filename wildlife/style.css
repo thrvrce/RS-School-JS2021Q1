@@ -383,6 +383,16 @@ html {
   border-top: 1px solid #666666;
   border-bottom: 1px solid #666666;
   border-right: none;
+  padding-left: 1.6rem;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.3rem;
+  text-align: left;
+  color: #666666;
+  line-height: 2.7rem;
+  position: relative;
+  color: #666666;
 }
 
 .Main-ContentWrapper form .Email:focus {
@@ -397,10 +407,9 @@ html {
   text-align: left;
   color: #666666;
   line-height: 2.7rem;
-  padding-left: 1.6rem;
   position: relative;
-  top: 4px;
   color: #666666;
+  top: 1px;
 }
 
 .Main-ContentWrapper form .Email:-ms-input-placeholder {
@@ -411,10 +420,9 @@ html {
   text-align: left;
   color: #666666;
   line-height: 2.7rem;
-  padding-left: 1.6rem;
   position: relative;
-  top: 4px;
   color: #666666;
+  top: 1px;
 }
 
 .Main-ContentWrapper form .Email::-ms-input-placeholder {
@@ -425,10 +433,9 @@ html {
   text-align: left;
   color: #666666;
   line-height: 2.7rem;
-  padding-left: 1.6rem;
   position: relative;
-  top: 4px;
   color: #666666;
+  top: 1px;
 }
 
 .Main-ContentWrapper form .Email::placeholder {
@@ -439,10 +446,9 @@ html {
   text-align: left;
   color: #666666;
   line-height: 2.7rem;
-  padding-left: 1.6rem;
   position: relative;
-  top: 4px;
   color: #666666;
+  top: 1px;
 }
 
 .Main-ContentWrapper form .Submit {

@@ -310,6 +310,12 @@ html{
 			display: flex;
 			justify-content: center;
 			margin-top: 5.9rem;
+			@mixin emailText {
+				@include roboto(2.3rem,left, $color_grey);
+					line-height: 2.7rem;
+					position: relative;
+					color: $color_grey;
+			}
 			.Email{
 				width: 54rem;
 				height: 6.2rem;
@@ -319,16 +325,14 @@ html{
 				border-bottom: 1px solid $color_grey;
 				border-right: none;
 				// border: 1px solid $color_grey;
+				padding-left: 1.6rem;
+				@include emailText;
 				&:focus{
 					outline: none;
 				}
 				&::placeholder{
-					@include roboto(2.3rem,left, $color_grey);
-					line-height: 2.7rem;
-					padding-left: 1.6rem;
-					position: relative;
-					top: 4px;
-					color: $color_grey;
+					@include emailText;
+					top: 1px;
 				}
 			}
 			.Submit{
