@@ -17,12 +17,28 @@ $color_braun: #8F5613;
 	color: $color_light;
 }
 
+@mixin h2style($textalign, $color) {
+	font-family: Open sans,sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 4.8rem;
+	color: $color;
+	text-align: $textalign;
+}
+
 @mixin regularUIText {
 	font-family: Roboto, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 2.3rem;
 	color: $color_light;
+}
+
+@mixin orangeButton{
+	@include regularUIText;
+	text-align: center;
+	padding-bottom: .2rem;
+	background: $color_orange;
 }
 
 @mixin menuUIText {
@@ -35,12 +51,14 @@ $color_braun: #8F5613;
 
 @mixin orangeHover {
 	background-color: $color_orange;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	cursor: pointer;
 }
 
 @mixin braunActive {
 	background-color: $color_braun;
 	border: 1px solid $color_braun;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	cursor: pointer;
 }
 
@@ -53,6 +71,19 @@ $color_braun: #8F5613;
 	cursor:pointer;
 	text-decoration: underline;
 	opacity: 0.6;
+}
+
+@mixin orangeButtonHover {
+	cursor: pointer;
+	background: #E39128;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@mixin orangeButtonActive {
+	cursor: pointer;
+	background: #8F5613;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	outline: none;
 }
 
 *{
@@ -153,6 +184,42 @@ html{
 			}
 			&-SignIn:active{
 				@include braunActive;
+			}
+		}
+	}
+	&Content{
+		width: 274px;
+    margin-top: 124px;
+		h2{
+			@include h2style(left, $color_orange);
+			letter-spacing: .2rem;
+			margin-left: .1rem;
+		}
+		div{
+			margin-top: 5.4rem;
+			width: 27.4rem;
+			font-family: Open Sans;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 1.8rem;
+			color: $color_light;
+			line-height: 2.7rem;
+		}
+		input{
+			@include orangeButton;
+			width: 16rem;
+			height: 6rem;
+			border-radius: .5rem;
+			margin-top: 4.9rem;
+			border: none;
+			&:hover{
+				@include orangeButtonHover;
+			}
+			&:active{
+				@include orangeButtonActive;
+			}
+			&:focus{
+				outline: none;
 			}
 		}
 	}
