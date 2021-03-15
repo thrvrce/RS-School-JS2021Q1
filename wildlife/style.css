@@ -552,7 +552,7 @@ footer {
   list-style: none;
   width: 40px;
   height: 40px;
-  background: #F7F7F7;
+  background-color: #F7F7F7;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -560,18 +560,6 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.FooterContenWrapper .SocialNetworks ul li object {
-  pointer-events: none;
-}
-
-.FooterContenWrapper .SocialNetworks ul li .SocialNetworkIcon:hover {
-  cursor: pointer;
-}
-
-.FooterContenWrapper .SocialNetworks ul li .SocialNetworkIcon:active {
-  cursor: pointer;
 }
 
 .FooterContenWrapper .SocialNetworks ul li:hover {
@@ -585,5 +573,33 @@ footer {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   opacity: 0.6;
+}
+
+.FooterContenWrapper .SocialNetworks ul .Facebook {
+  background-image: url(./assets/Facebook.svg);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: 11px 6px;
+}
+
+.FooterContenWrapper .SocialNetworks ul .Instagram {
+  background-image: url(./assets/Instagram.svg);
+  background-repeat: no-repeat;
+  background-size: 74%;
+  background-position: center;
+}
+
+.FooterContenWrapper .SocialNetworks ul .Pinterrest {
+  background-image: url(./assets/Pinterest.svg);
+  background-repeat: no-repeat;
+  background-size: 52%;
+  background-position: 10px;
+}
+
+.FooterContenWrapper .SocialNetworks ul .Telegram {
+  background-image: url(./assets/Telegram.svg);
+  background-repeat: no-repeat;
+  background-size: 66%;
+  background-position: 5px;
 }
 /*# sourceMappingURL=style.css.map */
