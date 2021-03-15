@@ -78,12 +78,14 @@ $color_braun: #8F5613;
 @mixin refHover {
 	cursor:pointer;
 	text-decoration: underline;
+	transform: scale(1.1);
 }
 
 @mixin refActive {
 	cursor:pointer;
 	text-decoration: underline;
 	opacity: 0.6;
+	transform: scale(1.1);
 }
 
 @mixin orangeButtonHover {
@@ -112,6 +114,12 @@ body{
 html{
 	font-size: 10px;
 }
+
+a, a:visited, a:active{
+	text-decoration: none;
+}
+
+
 @mixin BlockWrapper($color) {
 	background-color: $color;
 	width: 100%;
@@ -164,11 +172,13 @@ html{
 			}
 			&-Link{
 				@include menuUIText;
+				display: block;
 			}
 			&-Search{
-				width: 3.2rem;
-					height: 3.2rem;
 					background-image: url('./assets/Search-icon.png');
+					display: block;
+					width: 3.2rem;
+					height: 3.2rem;
 			}
 			&-Link:hover, &-Search:hover{
 				@include refHover;
@@ -270,11 +280,11 @@ html{
 				height: 7rem;
 				&:hover{
 					cursor: pointer;
-					transform: scale(1.2);
+					transform: scale(1.1);
 				}
 				&:active{
 					cursor: pointer;
-					transform: scale(1.2);
+					transform: scale(1.1);
 					opacity: 0.6;
 				}
 				&.Left{
@@ -310,6 +320,12 @@ html{
 			display: flex;
 			justify-content: center;
 			margin-top: 5.9rem;
+			@mixin emailText {
+				@include roboto(2.3rem,left, $color_grey);
+					line-height: 2.7rem;
+					position: relative;
+					color: $color_grey;
+			}
 			.Email{
 				width: 54rem;
 				height: 6.2rem;
@@ -319,16 +335,14 @@ html{
 				border-bottom: 1px solid $color_grey;
 				border-right: none;
 				// border: 1px solid $color_grey;
+				padding-left: 1.6rem;
+				@include emailText;
 				&:focus{
 					outline: none;
 				}
 				&::placeholder{
-					@include roboto(2.3rem,left, $color_grey);
-					line-height: 2.7rem;
-					padding-left: 1.6rem;
-					position: relative;
-					top: 4px;
-					color: $color_grey;
+					@include emailText;
+					top: 1px;
 				}
 			}
 			.Submit{
@@ -386,6 +400,9 @@ footer{
     	justify-content: space-between;
 			li{
 				list-style: none;
+			}
+			a{
+
 				width: 40px;
 				height: 40px;
 				background-color:$color_light;

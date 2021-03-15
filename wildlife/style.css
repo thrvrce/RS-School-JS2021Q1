@@ -16,6 +16,10 @@ html {
   font-size: 10px;
 }
 
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
 .HeroWrapper {
   background-color: #02160b;
   width: 100%;
@@ -112,23 +116,29 @@ html {
   font-weight: normal;
   font-size: 2.3rem;
   color: #F7F7F7;
+  display: block;
 }
 
 .HeroHeader-Right-Search {
+  background-image: url("./assets/Search-icon.png");
+  display: block;
   width: 3.2rem;
   height: 3.2rem;
-  background-image: url("./assets/Search-icon.png");
 }
 
 .HeroHeader-Right-Link:hover, .HeroHeader-Right-Search:hover {
   cursor: pointer;
   text-decoration: underline;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .HeroHeader-Right-Link:active, .HeroHeader-Right-Search:active {
   cursor: pointer;
   text-decoration: underline;
   opacity: 0.6;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .HeroHeader-Right-SignIn {
@@ -302,14 +312,14 @@ html {
 
 .Main-ContentWrapper .Slider .SliderItem-Control:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .Main-ContentWrapper .Slider .SliderItem-Control:active {
   cursor: pointer;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   opacity: 0.6;
 }
 
@@ -383,6 +393,16 @@ html {
   border-top: 1px solid #666666;
   border-bottom: 1px solid #666666;
   border-right: none;
+  padding-left: 1.6rem;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.3rem;
+  text-align: left;
+  color: #666666;
+  line-height: 2.7rem;
+  position: relative;
+  color: #666666;
 }
 
 .Main-ContentWrapper form .Email:focus {
@@ -397,10 +417,9 @@ html {
   text-align: left;
   color: #666666;
   line-height: 2.7rem;
-  padding-left: 1.6rem;
   position: relative;
-  top: 4px;
   color: #666666;
+  top: 1px;
 }
 
 .Main-ContentWrapper form .Email:-ms-input-placeholder {
@@ -411,10 +430,9 @@ html {
   text-align: left;
   color: #666666;
   line-height: 2.7rem;
-  padding-left: 1.6rem;
   position: relative;
-  top: 4px;
   color: #666666;
+  top: 1px;
 }
 
 .Main-ContentWrapper form .Email::-ms-input-placeholder {
@@ -425,10 +443,9 @@ html {
   text-align: left;
   color: #666666;
   line-height: 2.7rem;
-  padding-left: 1.6rem;
   position: relative;
-  top: 4px;
   color: #666666;
+  top: 1px;
 }
 
 .Main-ContentWrapper form .Email::placeholder {
@@ -439,10 +456,9 @@ html {
   text-align: left;
   color: #666666;
   line-height: 2.7rem;
-  padding-left: 1.6rem;
   position: relative;
-  top: 4px;
   color: #666666;
+  top: 1px;
 }
 
 .Main-ContentWrapper form .Submit {
@@ -550,6 +566,9 @@ footer {
 
 .FooterContenWrapper .SocialNetworks ul li {
   list-style: none;
+}
+
+.FooterContenWrapper .SocialNetworks ul a {
   width: 40px;
   height: 40px;
   background-color: #F7F7F7;
@@ -562,13 +581,13 @@ footer {
           justify-content: center;
 }
 
-.FooterContenWrapper .SocialNetworks ul li:hover {
+.FooterContenWrapper .SocialNetworks ul a:hover {
   cursor: pointer;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.FooterContenWrapper .SocialNetworks ul li:active {
+.FooterContenWrapper .SocialNetworks ul a:active {
   cursor: pointer;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
