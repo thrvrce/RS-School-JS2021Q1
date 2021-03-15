@@ -1,1 +1,165 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 10px;
+}
+
+.HeroWrapper {
+  background-color: #02160b;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Hero {
+  width: 144rem;
+  height: 78em;
+  background-image: url("./assets/Hero-Background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: .1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Hero-ContentWrapper {
+  width: 120rem;
+}
+
+.HeroHeader {
+  margin-top: 1.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.HeroHeader-Left {
+  width: 22.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.HeroHeader-Left-Logo {
+  width: 7rem;
+  height: 6rem;
+}
+
+.HeroHeader-Left-Text {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  color: #F7F7F7;
+}
+
+.HeroHeader-Right {
+  width: 48rem;
+}
+
+.HeroHeader-Right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.HeroHeader-Right li {
+  list-style: none;
+}
+
+.HeroHeader-Right-Link {
+  font-family: Open sans,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.3rem;
+  color: #F7F7F7;
+}
+
+.HeroHeader-Right-Search {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-image: url("./assets/Search-icon.png");
+}
+
+.HeroHeader-Right-Link:hover, .HeroHeader-Right-Search:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.HeroHeader-Right-Link:active, .HeroHeader-Right-Search:active {
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 0.6;
+}
+
+.HeroHeader-Right-SignIn {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.3rem;
+  color: #F7F7F7;
+  width: 12rem;
+  height: 5rem;
+  border: 0.2rem solid #CD6326;
+  border-radius: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.HeroHeader-Right-SignIn:hover {
+  background-color: #CD6326;
+  cursor: pointer;
+}
+
+.HeroHeader-Right-SignIn:active {
+  background-color: #8F5613;
+  border: 1px solid #8F5613;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

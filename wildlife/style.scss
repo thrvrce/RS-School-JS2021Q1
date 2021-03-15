@@ -1,0 +1,160 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$color_light: #F7F7F7;
+$color_grey: #666666;
+$color_dark: #333333;
+$color_orange: #CD6326;
+$color_braun: #8F5613;
+
+@mixin logoText {
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 3.2rem;
+	color: $color_light;
+}
+
+@mixin regularUIText {
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 2.3rem;
+	color: $color_light;
+}
+
+@mixin menuUIText {
+	font-family: Open sans,sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 2.3rem;
+	color: $color_light;
+}
+
+@mixin orangeHover {
+	background-color: $color_orange;
+	cursor: pointer;
+}
+
+@mixin braunActive {
+	background-color: $color_braun;
+	border: 1px solid $color_braun;
+	cursor: pointer;
+}
+
+@mixin refHover {
+	cursor:pointer;
+	text-decoration: underline;
+}
+
+@mixin refActive {
+	cursor:pointer;
+	text-decoration: underline;
+	opacity: 0.6;
+}
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body{
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	// align-items
+	width: 100%;
+	margin: 0 auto;
+}
+
+html{
+	font-size: 10px;
+}
+
+.HeroWrapper{
+	background-color: #02160b;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.Hero{
+	width: 144rem;
+	height: 78em;
+	background-image: url('./assets/Hero-Background.png');
+	background-repeat: no-repeat;
+	background-size:contain;
+	margin-top: .1rem;
+	// padding: 2rem 12rem 0rem 12rem;
+	// padding: 1.9rem 12rem 0rem 12rem;
+	// border-top: 1px solid white;
+	display: flex;
+	justify-content: center;
+	&-ContentWrapper {
+		// padding-top: 1.9rem;
+		width: 120rem;
+	}
+	&Header{
+		margin-top: 1.9rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&-Left {
+			width: 22.2rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			&-Logo{
+				width: 7rem;
+				height: 6rem;
+			}
+			&-Text{
+				@include logoText;
+			}
+		}
+		&-Right{
+			width: 48rem;
+			ul{
+				display: flex;
+				justify-content: space-between;
+    		align-items: center;
+			}
+			li{
+				list-style: none
+			}
+			&-Link{
+				@include menuUIText;
+			}
+			&-Search{
+				width: 3.2rem;
+					height: 3.2rem;
+					background-image: url('./assets/Search-icon.png');
+			}
+			&-Link:hover, &-Search:hover{
+				@include refHover;
+			}
+			&-Link:active, &-Search:active{
+				@include refActive;
+			}
+			&-SignIn{
+				@include regularUIText;
+				width: 12rem;
+				height: 5rem;
+				border: .2rem solid $color_orange;
+				border-radius: .5rem;
+				display: flex;
+    		justify-content: center;
+    		align-items: center;
+			}
+			&-SignIn:hover{
+				@include orangeHover;
+			}
+			&-SignIn:active{
+				@include braunActive;
+			}
+		}
+	}
+}
+
