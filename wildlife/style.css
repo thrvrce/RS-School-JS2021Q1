@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
@@ -488,7 +487,103 @@ html {
 .Main-ContentWrapper form .Submit:focus {
   outline: none;
 }
+
+footer {
+  background-color: #181617;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.FooterContenWrapper {
+  width: 144rem;
+  height: 36rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("./assets/Footer-bgIMg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.FooterContenWrapper .FooterConten {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1200px;
+}
+
+.FooterContenWrapper .FooterLinksWrapper {
+  width: 475px;
+  margin-left: 15px;
+}
+
+.FooterContenWrapper .SocialNetworks {
+  width: 240px;
+}
+
+.FooterContenWrapper .SocialNetworks ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.FooterContenWrapper .SocialNetworks ul li {
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  background: #F7F7F7;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.FooterContenWrapper .SocialNetworks ul li object {
+  pointer-events: none;
+}
+
+.FooterContenWrapper .SocialNetworks ul li .SocialNetworkIcon:hover {
+  cursor: pointer;
+}
+
+.FooterContenWrapper .SocialNetworks ul li .SocialNetworkIcon:active {
+  cursor: pointer;
+}
+
+.FooterContenWrapper .SocialNetworks ul li:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.FooterContenWrapper .SocialNetworks ul li:active {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0.6;
+}
 /*# sourceMappingURL=style.css.map */
-=======
-/* No CSS *//*# sourceMappingURL=style.css.map */
->>>>>>> 812295ca0647ca41cb59fc23f7c10e6b5fba9063

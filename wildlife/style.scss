@@ -356,3 +356,65 @@ html{
 		}
 	}
 }
+
+footer{
+	@include BlockWrapper(#181617);
+}
+.FooterContenWrapper{
+	width: 144rem;
+	height: 36rem;
+	display: flex;
+	justify-content: center;
+	background-image: url('./assets/Footer-bgIMg.png');
+	background-repeat: no-repeat;
+	background-size:contain;
+	.FooterConten {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 1200px;
+	}
+	.FooterLinksWrapper{
+		width: 475px;
+		margin-left: 15px;
+	}
+	.SocialNetworks{
+		width: 240px;
+		ul{
+			display: flex;
+    	justify-content: space-between;
+			li{
+				list-style: none;
+				width: 40px;
+				height: 40px;
+				background:$color_light;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+
+				object{
+					pointer-events: none;
+				}
+				.SocialNetworkIcon{
+					&:hover{
+						cursor: pointer;
+					}
+					&:active{
+						cursor: pointer;
+					}
+				}
+				&:hover{
+					cursor: pointer;
+					transform: scale(1.2);
+				}
+				&:active{
+					cursor: pointer;
+					transform: scale(1.2);
+					opacity: 0.6;
+				}
+			}
+		}
+	}
+
+}
