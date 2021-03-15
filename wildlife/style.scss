@@ -7,6 +7,7 @@ $color_dark: #333333;
 $color_orange: #CD6326;
 $color_braun: #8F5613;
 
+
 @mixin logoText {
 	font-family: Roboto, sans-serif;
 	font-style: normal;
@@ -22,6 +23,15 @@ $color_braun: #8F5613;
 	font-weight: normal;
 	font-size: 2.3rem;
 	color: $color_light;
+}
+
+@mixin roboto($fontSize,$textAlign, $color) {
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: $fontSize;
+	text-align: $textAlign;
+	color: $color;
 }
 
 @mixin openSans($fontSize,$textAlign, $color) {
@@ -209,6 +219,7 @@ html{
 			border-radius: .5rem;
 			margin-top: 4.9rem;
 			border: none;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 			&:hover{
 				@include orangeButtonHover;
 			}
@@ -246,7 +257,7 @@ html{
     font-size: 24px;
     line-height: 36px;
     text-align: center;
-    color: #666666;
+    color: $color_grey;
     margin-top: 19px;
 		}
 		.Slider{
@@ -288,6 +299,58 @@ html{
 				p{
 					@include 	openSansWithLH(1.7rem, 2.76rem, center, $color_light);
 					margin-top: 1rem;
+				}
+			}
+		}
+		.FormHeader{
+			@include 	openSansWithLH(2.7rem, 4rem, center, $color_dark);
+			margin-top: 240px;
+		}
+		form{
+			display: flex;
+			justify-content: center;
+			margin-top: 5.9rem;
+			.Email{
+				width: 54rem;
+				height: 6.2rem;
+				background-color: #CCCCCC;
+				border-left: 1px solid $color_grey;
+				border-top: 1px solid $color_grey;
+				border-bottom: 1px solid $color_grey;
+				border-right: none;
+				// border: 1px solid $color_grey;
+				&:focus{
+					outline: none;
+				}
+				&::placeholder{
+					@include roboto(2.3rem,left, $color_grey);
+					line-height: 2.7rem;
+					padding-left: 1.6rem;
+					position: relative;
+					top: 4px;
+					color: $color_grey;
+				}
+			}
+			.Submit{
+				height: 6.2rem;
+				width: 12.2rem;
+				@include roboto(2.3rem,center, $color_light);
+				line-height: 2.7rem;
+				display: flex;
+				align-items: center;
+				background:$color_orange;
+				border: none;
+				border-radius: 0px .6rem .6rem 0px;
+    		padding-left: 3.6rem;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				&:hover{
+					@include orangeButtonHover;
+				}
+				&:active{
+					@include orangeButtonActive;
+				}
+				&:focus{
+					outline: none;
 				}
 			}
 		}

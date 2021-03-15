@@ -208,6 +208,8 @@ html {
   border-radius: .5rem;
   margin-top: 4.9rem;
   border: none;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .HeroContent input:hover {
@@ -350,5 +352,139 @@ html {
   text-align: center;
   line-height: 2.76rem;
   margin-top: 1rem;
+}
+
+.Main-ContentWrapper .FormHeader {
+  font-family: Open sans,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.7rem;
+  color: #333333;
+  text-align: center;
+  line-height: 4rem;
+  margin-top: 240px;
+}
+
+.Main-ContentWrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5.9rem;
+}
+
+.Main-ContentWrapper form .Email {
+  width: 54rem;
+  height: 6.2rem;
+  background-color: #CCCCCC;
+  border-left: 1px solid #666666;
+  border-top: 1px solid #666666;
+  border-bottom: 1px solid #666666;
+  border-right: none;
+}
+
+.Main-ContentWrapper form .Email:focus {
+  outline: none;
+}
+
+.Main-ContentWrapper form .Email::-webkit-input-placeholder {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.3rem;
+  text-align: left;
+  color: #666666;
+  line-height: 2.7rem;
+  padding-left: 1.6rem;
+  position: relative;
+  top: 4px;
+  color: #666666;
+}
+
+.Main-ContentWrapper form .Email:-ms-input-placeholder {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.3rem;
+  text-align: left;
+  color: #666666;
+  line-height: 2.7rem;
+  padding-left: 1.6rem;
+  position: relative;
+  top: 4px;
+  color: #666666;
+}
+
+.Main-ContentWrapper form .Email::-ms-input-placeholder {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.3rem;
+  text-align: left;
+  color: #666666;
+  line-height: 2.7rem;
+  padding-left: 1.6rem;
+  position: relative;
+  top: 4px;
+  color: #666666;
+}
+
+.Main-ContentWrapper form .Email::placeholder {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.3rem;
+  text-align: left;
+  color: #666666;
+  line-height: 2.7rem;
+  padding-left: 1.6rem;
+  position: relative;
+  top: 4px;
+  color: #666666;
+}
+
+.Main-ContentWrapper form .Submit {
+  height: 6.2rem;
+  width: 12.2rem;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.3rem;
+  text-align: center;
+  color: #F7F7F7;
+  line-height: 2.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #CD6326;
+  border: none;
+  border-radius: 0px .6rem .6rem 0px;
+  padding-left: 3.6rem;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Main-ContentWrapper form .Submit:hover {
+  cursor: pointer;
+  background: #E39128;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Main-ContentWrapper form .Submit:active {
+  cursor: pointer;
+  background: #8F5613;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+.Main-ContentWrapper form .Submit:focus {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */
