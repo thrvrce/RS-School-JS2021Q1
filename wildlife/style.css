@@ -29,7 +29,7 @@ html {
 
 .Hero {
   width: 144rem;
-  height: 77.9em;
+  height: 77.9rem;
   background-image: url("./assets/Hero-Background.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -227,5 +227,128 @@ html {
 
 .HeroContent input:focus {
   outline: none;
+}
+
+.MainWrapper {
+  background-color: #cccccc;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Main {
+  width: 144rem;
+  height: 136.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Main-ContentWrapper {
+  width: 120rem;
+}
+
+.Main-ContentWrapper h2 {
+  font-family: Open sans,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4.8rem;
+  color: #333333;
+  text-align: center;
+  line-height: 0.2rem;
+  margin-left: .1rem;
+  line-height: 72px;
+  margin-top: 121px;
+  letter-spacing: 0rem;
+}
+
+.Main-ContentWrapper p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #666666;
+  margin-top: 19px;
+}
+
+.Main-ContentWrapper .Slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12rem;
+}
+
+.Main-ContentWrapper .Slider .SliderItem-Control {
+  width: 3rem;
+  height: 7rem;
+}
+
+.Main-ContentWrapper .Slider .SliderItem-Control:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.Main-ContentWrapper .Slider .SliderItem-Control:active {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0.6;
+}
+
+.Main-ContentWrapper .Slider .SliderItem-Control.Left {
+  background-image: url("./assets/Arrow-left.png");
+}
+
+.Main-ContentWrapper .Slider .SliderItem-Control.Right {
+  background-image: url("./assets/Arrow-right.png");
+}
+
+.Main-ContentWrapper .Slider .SliderItem-Image {
+  width: 30rem;
+  height: 36rem;
+  position: relative;
+}
+
+.Main-ContentWrapper .Slider .SliderItem-Image-Text {
+  position: absolute;
+  top: 24.7rem;
+  width: 30.1rem;
+}
+
+.Main-ContentWrapper .Slider .SliderItem-Image h4 {
+  font-family: Open sans,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.2rem;
+  color: #F7F7F7;
+  text-align: center;
+  line-height: 3.6rem;
+}
+
+.Main-ContentWrapper .Slider .SliderItem-Image p {
+  font-family: Open sans,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.7rem;
+  color: #F7F7F7;
+  text-align: center;
+  line-height: 2.76rem;
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
