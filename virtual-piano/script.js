@@ -58,7 +58,6 @@ const handleKeyDown = (event) => {
 
   const pressedKeyCode = getValidKeyCode(event.code);
   const [pianoKey] = getPianoKeyNodeByLetter(pressedKeyCode);
-  console.log('keydown', pressedKeyCode);
 
   if (!event.repeat && pianoKey && !pianoKey.classList.contains(PIANO_KEY_ACTIVE)) {
     setPianoKeyActive(pianoKey);
