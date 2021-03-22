@@ -39,16 +39,15 @@ const handleMouseActivateKey = (event) => {
 
 const handleMouseDeactivateKey = (event) => {
 
-  if (event.type === 'mouseup' && clickedPianoKey) {
-    setPianoKeyInActive(clickedPianoKey)
-    clickedPianoKey = null;
-  } else {
+    if (event.type === 'mouseup' && clickedPianoKey) {
+      setPianoKeyInActive(clickedPianoKey)
+      clickedPianoKey = null;
+    }
     const currentPianoKeyElement = event.target;
     const noteName = currentPianoKeyElement.dataset.note;
     if (noteName) {
       setPianoKeyInActive(event.target);
     }
-  }
 }
 
 const getValidKeyCode = (code) => code.substring(3, 4);
