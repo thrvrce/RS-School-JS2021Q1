@@ -50,7 +50,7 @@ const handleMouseDeactivateKey = (event) => {
     }
 }
 
-const getValidKeyCode = (code) => code.substring(3, 4);
+const getValidKeyCode = (code) => code.replace('Key', '');
 const getPianoKeyNodeByLetter = (letter) => pianoKeys.filter((pianoKey) => pianoKey.dataset.letter === letter);
 
 const handleKeyDown = (event) => {
