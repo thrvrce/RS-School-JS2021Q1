@@ -32,5 +32,32 @@ const handleMouseUp = () => {
   }
 }
 
+const getValidKeyCode = (code) => code.substring(3,4);
+const getPianoKeyNodeByLetter = (letter) => Array.from(document.querySelectorAll('.piano-key')).filter( (pianoKey) => pianoKey.dataset.letter === letter);
+
+const handleKeyDown = (event) => {
+  const pressedKeyCode = getValidKeyCode(event.code);
+  const [pianoKey] = getPianoKeyNodeByLetter(pressedKeyCode);
+  console.log('keydown', pressedKeyCode);
+
+  if(!event.repeat && pianoKey ) {
+    setPianoKeyActive(pianoKey.dataset.note);
+    playNote(note);
+  }
+}
+
+const handleKeyUp =(event) => {
+  console.log('keyup', arrOfPressedPianoKeys);
+  const pressedKeyCode = getValidKeyCode(event.code);
+  const [pianoKey] = getPianoKeyNodeByLetter(pressedKeyCode);
+
+  if (pianoKey && pianoKey.classList.contains(PIANO_KEY_ACTIVE)) {
+    setPianoKeyInActive(pianoKey)
+  }
+}
+
 piano.addEventListener('mousedown', handleMouseDown);
 window.addEventListener('mouseup', handleMouseUp);
+
+window.addEventListener('keydown', handleKeyDown)
+window.addEventListener('keyup', handleKeyUp)
