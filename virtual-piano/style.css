@@ -119,6 +119,9 @@ body {
   transform-origin: center top;
   margin: 0px;
 }
+.piano-key.sharp:hover{
+  background-color: #3e454b;
+}
 .piano-key.piano-key-active,
 .piano-key.sharp.piano-key-active {
   transform: scale(0.96);
@@ -129,9 +132,9 @@ body {
   border-radius: 0;
   pointer-events: none;
 }
-.piano-key::before,
+/* .piano-key::before, */
 .piano-key::after {
-  content: attr(data-note);
+  /* content: attr(data-note); */
   position: absolute;
   width: 40px;
   height: 40px;
@@ -144,9 +147,15 @@ body {
   transition: 0.3s;
   pointer-events: none;
 }
-.piano-key::after {
+/* .piano-key::after {
   display: none;
   content: attr(data-letter);
+} */
+.piano-key-pseudo-letters::after {
+  content: attr(data-letter);
+}
+.piano-key-pseudo-notes::after {
+   content: attr(data-note);
 }
 .piano-key:hover::before,
 .piano-key:hover::after {
