@@ -8,6 +8,8 @@ let clickedPianoKey = null;
 const btnsContainer = document.querySelector('.btn-container');
 const btns = Array.from(document.querySelectorAll(`.${BTN}`));
 const pianoKeys = Array.from(document.querySelectorAll('.piano-key')).filter((pianoKey) => pianoKey.dataset.letter !== undefined);
+const fullscreenButton = document.querySelector('.fullscreen');
+let isFullSCreenActive = false;
 
 const playNote = (noteName) => {
   const pathToAudioFile = `./assets/audio/${noteName}.mp3`;
@@ -88,6 +90,16 @@ const handleBtnsContainerClick = (event) => {
   }
 }
 
+const handleFullScreenClick = () => {
+  if (!isFullSCreenActive) {
+    isFullSCreenActive = true;
+    document.body.requestFullscreen();
+  } else {
+    isFullSCreenActive = false;
+    document.exitFullscreen();
+  }
+}
+
 piano.addEventListener('mousedown', handleMouseActivateKey);
 window.addEventListener('mouseup', handleMouseDeactivateKey);
 
@@ -98,3 +110,5 @@ window.addEventListener('keydown', handleKeyDown)
 window.addEventListener('keyup', handleKeyUp)
 
 btnsContainer.addEventListener('click', handleBtnsContainerClick)
+
+fullscreenButton.addEventListener('click', handleFullScreenClick)
