@@ -1,5 +1,4 @@
 const PIANO_KEY_ACTIVE = 'piano-key-active';
-
 const piano = document.querySelector('.piano');
 let clickedPianoKey = null;
 
@@ -12,42 +11,52 @@ const playNote = (noteName) => {
 
 const setPianoKeyActive = (pianoKeyElement) => pianoKeyElement.classList.add(PIANO_KEY_ACTIVE);
 const setPianoKeyInActive = (pianoKeyElement) => pianoKeyElement.classList.remove(PIANO_KEY_ACTIVE);
+const getActivePianoKeys = () => pianoKeys.filter((pianoKey) => pianoKey.classList.contains(PIANO_KEY_ACTIVE))
 
-const handleMouseDown = (event) => {
+const handleMouseActivateKey = (event) => {
   const currentPianoKeyElement = event.target;
   const noteName = currentPianoKeyElement.dataset.note;
-  console.log('mousedown', noteName);
-  if (noteName) {
-    clickedPianoKey = currentPianoKeyElement;
-    setPianoKeyActive(currentPianoKeyElement);
-    playNote(noteName);
+
+  if (noteName && !currentPianoKeyElement.classList.contains(PIANO_KEY_ACTIVE)) {
+    if (event.type === 'mousedown') {
+      clickedPianoKey = currentPianoKeyElement;
+    }
+    if (event.type === 'mousedown' || (event.type === 'mouseover' && clickedPianoKey)) {
+      setPianoKeyActive(currentPianoKeyElement);
+      playNote(noteName);
+    }
   }
 }
 
-const handleMouseUp = () => {
-  console.log('mouseup', clickedPianoKey);
-  if (clickedPianoKey) {
+const handleMouseDeactivateKey = (event) => {
+
+  if (event.type === 'mouseup' && clickedPianoKey) {
     setPianoKeyInActive(clickedPianoKey)
     clickedPianoKey = null;
+  } else {
+    const currentPianoKeyElement = event.target;
+    const noteName = currentPianoKeyElement.dataset.note;
+    if (noteName) {
+      setPianoKeyInActive(event.target);
+    }
   }
 }
 
-const getValidKeyCode = (code) => code.substring(3,4);
-const getPianoKeyNodeByLetter = (letter) => Array.from(document.querySelectorAll('.piano-key')).filter( (pianoKey) => pianoKey.dataset.letter === letter);
+const getValidKeyCode = (code) => code.substring(3, 4);
+const getPianoKeyNodeByLetter = (letter) => Array.from(document.querySelectorAll('.piano-key')).filter((pianoKey) => pianoKey.dataset.letter === letter);
 
 const handleKeyDown = (event) => {
   const pressedKeyCode = getValidKeyCode(event.code);
   const [pianoKey] = getPianoKeyNodeByLetter(pressedKeyCode);
   console.log('keydown', pressedKeyCode);
 
-  if(!event.repeat && pianoKey ) {
-    setPianoKeyActive(pianoKey.dataset.note);
-    playNote(note);
+  if (!event.repeat && pianoKey && !pianoKey.classList.contains(PIANO_KEY_ACTIVE)) {
+    setPianoKeyActive(pianoKey);
+    playNote(pianoKey.dataset.note);
   }
 }
 
-const handleKeyUp =(event) => {
-  console.log('keyup', arrOfPressedPianoKeys);
+const handleKeyUp = (event) => {
   const pressedKeyCode = getValidKeyCode(event.code);
   const [pianoKey] = getPianoKeyNodeByLetter(pressedKeyCode);
 
@@ -56,8 +65,12 @@ const handleKeyUp =(event) => {
   }
 }
 
-piano.addEventListener('mousedown', handleMouseDown);
-window.addEventListener('mouseup', handleMouseUp);
+
+piano.addEventListener('mousedown', handleMouseActivateKey);
+window.addEventListener('mouseup', handleMouseDeactivateKey);
+
+piano.addEventListener('mouseover', handleMouseActivateKey)
+piano.addEventListener('mouseout', handleMouseDeactivateKey);
 
 window.addEventListener('keydown', handleKeyDown)
 window.addEventListener('keyup', handleKeyUp)
