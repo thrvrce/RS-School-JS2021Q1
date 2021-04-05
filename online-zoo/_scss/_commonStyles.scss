@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+@mixin basicPageSettings {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  html {
+    font-size: 10px;
+  }
+
+  a,
+  a:visited,
+  a:active,
+  a:hover {
+    text-decoration: none;
+    cursor: default;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+@mixin BlockWrapper($color) {
+  background-color: $color;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin useRobotoFont($style, $weight, $fontSize, $lineHeight, $color) {
+  font-family: Roboto, sans-serif;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $color;
+}
+@mixin displayFlex($justify, $alignItems) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $alignItems;
+}
+
+@mixin logoText {
+  @include useRobotoFont(normal, normal, 1.9rem, 120%, $logoTextColor);
+  text-align: center;
+}
+
+@mixin robotoMedium16140($color) {
+  @include useRobotoFont(normal, 500, 1.6rem, 140%, $color);
+}
+
+@mixin logotype {
+  .logo {
+    // @include displayFlex(center, center);
+    padding: 0.35rem 0rem;
+    @include logoText;
+    width: 8.2rem;
+    height: 5.2rem;
+    border: 0.1rem solid $commonWhiteColor;
+    border-radius: 0.2rem;
+    background-image: url(../../assets/icons/bamboo.svg);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: 0.9rem 2.2rem;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin navItemHover {
+
+}
+
+@mixin nav-default($marginLeft) {
+  .nav {
+    @include displayFlex(center, center);
+    margin-left: $marginLeft;
+
+    &__list_default {
+      @include displayFlex(space-between, center);
+      width: 52.6rem;
+    }
+
+    &__list-item_default {
+      @include robotoMedium16140($commonWhiteColor);
+      &:hover {
+        cursor: pointer;
+        color: $orang;
+      }
+    }
+
+    &__list-item_selected {
+      @include robotoMedium16140($orang);
+      pointer-events: none;
+    }
+  }
+}
