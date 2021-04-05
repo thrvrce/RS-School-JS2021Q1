@@ -1,4 +1,59 @@
-@import '../../../_scss/commonStyles';
+@import "../../../_scss/commonStyles";
 @include basicPageSettings;
+@include standarPageButonRound;
+@import "../../../_scss//header";
 
-@import '../../../_scss//header';
+@mixin watchAnimalText($fontSize) {
+  @include useRobotoFont(normal, bold, $fontSize, 75%, $commonWhiteColor);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pandaWrapper {
+  background-image: url(../../assets/images/GiantPanda.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  height: 78rem;
+}
+
+.watchAnimal {
+  @include BlockWrapper(transparent);
+
+  &__content {
+    @include displayFlex(center, flex-end);
+    flex-direction: column;
+    width: 116rem;
+    position: relative;
+  }
+
+  &__text {
+    @include watchAnimalText(10.7rem);
+    z-index: 2;
+    position: absolute;
+    top: 85px;
+    width: 500.31px;
+    height: 400px;
+  }
+
+  &__text-content_yellow {
+    color: $yellow;
+  }
+
+  &__rectangle {
+    position: absolute;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    width: 465px;
+    height: 465px;
+    z-index: 1;
+    border-radius: 50%;
+    top: 12px;
+    right: 108px;
+  }
+  .wathOnlineButton{
+    position: absolute;
+    top: 546px;
+    right: 99px;
+  }
+}
+

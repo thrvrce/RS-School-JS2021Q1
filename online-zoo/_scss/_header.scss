@@ -7,13 +7,10 @@
   @include BlockWrapper($headerBGColor);
   backdrop-filter: blur(4px);
 
-
   &__wrapper{
     @include displayFlex(flex-start, center);
-
-      padding: 1.4rem 0 ;
+    padding: 1.4rem 0 ;
     width: 116rem;
   }
-
-
 }
+
