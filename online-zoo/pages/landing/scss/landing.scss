@@ -42,7 +42,7 @@
 
   &__rectangle {
     position: absolute;
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
     width: 465px;
     height: 465px;
     z-index: 1;
@@ -50,65 +50,191 @@
     top: 12px;
     right: 108px;
   }
-  .wathOnlineButton{
+  .wathOnlineButton {
     position: absolute;
     top: 546px;
     right: 99px;
   }
 }
 
-.backstage{
+.backstage {
   @include BlockWrapper(transparent);
   position: relative;
 
-  &__content{
+  &__content {
     margin-top: 14rem;
     width: 116rem;
     @include displayFlex(space-between, center);
   }
 
-  &__img{
+  &__img {
     background-image: url(../../assets/images/bamboo-cap.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    width:609px;
+    width: 609px;
     height: 405px;
     margin-left: -1px;
   }
 
-  &__text{
+  &__text {
     width: 465px;
     @include displayFlex(flex-start, flex-start);
     flex-direction: column;
     height: 100%;
 
-    &_48120{
+    &_48120 {
       @include robotoNorma48120($blackBlue);
       margin-bottom: 23px;
     }
 
-    &_16130{
+    &_16130 {
       @include robotoNorma16130($blackBlue);
       margin-bottom: 56px;
     }
 
-    &_24120{
+    &_24120 {
       @include robotoNormal24120($blackBlue);
       margin-bottom: 34px;
     }
 
-    &_16140{
+    &_16140 {
       @include robotoMedium16140($blackBlue);
     }
   }
 }
 
-.sideBush{
+.sideBush {
   background-image: url(../../assets//images/flowerfoto1.png);
-    background-repeat: no-repeat;
-    width:204px;
-    height: 605px;
-    position: absolute;
-    right: 0px;
-    top: 12px;
+  background-repeat: no-repeat;
+  width: 204px;
+  height: 605px;
+  position: absolute;
+  right: 0px;
+  top: 12px;
 }
+
+.pets {
+  @include BlockWrapper(transparent);
+  position: relative;
+  margin-top: 168px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.pets-slider {
+  width: 1322px;
+  @include displayFlex(space-between, center);
+  margin-bottom: 70px;
+
+  &__content {
+    width: 116rem;
+    @include displayFlex(space-between, center);
+    flex-wrap: wrap;
+    height: 892px;
+    padding-right: 2px;
+  }
+}
+
+@include roundArrowButtonLeft;
+@include roundArrowButtonRight;
+
+.round-arrow-button_right,
+.round-arrow-button_left {
+  margin-top: -6px;
+}
+
+.pet-card {
+  width: 366px;
+  height: 426px;
+  border: 1px solid #fe9013;
+  box-sizing: border-box;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: column;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover &__image {
+    transform: scale(1.1);
+  }
+
+  &:hover &__animated-text {
+    top: 0%;
+  }
+
+  &__image-wrapper {
+    overflow: hidden;
+    width: 366px;
+    height: 366px;
+    position: relative;
+  }
+  &__image {
+    width: 366px;
+    height: 366px;
+    transform: scale(1);
+    transition: transform 0.5s linear;
+    border-radius: 5px;
+    margin-top: -1px;
+  }
+
+  @keyframes petCardTextAnimation {
+  }
+  &__animated-text {
+    @include displayFlex(center, center);
+    flex-direction: column;
+    top: 100%;
+    position: absolute;
+    background-color: rgba(1, 1, 1, 0.5);
+    width: 364px;
+    height: 366px;
+    transition: top 0.5s linear;
+    border-radius: 5px;
+  }
+
+  &__fixed-info {
+    @include displayFlex(space-between, center);
+    width: 337px;
+    margin-left: 4px;
+    margin-top: 8px;
+    height: 37px;
+  }
+
+  &__fixed-text {
+    @include displayFlex(space-between, flex-start);
+    flex-direction: column;
+
+    &-animal {
+      @include robotoNormal16140($black);
+      text-transform: uppercase;
+    }
+    &-animal_white {
+      @include robotoNormal16140($commonWhiteColor);
+      text-transform: uppercase;
+    }
+
+    &-area {
+      @include robotoLight15120($black);
+    }
+    &-area_white {
+      @include robotoLight15120($commonWhiteColor);
+    }
+  }
+
+  &__fixed-icon-banana {
+    width: 33px;
+    height: 36px;
+  }
+  &__fixed-icon-fish {
+    width: 44px;
+    height: 39px;
+  }
+}
+
+@include sideStrelizia;
+@include sidePalm;

@@ -222,7 +222,7 @@ li {
 
 .watchAnimal__rectangle {
   position: absolute;
-  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   width: 465px;
   height: 465px;
   z-index: 1;
@@ -337,4 +337,277 @@ li {
   position: absolute;
   right: 0px;
   top: 12px;
+}
+
+.pets {
+  background-color: transparent;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin-top: 168px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 100px;
+}
+
+.pets-slider {
+  width: 1322px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 70px;
+}
+
+.pets-slider__content {
+  width: 116rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 892px;
+  padding-right: 2px;
+}
+
+.round-arrow-button_left {
+  width: 61px;
+  height: 61px;
+  background-color: #F9804B;
+  background-image: url(../../assets//icons/whiteLeftArrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.round-arrow-button_left:hover {
+  cursor: pointer;
+  background-color: #4b9200;
+}
+
+.round-arrow-button_right {
+  width: 61px;
+  height: 61px;
+  background-color: #F9804B;
+  background-image: url(../../assets//icons/whiteLeftArrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.round-arrow-button_right:hover {
+  cursor: pointer;
+  background-color: #4b9200;
+}
+
+.round-arrow-button_right,
+.round-arrow-button_left {
+  margin-top: -6px;
+}
+
+.pet-card {
+  width: 366px;
+  height: 426px;
+  border: 1px solid #fe9013;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pet-card:hover {
+  cursor: pointer;
+}
+
+.pet-card:hover .pet-card__image {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.pet-card:hover .pet-card__animated-text {
+  top: 0%;
+}
+
+.pet-card__image-wrapper {
+  overflow: hidden;
+  width: 366px;
+  height: 366px;
+  position: relative;
+}
+
+.pet-card__image {
+  width: 366px;
+  height: 366px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+  border-radius: 5px;
+  margin-top: -1px;
+}
+
+@-webkit-keyframes petCardTextAnimation {}
+
+@keyframes petCardTextAnimation {}.pet-card__animated-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 100%;
+  position: absolute;
+  background-color: rgba(1, 1, 1, 0.5);
+  width: 364px;
+  height: 366px;
+  -webkit-transition: top 0.5s linear;
+  transition: top 0.5s linear;
+  border-radius: 5px;
+}
+
+.pet-card__fixed-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 337px;
+  margin-left: 4px;
+  margin-top: 8px;
+  height: 37px;
+}
+
+.pet-card__fixed-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pet-card__fixed-text-animal {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.pet-card__fixed-text-animal_white {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.pet-card__fixed-text-area {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 120%;
+  color: #000000;
+}
+
+.pet-card__fixed-text-area_white {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+.pet-card__fixed-icon-banana {
+  width: 33px;
+  height: 36px;
+}
+
+.pet-card__fixed-icon-fish {
+  width: 44px;
+  height: 39px;
+}
+
+.sideStrelitzia {
+  background-image: url(../../assets/images/strelitziaFoto.png);
+  background-repeat: no-repeat;
+  width: 368px;
+  height: 275px;
+  position: absolute;
+  bottom: -100px;
+  right: 0px;
+}
+
+.sidePalm {
+  background-image: url(../../assets/images/palmFoto.png);
+  background-repeat: no-repeat;
+  width: 266px;
+  height: 460px;
+  position: absolute;
+  left: 0;
+  bottom: -100px;
 }
