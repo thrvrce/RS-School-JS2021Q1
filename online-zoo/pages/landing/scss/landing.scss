@@ -57,3 +57,58 @@
   }
 }
 
+.backstage{
+  @include BlockWrapper(transparent);
+  position: relative;
+
+  &__content{
+    margin-top: 14rem;
+    width: 116rem;
+    @include displayFlex(space-between, center);
+  }
+
+  &__img{
+    background-image: url(../../assets/images/bamboo-cap.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width:609px;
+    height: 405px;
+    margin-left: -1px;
+  }
+
+  &__text{
+    width: 465px;
+    @include displayFlex(flex-start, flex-start);
+    flex-direction: column;
+    height: 100%;
+
+    &_48120{
+      @include robotoNorma48120($blackBlue);
+      margin-bottom: 23px;
+    }
+
+    &_16130{
+      @include robotoNorma16130($blackBlue);
+      margin-bottom: 56px;
+    }
+
+    &_24120{
+      @include robotoNormal24120($blackBlue);
+      margin-bottom: 34px;
+    }
+
+    &_16140{
+      @include robotoMedium16140($blackBlue);
+    }
+  }
+}
+
+.sideBush{
+  background-image: url(../../assets//images/flowerfoto1.png);
+    background-repeat: no-repeat;
+    width:204px;
+    height: 605px;
+    position: absolute;
+    right: 0px;
+    top: 12px;
+}

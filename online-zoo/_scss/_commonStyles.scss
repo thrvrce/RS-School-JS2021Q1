@@ -63,6 +63,23 @@
   @include useRobotoFont(normal, 500, 1.6rem, 140%, $color);
 }
 
+@mixin robotoNormal16140($color) {
+  @include useRobotoFont(normal, normal, 1.6rem, 140%, $color);
+}
+
+@mixin robotoNormal24120($color) {
+  @include useRobotoFont(normal, normal, 2.4rem, 120%, $color);
+}
+
+@mixin robotoNorma48120($color) {
+  @include useRobotoFont(normal, normal, 4.8rem, 120%, $color);
+}
+
+@mixin robotoNorma16130($color) {
+  @include useRobotoFont(normal, normal, 1.6rem, 130%, $color);
+}
+
+
 @mixin logotype {
   .logo {
     padding: 0.35rem 0rem;
