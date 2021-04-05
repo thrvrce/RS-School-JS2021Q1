@@ -1,31 +1,35 @@
 @import "./variables";
-@import './fonts';
+@import "./fonts";
 
 @mixin standarPageButon($borderRadius) {
-  .standarPageButon {
-    @include robotoMedium16140($commonWhiteColor);
-    width: 298px;
-    height: 54px;
-    background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
-    border-radius: $borderRadius;
-    border: none;
-    outline: none;
-    text-transform: uppercase;
-    padding-left: 4px;
-    @include displayFlex(center, center);
-    &:hover {
-      background: #4b9200;
-      cursor: pointer;
-    }
+  // .standarPageButon {
+  @include robotoMedium16140($commonWhiteColor);
+  width: 298px;
+  height: 54px;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  border-radius: $borderRadius;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  padding-left: 4px;
+  @include displayFlex(center, center);
+  &:hover {
+    background: #4b9200;
+    cursor: pointer;
   }
+  // }
 }
 
 @mixin standarPageButonRound {
-  @include standarPageButon(2.5rem);
+  .standarPageButon {
+    @include standarPageButon(2.5rem);
+  }
 }
 
 @mixin standarPageButonNotRound {
-  @include standarPageButon(0.5rem);
+  .standarPageButonNotRound {
+    @include standarPageButon(0.5rem);
+  }
 }
 
 @mixin roundArrowButtonLeft {

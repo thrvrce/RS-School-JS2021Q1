@@ -4,9 +4,10 @@
 @import "../../../_scss/buttons";
 @import "../../../_scss/fonts";
 @import "../../../_scss/components";
-
+//
 @include header;
 @include standarPageButonRound;
+@include standarPageButonNotRound;
 
 @mixin watchAnimalText($fontSize) {
   @include useRobotoFont(normal, bold, $fontSize, 75%, $commonWhiteColor);
@@ -348,13 +349,15 @@
         @include pickAndFeedDiagIcons("../../assets/icons/paywithcard.svg");
       }
       &-img-paymenttozoo {
-        @include pickAndFeedDiagIcons("../../assets/icons/paymentsgoestothezoo.svg");
+        @include pickAndFeedDiagIcons(
+          "../../assets/icons/paymentsgoestothezoo.svg"
+        );
       }
       &-img-eat {
         @include pickAndFeedDiagIcons("../../assets/icons/monkeyEats.svg");
       }
 
-      &-arrow{
+      &-arrow {
         width: 69px;
         height: 35px;
         background-image: url(../../assets/icons/paymentArrow.svg);
@@ -363,11 +366,151 @@
         margin-top: 60px;
       }
 
-      &-text{
+      &-text {
         @include robotoNormal16140($blackBlue);
         margin-right: auto;
         margin-top: 31px;
       }
     }
   }
+}
+
+.testimonials {
+  @include BlockWrapper($commonWhiteColor);
+  position: relative;
+
+  &__content {
+    @include displayFlex(flex-start, center);
+    flex-direction: column;
+    width: 1160px;
+    height: 842px;
+    margin: 0px 30px 140px 30px;
+    @include displayFlex(flex-start, center);
+    flex-direction: column;
+  }
+
+  &__title {
+    @include robotoNormal36130($blackBlue);
+    margin-top: 141px;
+  }
+
+  &__cards {
+    @include displayFlex(space-between, center);
+    margin-top: 48px;
+    width: 1160px;
+  }
+  &__card-item-bg {
+    background: linear-gradient(
+        315.75deg,
+        rgba(254, 189, 171, 0.74) 30.06%,
+        rgba(243, 169, 248, 0.66) 50.74%,
+        #e0d8f0 80.49%,
+        #eaf7fe 127.9%,
+        #eaf7fe 149.54%
+      ),
+      linear-gradient(
+        315.75deg,
+        rgba(254, 189, 171, 0.74) 30.06%,
+        rgba(243, 169, 248, 0.66) 50.74%,
+        #e0d8f0 80.49%,
+        #eaf7fe 127.9%,
+        #eaf7fe 149.54%
+      );
+    border-radius: 20px;
+  }
+  &__card-item {
+    @include displayFlex(flex-start, flex-start);
+    flex-direction: column;
+    width: 268px;
+    height: 391px;
+    // border: 1px solid $pinkGradient;
+    background: $lightGray;
+    border-radius: 20px;
+    padding: 15px 15px 19px 16px;
+    transform: scale(0.99);
+    &-user-info {
+      @include displayFlex(space-between, center);
+
+      &-other-data {
+        margin-left: 10px;
+        &-name {
+          @include robotoNorma16120($black);
+        }
+        &-date-local {
+          @include robotoLight15120($gray4);
+          word-spacing: 2px;
+        }
+      }
+    }
+
+    &-user-text {
+      @include robotoLight15120(#767474);
+      margin-top: 10px;
+      overflow: hidden;
+    }
+  }
+}
+
+.progress-bar__gradiend-border {
+  width: 599px;
+  height: 8px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+  background: linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
+}
+
+.progress-bar {
+  transform: scale(0.99);
+  height: 75%;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  &__progress-level {
+    margin-left: -3px;
+    border-radius: 5px;
+    display: block;
+    height: 100%;
+    width: 116px;
+    background-color: $anotherOrange;
+
+    &:hover{
+      cursor: pointer;
+      background-color: $green;
+    }
+  }
+}
+
+.leave-feedback{
+  align-self: flex-start;
+  margin-top: 31px;
+  margin-left: -1px;
+}
+
+.leaveFoto{
+  background-image: url(../../assets/images/leavFoto.png);
+    background-repeat: no-repeat;
+    width: 248px;
+    height: 457px;
+    position: absolute;
+    /* left: 0; */
+    right: 0px;
+    bottom: -119px;
 }
