@@ -1,0 +1,636 @@
+@import "../../../_scss/commonStyles";
+@include basicPageSettings;
+
+@import "../../../_scss/buttons";
+@import "../../../_scss/fonts";
+@import "../../../_scss/components";
+//
+@include header;
+@include standarPageButonRound;
+@include standarPageButonNotRound;
+
+@mixin watchAnimalText($fontSize) {
+  @include useRobotoFont(normal, bold, $fontSize, 75%, $commonWhiteColor);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pandaWrapper {
+  background-image: url(../../assets/images/GiantPanda.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  height: 78rem;
+}
+
+.watchAnimal {
+  @include BlockWrapper(transparent);
+
+  &__content {
+    @include displayFlex(center, flex-end);
+    flex-direction: column;
+    width: 116rem;
+    position: relative;
+  }
+
+  &__text {
+    @include watchAnimalText(10.7rem);
+    z-index: 2;
+    position: absolute;
+    top: 85px;
+    width: 500.31px;
+    height: 400px;
+  }
+
+  &__text-content_yellow {
+    color: $yellow;
+  }
+
+  &__rectangle {
+    position: absolute;
+    background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+    width: 465px;
+    height: 465px;
+    z-index: 1;
+    border-radius: 50%;
+    top: 12px;
+    right: 108px;
+  }
+  .wathOnlineButton {
+    position: absolute;
+    top: 546px;
+    right: 99px;
+  }
+}
+
+.backstage {
+  @include BlockWrapper(transparent);
+  position: relative;
+
+  &__content {
+    margin-top: 14rem;
+    width: 116rem;
+    @include displayFlex(space-between, center);
+  }
+
+  &__img {
+    background-image: url(../../assets/images/bamboo-cap.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 609px;
+    height: 405px;
+    margin-left: -1px;
+  }
+
+  &__text {
+    width: 465px;
+    @include displayFlex(flex-start, flex-start);
+    flex-direction: column;
+    height: 100%;
+
+    &_48120 {
+      @include robotoNorma48120($blackBlue);
+      margin-bottom: 23px;
+    }
+
+    &_16130 {
+      @include robotoNorma16130($blackBlue);
+      margin-bottom: 56px;
+    }
+
+    &_24120 {
+      @include robotoNormal24120($blackBlue);
+      margin-bottom: 34px;
+    }
+
+    &_16140 {
+      @include robotoMedium16140($blackBlue);
+    }
+  }
+}
+
+.sideBush {
+  background-image: url(../../assets//images/flowerfoto1.png);
+  background-repeat: no-repeat;
+  width: 204px;
+  height: 605px;
+  position: absolute;
+  right: 0px;
+  top: 12px;
+}
+
+.pets {
+  @include BlockWrapper(transparent);
+  position: relative;
+  margin-top: 168px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.pets-slider {
+  width: 1322px;
+  @include displayFlex(space-between, center);
+  margin-bottom: 70px;
+
+  &__content {
+    width: 116rem;
+    @include displayFlex(space-between, center);
+    flex-wrap: wrap;
+    height: 892px;
+    padding-right: 2px;
+  }
+}
+
+@include roundArrowButtonLeft;
+@include roundArrowButtonRight;
+
+.round-arrow-button_right,
+.round-arrow-button_left {
+  margin-top: -6px;
+}
+
+.pet-card {
+  width: 366px;
+  height: 426px;
+  border: 1px solid #fe9013;
+  box-sizing: border-box;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: column;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover &__image {
+    transform: scale(1.1);
+  }
+
+  &:hover &__animated-text {
+    top: 0%;
+  }
+
+  &__image-wrapper {
+    overflow: hidden;
+    width: 366px;
+    height: 366px;
+    position: relative;
+  }
+  &__image {
+    width: 366px;
+    height: 366px;
+    transform: scale(1);
+    transition: transform 0.5s linear;
+    border-radius: 5px;
+    margin-top: -1px;
+  }
+
+  @keyframes petCardTextAnimation {
+  }
+  &__animated-text {
+    @include displayFlex(center, center);
+    flex-direction: column;
+    top: 100%;
+    position: absolute;
+    background-color: rgba(1, 1, 1, 0.5);
+    width: 364px;
+    height: 366px;
+    transition: top 0.5s linear;
+    border-radius: 5px;
+  }
+
+  &__fixed-info {
+    @include displayFlex(space-between, center);
+    width: 337px;
+    margin-left: 4px;
+    margin-top: 8px;
+    height: 37px;
+  }
+
+  &__fixed-text {
+    @include displayFlex(space-between, flex-start);
+    flex-direction: column;
+
+    &-animal {
+      @include robotoNormal16140($black);
+      text-transform: uppercase;
+    }
+    &-animal_white {
+      @include robotoNormal16140($commonWhiteColor);
+      text-transform: uppercase;
+    }
+
+    &-area {
+      @include robotoLight15120($black);
+    }
+    &-area_white {
+      @include robotoLight15120($commonWhiteColor);
+    }
+  }
+
+  &__fixed-icon-banana {
+    width: 33px;
+    height: 36px;
+  }
+  &__fixed-icon-fish {
+    width: 44px;
+    height: 39px;
+  }
+}
+
+@include sideStrelizia;
+@include sidePalm;
+
+.pick-and-feed {
+  @include BlockWrapper($orangeGrad);
+  background: linear-gradient(
+      315.75deg,
+      rgba(254, 210, 144, 0.7) 30.06%,
+      #febdab 100.95%,
+      rgba(254, 210, 144, 0.7) 106.36%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
+  opacity: 0.9;
+  height: 1004px;
+
+  &__content {
+    width: 1160px;
+    height: 835px;
+    margin: 69px 220px 100px 220px;
+    background: rgba(253, 253, 255, 0.52);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    @include displayFlex(flex-start, center);
+    flex-direction: column;
+  }
+
+  &__title {
+    @include robotoNorma48120($anotherOrange);
+    margin-top: 41px;
+  }
+  &__subtitle {
+    @include robotoNormal24120($blackBlue);
+    margin-top: 31px;
+    align-self: flex-start;
+    padding-left: 99px;
+  }
+  &__aboutcovid {
+    @include robotoMedium16130($blackBlue);
+    margin-top: 43px;
+    align-self: flex-start;
+    padding-left: 99px;
+  }
+  &__emergency {
+    @include robotoNorma16130($blackBlue);
+    margin-top: 10px;
+    align-self: flex-start;
+    padding-left: 99px;
+    width: 970px;
+    &_underline {
+      @include robotoNorma16130($blackBlue);
+      // text-decoration: underline;
+      border-bottom: 1px solid $anotherOrange;
+      // text-decoration-color: $anotherOrange;
+      &:hover {
+        cursor: pointer;
+        border-bottom: 1px solid $green;
+        color: $green;
+      }
+    }
+  }
+  &__how-it-works {
+    @include robotoNormal36130($blackBlue);
+    margin-top: 62px;
+  }
+
+  &__diagram {
+    @include displayFlex(space-between, center);
+    width: 764px;
+    margin-top: 40px;
+    align-items: end;
+    margin-bottom: 61px;
+
+    &-item {
+      @include displayFlex(flex-start, center);
+      flex-direction: column;
+      width: 168px;
+
+      @mixin pickAndFeedDiagIcons($url) {
+        background: $commonWhiteColor;
+        border-radius: 5px;
+        border: 1px solid $orang;
+        width: 168px;
+        height: 168px;
+        background-image: url($url);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &-img-pay {
+        @include pickAndFeedDiagIcons("../../assets/icons/paywithcard.svg");
+      }
+      &-img-paymenttozoo {
+        @include pickAndFeedDiagIcons(
+          "../../assets/icons/paymentsgoestothezoo.svg"
+        );
+      }
+      &-img-eat {
+        @include pickAndFeedDiagIcons("../../assets/icons/monkeyEats.svg");
+      }
+
+      &-arrow {
+        width: 69px;
+        height: 35px;
+        background-image: url(../../assets/icons/paymentArrow.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 60px;
+      }
+
+      &-text {
+        @include robotoNormal16140($blackBlue);
+        margin-right: auto;
+        margin-top: 31px;
+      }
+    }
+  }
+}
+
+.testimonials {
+  @include BlockWrapper($commonWhiteColor);
+  position: relative;
+
+  &__content {
+    @include displayFlex(flex-start, center);
+    flex-direction: column;
+    width: 1160px;
+    height: 842px;
+    margin: 0px 30px 77px 30px;
+    @include displayFlex(flex-start, center);
+    flex-direction: column;
+  }
+
+  &__title {
+    @include robotoNormal36130($blackBlue);
+    margin-top: 141px;
+  }
+
+  &__cards {
+    @include displayFlex(space-between, center);
+    margin-top: 48px;
+    width: 1160px;
+  }
+  &__card-item-bg {
+    background: linear-gradient(
+        315.75deg,
+        rgba(254, 189, 171, 0.74) 30.06%,
+        rgba(243, 169, 248, 0.66) 50.74%,
+        #e0d8f0 80.49%,
+        #eaf7fe 127.9%,
+        #eaf7fe 149.54%
+      ),
+      linear-gradient(
+        315.75deg,
+        rgba(254, 189, 171, 0.74) 30.06%,
+        rgba(243, 169, 248, 0.66) 50.74%,
+        #e0d8f0 80.49%,
+        #eaf7fe 127.9%,
+        #eaf7fe 149.54%
+      );
+    border-radius: 20px;
+  }
+  &__card-item {
+    @include displayFlex(flex-start, flex-start);
+    flex-direction: column;
+    width: 268px;
+    height: 391px;
+    // border: 1px solid $pinkGradient;
+    background: $lightGray;
+    border-radius: 20px;
+    padding: 15px 15px 19px 16px;
+    transform: scale(0.99);
+    &-user-info {
+      @include displayFlex(space-between, center);
+
+      &-other-data {
+        margin-left: 10px;
+        &-name {
+          @include robotoNorma16120($black);
+        }
+        &-date-local {
+          @include robotoLight15120($gray4);
+          word-spacing: 2px;
+        }
+      }
+    }
+
+    &-user-text {
+      @include robotoLight15120(#767474);
+      margin-top: 10px;
+      overflow: hidden;
+    }
+  }
+}
+
+.progress-bar__gradiend-border {
+  width: 599px;
+  height: 8px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+  background: linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
+}
+
+.progress-bar {
+  transform: scale(0.99);
+  height: 75%;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  &__progress-level {
+    margin-left: -3px;
+    border-radius: 5px;
+    display: block;
+    height: 100%;
+    width: 116px;
+    background-color: $anotherOrange;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $green;
+    }
+  }
+}
+
+.leave-feedback {
+  align-self: flex-start;
+  margin-top: 31px;
+  margin-left: -1px;
+}
+
+.leaveFoto {
+  background-image: url(../../assets/images/leavFoto.png);
+  background-repeat: no-repeat;
+  width: 248px;
+  height: 457px;
+  position: absolute;
+  /* left: 0; */
+  right: 0px;
+  bottom: -119px;
+}
+
+.footer {
+  @include BlockWrapper(#111115);
+  .logo_footer{
+    margin-top: 39px
+  }
+  .footerstdButton{
+    margin-top: 70px;
+  }
+  &__content {
+    @include displayFlex(flex-start, flex-start);
+    width: 1160px;
+    height: 443px;
+  }
+
+  &__firstColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &-socials{
+      margin-top: 44px;
+      &-wrapper{
+        display: flex;
+        height: 26px;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      & a:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__social-img-fb {
+    background-image: url(../../assets/icons/Fill211.png);
+    background-repeat: no-repeat;
+    background: rgba(196, 196, 196, 0.5);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__social-text {
+    margin-left: 12px;
+    @include robotoNormal16140($commonWhiteColor);
+  }
+
+  &__secondColumn{
+    align-self: flex-end;
+    padding-bottom: 50px;
+    width: 425px;
+    margin-left: 38px;
+  }
+
+  &__thirdColumn{
+    margin-left: 32px;
+    margin-top: 41px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.subscribe{
+  align-self: start;
+  @include robotoNormal24120($commonWhiteColor);
+}
+
+.designer-Alisa, .designer-Tony{
+  @include robotoThin16130($commonWhiteColor);
+}
+.designer-Alisa{
+  margin-bottom: 11px;
+    margin-right: 6px;
+    margin-top: 217px;
+}
+
+.form{
+  display: flex;
+  width: 367px;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.submitFormButton{
+  background: #F1F3F2;
+  border-radius: 5px;
+  width: 129px;
+  height: 42px;
+  @include robotoNormal16140(#000000);
+  border: none;
+  outline: none;
+  &:hover{
+    cursor: pointer;
+  }
+
+}
+
+.email:valid + .submitFormButton{
+  color: #000000;
+  border: 1px solid #333B41;
+
+}
+
+.email:invalid + .submitFormButton{
+  border: 1px solid #D31414;
+  color: #D31414;
+}
+
+.email{
+  width: 228px;
+  height: 42px;
+  @include robotoNormal16140(#BDBDBD);
+}
+

@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import "./variables";
+
+@mixin useRobotoFont($style, $weight, $fontSize, $lineHeight, $color) {
+  font-family: Roboto, sans-serif;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $color;
+}
+
+@mixin robotoLight15120($color) {
+  @include useRobotoFont(normal, 300, 1.5rem, 120%, $color);
+}
+
+@mixin robotoNorma16120($color) {
+  @include useRobotoFont(normal, normal, 1.6rem, 120%, $color);
+}
+
+@mixin robotoMedium16140($color) {
+  @include useRobotoFont(normal, 500, 1.6rem, 140%, $color);
+}
+
+@mixin robotoNormal16140($color) {
+  @include useRobotoFont(normal, normal, 1.6rem, 140%, $color);
+}
+
+@mixin robotoThin16130($color) {
+  @include useRobotoFont(normal, 200, 1.6rem, 130%, $color);
+}
+
+@mixin robotoNorma16130($color) {
+  @include useRobotoFont(normal, normal, 1.6rem, 130%, $color);
+}
+
+@mixin robotoMedium16130($color) {
+  @include useRobotoFont(normal, 500, 1.6rem, 130%, $color);
+}
+
+@mixin robotoNormal24120($color) {
+  @include useRobotoFont(normal, normal, 2.4rem, 120%, $color);
+}
+
+@mixin robotoNormal36130($color) {
+  @include useRobotoFont(normal, normal, 3.6rem, 130%, $color);
+}
+
+@mixin robotoNorma48120($color) {
+  @include useRobotoFont(normal, normal, 4.8rem, 120%, $color);
+}
+
+
+
+@mixin logoText {
+  @include useRobotoFont(normal, normal, 1.9rem, 120%, $logoTextColor);
+  text-align: center;
+}

@@ -1,0 +1,84 @@
+@import "./fonts";
+@import "./commonStyles";
+
+@mixin sideStrelizia {
+  .sideStrelitzia {
+    background-image: url(../../assets/images/strelitziaFoto.png);
+    background-repeat: no-repeat;
+    width: 368px;
+    height: 275px;
+    position: absolute;
+    bottom: -100px;
+    right: 0px;
+  }
+}
+@mixin sidePalm {
+  .sidePalm {
+    background-image: url(../../assets/images/palmFoto.png);
+    background-repeat: no-repeat;
+    width: 266px;
+    height: 460px;
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+  }
+}
+
+@mixin logotype {
+  .logo {
+    padding: 0.35rem 0rem;
+    @include logoText;
+    width: 8.2rem;
+    height: 5.2rem;
+    border: 0.1rem solid $commonWhiteColor;
+    border-radius: 0.2rem;
+    background-image: url(../../assets/icons/bamboo.svg);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: 0.9rem 2.2rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin nav-default($marginLeft) {
+  .nav {
+    @include displayFlex(center, center);
+    margin-left: $marginLeft;
+
+    &__list_default {
+      @include displayFlex(space-between, center);
+      width: 52.6rem;
+    }
+
+    &__list-item_default {
+      @include robotoMedium16140($commonWhiteColor);
+      &:hover {
+        cursor: pointer;
+        color: $orang;
+      }
+    }
+
+    &__list-item_selected {
+      @include robotoMedium16140($orang);
+      pointer-events: none;
+    }
+  }
+}
+
+@mixin header {
+  @include logotype;
+  @include nav-default(63px);
+  .header {
+    @include BlockWrapper($headerBGColor);
+    backdrop-filter: blur(4px);
+
+    &__wrapper {
+      @include displayFlex(flex-start, center);
+      padding: 1.4rem 0;
+      width: 116rem;
+    }
+  }
+}
