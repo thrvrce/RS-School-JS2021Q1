@@ -875,7 +875,7 @@ li {
           flex-direction: column;
   width: 1160px;
   height: 842px;
-  margin: 0px 30px 140px 30px;
+  margin: 0px 30px 77px 30px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1036,4 +1036,198 @@ li {
   /* left: 0; */
   right: 0px;
   bottom: -119px;
+}
+
+.footer {
+  background-color: #111115;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .logo_footer {
+  margin-top: 39px;
+}
+
+.footer .footerstdButton {
+  margin-top: 70px;
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 1160px;
+  height: 443px;
+}
+
+.footer__firstColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer__firstColumn-socials {
+  margin-top: 44px;
+}
+
+.footer__firstColumn-socials-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 26px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer__firstColumn-socials a:hover {
+  cursor: pointer;
+}
+
+.footer__social-img-fb {
+  background-image: url(../../assets/icons/Fill211.png);
+  background-repeat: no-repeat;
+  background: rgba(196, 196, 196, 0.5);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer__social-text {
+  margin-left: 12px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+
+.footer__secondColumn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-bottom: 50px;
+  width: 425px;
+  margin-left: 38px;
+}
+
+.footer__thirdColumn {
+  margin-left: 32px;
+  margin-top: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.subscribe {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.4rem;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+.designer-Alisa, .designer-Tony {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 1.6rem;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+
+.designer-Alisa {
+  margin-bottom: 11px;
+  margin-right: 6px;
+  margin-top: 217px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 367px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 14px;
+}
+
+.submitFormButton {
+  background: #F1F3F2;
+  border-radius: 5px;
+  width: 129px;
+  height: 42px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #000000;
+  border: none;
+  outline: none;
+}
+
+.submitFormButton:hover {
+  cursor: pointer;
+}
+
+.email:valid + .submitFormButton {
+  color: #000000;
+  border: 1px solid #333B41;
+}
+
+.email:invalid + .submitFormButton {
+  border: 1px solid #D31414;
+  color: #D31414;
+}
+
+.email {
+  width: 228px;
+  height: 42px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #BDBDBD;
 }
