@@ -1,7 +1,12 @@
 @import "../../../_scss/commonStyles";
 @include basicPageSettings;
+
+@import '../../../_scss/buttons';
+@import '../../../_scss/fonts';
+@import '../../../_scss/components';
+
+@include header;
 @include standarPageButonRound;
-@import "../../../_scss//header";
 
 @mixin watchAnimalText($fontSize) {
   @include useRobotoFont(normal, bold, $fontSize, 75%, $commonWhiteColor);
@@ -238,3 +243,16 @@
 
 @include sideStrelizia;
 @include sidePalm;
+
+.pick-and-feed{
+  @include BlockWrapper($orangeGrad);
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  opacity: 0.9;
+  height: 1004px;
+
+  &__content{
+    width: 1160px;
+    height: 835px;
+    margin: 69px 220px 100px 220px;
+  }
+}

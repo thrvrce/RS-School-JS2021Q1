@@ -1,0 +1,62 @@
+@import "./variables";
+@import './fonts';
+
+@mixin standarPageButon($borderRadius) {
+  .standarPageButon {
+    @include robotoMedium16140($commonWhiteColor);
+    width: 298px;
+    height: 54px;
+    background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+    border-radius: $borderRadius;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    padding-left: 4px;
+    @include displayFlex(center, center);
+    &:hover {
+      background: #4b9200;
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin standarPageButonRound {
+  @include standarPageButon(2.5rem);
+}
+
+@mixin standarPageButonNotRound {
+  @include standarPageButon(0.5rem);
+}
+
+@mixin roundArrowButtonLeft {
+  .round-arrow-button_left {
+    @include roundArrowButton(0deg);
+
+    &:hover {
+      cursor: pointer;
+      background-color: $green;
+    }
+  }
+}
+
+@mixin roundArrowButtonRight {
+  .round-arrow-button_right {
+    @include roundArrowButton(180deg);
+
+    &:hover {
+      cursor: pointer;
+      background-color: $green;
+    }
+  }
+}
+
+@mixin roundArrowButton($rotateArrow) {
+  width: 61px;
+  height: 61px;
+  background-color: $orang;
+  background-image: url(../../assets//icons/whiteLeftArrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  transform: rotate($rotateArrow);
+}
