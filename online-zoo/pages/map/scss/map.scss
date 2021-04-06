@@ -1,11 +1,325 @@
-@import '../../../_scss/commonStyles';
-@import '../../../_scss/components';
-@import '../../../_scss/buttons';
-@import '../../../_scss/fonts';
-@import '../../../_scss/variables';
+@import "../../../_scss/commonStyles";
+@import "../../../_scss/components";
+@import "../../../_scss/buttons";
+@import "../../../_scss/fonts";
+@import "../../../_scss/variables";
 
 @include basicPageSettings;
 @include header;
 @include footer;
 @include standarPageButonRound;
 @include standarPageButonNotRound;
+
+.map {
+  @include displayFlex(center, flex-start);
+  background: #eaf7fe;
+  margin-top: 1px;
+  height: 938px;
+  position: relative;
+
+  &__content {
+    width: 1160px;
+    height: 717px;
+    background-image: url(../../assets/images/map.png);
+    background-repeat: no-repeat;
+    margin-top: 103px;
+    background-position-x: 41px;
+    position: relative;
+  }
+
+  &__buttons {
+    @include displayFlex(space-between, center);
+    flex-direction: column;
+    width: 54px;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    height: 118px;
+
+    &-button {
+      @include displayFlex(center, center);
+      height: 54px;
+      width: 54px;
+      background-color: $commonWhiteColor;
+      border-radius: 5px;
+
+      &-svg {
+        fill: $blackBlue;
+      }
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid $green;
+      }
+
+      &:hover &-svg {
+        fill: $green;
+      }
+    }
+  }
+  &__tooltip {
+    width: 159px;
+    height: 109px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    position: relative;
+
+    &-arrow {
+      margin-bottom: 0px;
+      width: 0px;
+      height: 0;
+      border: 50px solid transparent;
+      border-bottom: 70px solid black;
+      position: relative;
+      top: -50px;
+      transform: scale(0.1);
+      position: absolute;
+      top: -66px;
+      left: 5px;
+
+      &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: -50px;
+        top: -40px;
+
+        border: 50px solid transparent;
+        border-bottom: 70px solid white;
+      }
+    }
+
+    &-text {
+      @include robotoNormal16140($black);
+      margin-left: 9px;
+      margin-top: 7px;
+      margin-bottom: 11px;
+    }
+
+    @include watchOnlineButton;
+    .watchOnlineButton {
+      margin-left: 10px;
+    }
+  }
+
+  @mixin showTooltip {
+    &:hover ~ .map__tooltip {
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity 1s;
+      visibility: visible;
+    }
+  }
+
+  @mixin activateMarkerHover($icon) {
+    &#{$icon}:hover ~ &-marker {
+      fill: $orang;
+    }
+  }
+
+  @mixin showTooltipOnHover {
+    & > .map__tooltip:hover {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__animal-container-eagles {
+    position: relative;
+    top: 362px;
+    left: 133px;
+    width: 100px;
+    height: 63px;
+
+    &-attack-ico {
+      position: absolute;
+      left: 0px;
+      top: 6px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @include showTooltip;
+    }
+
+    &-flying-ico {
+      position: absolute;
+      bottom: 0px;
+      right: 16px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @include showTooltip;
+    }
+
+    & > .map__tooltip {
+      top: 71px;
+      right: 16px;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &-marker {
+      position: absolute;
+      top: 0px;
+      right: 30px;
+      fill: #4b9200;
+    }
+
+    @include activateMarkerHover(-attack-ico);
+    @include activateMarkerHover(-flying-ico);
+
+    @include showTooltipOnHover;
+  }
+
+  &__animal-container-alligators {
+    position: relative;
+    top: 311px;
+    left: 286px;
+    width: 100px;
+    height: 63px;
+
+    &-ico {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @include showTooltip;
+    }
+
+    &-marker {
+      position: absolute;
+      top: 5px;
+      left: 7px;
+      fill: $green;
+    }
+
+    & > .map__tooltip {
+      top: 71px;
+      right: 16px;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @include activateMarkerHover(-ico);
+    @include showTooltipOnHover;
+  }
+
+  &__animal-container-gorillas {
+    position: relative;
+    top: 339px;
+    left: 583px;
+    width: 100px;
+    height: 77px;
+
+    &-ico {
+      position: absolute;
+      bottom: 0px;
+      left: 1px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @include showTooltip;
+    }
+
+    &-marker {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      fill: $green;
+    }
+
+    & > .map__tooltip {
+      top: 82px;
+      right: 29px;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @include activateMarkerHover(-ico);
+    @include showTooltipOnHover;
+  }
+
+  &__animal-container-pandas {
+    position: relative;
+    top: 156px;
+    left: 851px;
+    width: 100px;
+    height: 77px;
+
+    &-ico {
+      position: absolute;
+      bottom: 0px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @include showTooltip;
+    }
+
+    &-marker {
+      position: absolute;
+      top: 22px;
+      left: 39px;
+      fill: #4b9200;
+    }
+
+    & > .map__tooltip {
+      top: 82px;
+      right: 29px;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @include activateMarkerHover(-ico);
+    @include showTooltipOnHover;
+  }
+
+  &__animal-container-panda {
+    position: relative;
+    top: 19px;
+    left: 858px;
+    width: 100px;
+    height: 77px;
+
+    &-ico {
+      position: absolute;
+      bottom: 0px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @include showTooltip;
+    }
+
+    &-marker {
+      position: absolute;
+      top: 35px;
+      left: 37px;
+      fill: #4b9200;
+    }
+
+    & > .map__tooltip {
+      top: 82px;
+      right: 29px;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @include activateMarkerHover(-ico);
+    @include showTooltipOnHover;
+  }
+}
