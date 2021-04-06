@@ -9,3 +9,14 @@
 @include footer;
 @include standarPageButonRound;
 @include standarPageButonNotRound;
+
+.donate{
+  @include BlockWrapper($black);
+  align-items: flex-end;
+  background-image: url(../../assets/images/zoos-donate-bg-panda.png);
+  background-repeat: no-repeat;
+  height: 390px;
+  padding-bottom: 60px;
+
+
+}
