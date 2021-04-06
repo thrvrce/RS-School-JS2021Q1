@@ -15,6 +15,7 @@
   background: #EAF7FE;
   margin-top: 1px;
   height: 938px;
+  position: relative;
 
   &__content{
     width: 1160px;
@@ -24,5 +25,36 @@
     margin-top: 103px;
     background-position-x: 41px;
     position: relative;
+  }
+
+  &__buttons{
+    @include displayFlex(space-between, center);
+    flex-direction: column;
+    width: 54px;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    height: 118px;
+
+    &-button{
+      @include displayFlex(center, center);
+      height: 54px;
+      width: 54px;
+      background-color: $commonWhiteColor;
+      border-radius: 5px;
+
+      &-svg{
+        fill:$blackBlue;
+      }
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid $green;
+      }
+
+      &:hover &-svg{
+        fill: $green;
+      }
+    }
   }
 }

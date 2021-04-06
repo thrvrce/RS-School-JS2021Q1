@@ -404,6 +404,7 @@ li {
   background: #EAF7FE;
   margin-top: 1px;
   height: 938px;
+  position: relative;
 }
 
 .map__content {
@@ -414,4 +415,54 @@ li {
   margin-top: 103px;
   background-position-x: 41px;
   position: relative;
+}
+
+.map__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 54px;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  height: 118px;
+}
+
+.map__buttons-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 54px;
+  width: 54px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+}
+
+.map__buttons-button-svg {
+  fill: #333b41;
+}
+
+.map__buttons-button:hover {
+  cursor: pointer;
+  border: 1px solid #4b9200;
+}
+
+.map__buttons-button:hover .map__buttons-button-svg {
+  fill: #4b9200;
 }
