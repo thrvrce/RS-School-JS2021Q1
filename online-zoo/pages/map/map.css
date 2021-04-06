@@ -390,3 +390,28 @@ li {
   background: #4b9200;
   cursor: pointer;
 }
+
+.map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: #EAF7FE;
+  margin-top: 1px;
+  height: 938px;
+}
+
+.map__content {
+  width: 1160px;
+  height: 717px;
+  background-image: url(../../assets/images/map.png);
+  background-repeat: no-repeat;
+  margin-top: 103px;
+  background-position-x: 41px;
+  position: relative;
+}

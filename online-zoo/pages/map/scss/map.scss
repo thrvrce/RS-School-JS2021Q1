@@ -9,3 +9,20 @@
 @include footer;
 @include standarPageButonRound;
 @include standarPageButonNotRound;
+
+.map{
+  @include displayFlex(center, flex-start);
+  background: #EAF7FE;
+  margin-top: 1px;
+  height: 938px;
+
+  &__content{
+    width: 1160px;
+    height: 717px;
+    background-image: url(../../assets/images/map.png);
+    background-repeat: no-repeat;
+    margin-top: 103px;
+    background-position-x: 41px;
+    position: relative;
+  }
+}
