@@ -344,6 +344,10 @@ li {
   outline: none;
   text-transform: uppercase;
   padding-left: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,6 +379,10 @@ li {
   outline: none;
   text-transform: uppercase;
   padding-left: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -401,7 +409,7 @@ li {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background: #EAF7FE;
+  background: #eaf7fe;
   margin-top: 1px;
   height: 938px;
   position: relative;
@@ -465,4 +473,352 @@ li {
 
 .map__buttons-button:hover .map__buttons-button-svg {
   fill: #4b9200;
+}
+
+.map__tooltip {
+  width: 159px;
+  height: 109px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  position: relative;
+}
+
+.map__tooltip-arrow {
+  margin-bottom: 0px;
+  width: 0px;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom: 70px solid black;
+  position: relative;
+  top: -50px;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  position: absolute;
+  top: -66px;
+  left: 5px;
+}
+
+.map__tooltip-arrow:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -50px;
+  top: -40px;
+  border: 50px solid transparent;
+  border-bottom: 70px solid white;
+}
+
+.map__tooltip-text {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #000000;
+  margin-left: 9px;
+  margin-top: 7px;
+  margin-bottom: 11px;
+}
+
+.map__tooltip .watchOnlineButton {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #4b9200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #f1f3f2;
+  width: 136px;
+  height: 31px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.map__tooltip .watchOnlineButton:hover {
+  cursor: pointer;
+}
+
+.map__tooltip .watchOnlineButton {
+  margin-left: 10px;
+}
+
+.map__animal-container-eagles {
+  position: relative;
+  top: 362px;
+  left: 133px;
+  width: 100px;
+  height: 63px;
+}
+
+.map__animal-container-eagles-attack-ico {
+  position: absolute;
+  left: 0px;
+  top: 6px;
+}
+
+.map__animal-container-eagles-attack-ico:hover {
+  cursor: pointer;
+}
+
+.map__animal-container-eagles-attack-ico:hover ~ .map__tooltip {
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  visibility: visible;
+}
+
+.map__animal-container-eagles-flying-ico {
+  position: absolute;
+  bottom: 0px;
+  right: 16px;
+}
+
+.map__animal-container-eagles-flying-ico:hover {
+  cursor: pointer;
+}
+
+.map__animal-container-eagles-flying-ico:hover ~ .map__tooltip {
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  visibility: visible;
+}
+
+.map__animal-container-eagles > .map__tooltip {
+  top: 71px;
+  right: 16px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.map__animal-container-eagles-marker {
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  fill: #4b9200;
+}
+
+.map__animal-container-eagles-attack-ico:hover ~ .map__animal-container-eagles-marker {
+  fill: #F9804B;
+}
+
+.map__animal-container-eagles-flying-ico:hover ~ .map__animal-container-eagles-marker {
+  fill: #F9804B;
+}
+
+.map__animal-container-eagles > .map__tooltip:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.map__animal-container-alligators {
+  position: relative;
+  top: 311px;
+  left: 286px;
+  width: 100px;
+  height: 63px;
+}
+
+.map__animal-container-alligators-ico {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.map__animal-container-alligators-ico:hover {
+  cursor: pointer;
+}
+
+.map__animal-container-alligators-ico:hover ~ .map__tooltip {
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  visibility: visible;
+}
+
+.map__animal-container-alligators-marker {
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  fill: #4b9200;
+}
+
+.map__animal-container-alligators > .map__tooltip {
+  top: 71px;
+  right: 16px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.map__animal-container-alligators-ico:hover ~ .map__animal-container-alligators-marker {
+  fill: #F9804B;
+}
+
+.map__animal-container-alligators > .map__tooltip:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.map__animal-container-gorillas {
+  position: relative;
+  top: 339px;
+  left: 583px;
+  width: 100px;
+  height: 77px;
+}
+
+.map__animal-container-gorillas-ico {
+  position: absolute;
+  bottom: 0px;
+  left: 1px;
+}
+
+.map__animal-container-gorillas-ico:hover {
+  cursor: pointer;
+}
+
+.map__animal-container-gorillas-ico:hover ~ .map__tooltip {
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  visibility: visible;
+}
+
+.map__animal-container-gorillas-marker {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  fill: #4b9200;
+}
+
+.map__animal-container-gorillas > .map__tooltip {
+  top: 82px;
+  right: 29px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.map__animal-container-gorillas-ico:hover ~ .map__animal-container-gorillas-marker {
+  fill: #F9804B;
+}
+
+.map__animal-container-gorillas > .map__tooltip:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.map__animal-container-pandas {
+  position: relative;
+  top: 156px;
+  left: 851px;
+  width: 100px;
+  height: 77px;
+}
+
+.map__animal-container-pandas-ico {
+  position: absolute;
+  bottom: 0px;
+}
+
+.map__animal-container-pandas-ico:hover {
+  cursor: pointer;
+}
+
+.map__animal-container-pandas-ico:hover ~ .map__tooltip {
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  visibility: visible;
+}
+
+.map__animal-container-pandas-marker {
+  position: absolute;
+  top: 22px;
+  left: 39px;
+  fill: #4b9200;
+}
+
+.map__animal-container-pandas > .map__tooltip {
+  top: 82px;
+  right: 29px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.map__animal-container-pandas-ico:hover ~ .map__animal-container-pandas-marker {
+  fill: #F9804B;
+}
+
+.map__animal-container-pandas > .map__tooltip:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.map__animal-container-panda {
+  position: relative;
+  top: 19px;
+  left: 858px;
+  width: 100px;
+  height: 77px;
+}
+
+.map__animal-container-panda-ico {
+  position: absolute;
+  bottom: 0px;
+}
+
+.map__animal-container-panda-ico:hover {
+  cursor: pointer;
+}
+
+.map__animal-container-panda-ico:hover ~ .map__tooltip {
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  visibility: visible;
+}
+
+.map__animal-container-panda-marker {
+  position: absolute;
+  top: 35px;
+  left: 37px;
+  fill: #4b9200;
+}
+
+.map__animal-container-panda > .map__tooltip {
+  top: 82px;
+  right: 29px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.map__animal-container-panda-ico:hover ~ .map__animal-container-panda-marker {
+  fill: #F9804B;
+}
+
+.map__animal-container-panda > .map__tooltip:hover {
+  opacity: 1;
+  visibility: visible;
 }
