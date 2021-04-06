@@ -1,0 +1,11 @@
+@import '../../../_scss/commonStyles';
+@import '../../../_scss/components';
+@import '../../../_scss/buttons';
+@import '../../../_scss/fonts';
+@import '../../../_scss/variables';
+
+@include basicPageSettings;
+@include header;
+@include footer;
+@include standarPageButonRound;
+@include standarPageButonNotRound;

@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 10px;
+}
+
+a,
+a:visited,
+a:active,
+a:hover {
+  text-decoration: none;
+  cursor: default;
+}
+
+h1 {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.logo {
+  padding: 0.35rem 0rem;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.9rem;
+  line-height: 120%;
+  color: #FFFFFF;
+  text-align: center;
+  width: 8.2rem;
+  height: 5.2rem;
+  border: 0.1rem solid #FFFFFF;
+  border-radius: 0.2rem;
+  background-image: url(../../assets/icons/bamboo.svg);
+  background-repeat: no-repeat;
+  background-size: 15%;
+  background-position: 0.9rem 2.2rem;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 63px;
+}
+
+.nav__list_default {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 52.6rem;
+}
+
+.nav__list-item_default {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+
+.nav__list-item_default:hover {
+  cursor: pointer;
+  color: #F9804B;
+}
+
+.nav__list-item_selected {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #F9804B;
+  pointer-events: none;
+}
+
+.header {
+  background-color: #000000;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.4rem 0;
+  width: 116rem;
+}
+
+.footer {
+  background-color: #111115;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .logo_footer {
+  margin-top: 39px;
+}
+
+.footer .footerstdButton {
+  margin-top: 70px;
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 1160px;
+  height: 443px;
+}
+
+.footer__firstColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer__firstColumn-socials {
+  margin-top: 44px;
+}
+
+.footer__firstColumn-socials-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 26px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer__firstColumn-socials a:hover {
+  cursor: pointer;
+}
+
+.footer__social-img-fb {
+  background-image: url(../../assets/icons/Fill211.png);
+  background-repeat: no-repeat;
+  background: rgba(196, 196, 196, 0.5);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer__social-text {
+  margin-left: 12px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+
+.footer__secondColumn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-bottom: 50px;
+  width: 425px;
+  margin-left: 38px;
+}
+
+.footer__thirdColumn {
+  margin-left: 32px;
+  margin-top: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.subscribe {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.4rem;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+.designer-Alisa, .designer-Tony {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 1.6rem;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+
+.designer-Alisa {
+  margin-bottom: 11px;
+  margin-right: 6px;
+  margin-top: 217px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 367px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 14px;
+}
+
+.submitFormButton {
+  background: #F1F3F2;
+  border-radius: 5px;
+  width: 129px;
+  height: 42px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #000000;
+  border: none;
+  outline: none;
+}
+
+.submitFormButton:hover {
+  cursor: pointer;
+}
+
+.email:valid + .submitFormButton {
+  color: #000000;
+  border: 1px solid #333B41;
+}
+
+.email:invalid + .submitFormButton {
+  border: 1px solid #D31414;
+  color: #D31414;
+}
+
+.email {
+  width: 228px;
+  height: 42px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #BDBDBD;
+}
+
+.standarPageButon {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #FFFFFF;
+  width: 298px;
+  height: 54px;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  border-radius: 2.5rem;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  padding-left: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.standarPageButon:hover {
+  background: #4b9200;
+  cursor: pointer;
+}
+
+.standarPageButonNotRound {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #FFFFFF;
+  width: 298px;
+  height: 54px;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  padding-left: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.standarPageButonNotRound:hover {
+  background: #4b9200;
+  cursor: pointer;
+}
