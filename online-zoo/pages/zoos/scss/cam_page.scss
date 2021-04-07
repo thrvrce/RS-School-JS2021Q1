@@ -148,3 +148,123 @@
   bottom: 0px;
   right: 0px;
 }
+
+.animal-camera {
+  @include BlockWrapper($commonWhiteColor);
+  margin-bottom: 138px;
+
+  &__content {
+    width: 1324x;
+    @include displayFlex(flex-start, flex-start);
+    flex-direction: column;
+  }
+
+  &__title {
+    @include robotoNorma48120($blackBlue);
+    margin-top: 40px;
+    margin-left: 82px;
+  }
+
+  &__main-video {
+    width: 1162px;
+    height: 652px;
+    margin-top: 15px;
+    margin-left: 81px;
+
+    &-frame {
+      width: 1162px;
+      height: 652px;
+      margin-left: -1px;
+    }
+  }
+
+  &__video-selector {
+    @include displayFlex(center, center);
+    margin-top: 80px;
+
+    @include roundArrowButtonLeft;
+    .round-arrow-button_left {
+      margin-right: 21px;
+    }
+
+    @include roundArrowButtonRight;
+    .round-arrow-button_right {
+      margin-left: 21px;
+    }
+
+    &-videos {
+      @include displayFlex(space-between, center);
+      width: 1160px;
+    }
+
+    &-video {
+      position: relative;
+
+      &-plug {
+        position: absolute;
+        width: 268px;
+        height: 210px;
+        top: 0px;
+        background-color: grey;
+        opacity: 0.5;
+
+        // &::before {
+        &-live {
+          // content: "LIVE";
+          font-family: Roboto, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.6rem;
+          line-height: 140%;
+          color: #000000;
+          text-transform: uppercase;
+          display: block;
+          width: 55px;
+          height: 24px;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 5px;
+          position: relative;
+          top: 9px;
+          left: 9px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &-cam {
+          top: -14px;
+          left: 70px;
+          font-family: Roboto, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.6rem;
+          line-height: 140%;
+          color: #000000;
+          text-transform: uppercase;
+          display: block;
+          width: 138px;
+          height: 24px;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 5px;
+          position: relative;
+          top: -16px;
+          left: 123px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+      }
+
+      &-frame {
+        width: 268px;
+        height: 210px;
+      }
+    }
+  }
+}
