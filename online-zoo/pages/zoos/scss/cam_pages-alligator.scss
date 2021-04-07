@@ -1,0 +1,27 @@
+@import './cam_page.scss';
+
+.animal-info-shortinfo__img{
+  margin-top: -4px;
+}
+
+.animal-info-shortinfo{
+padding-bottom: 58px;
+}
+
+.animal-info-range {
+  margin-top: 24px;
+}
+
+.animal-info-general {
+  margin-top: 22px;
+}
+
+.animal-info-diet-more {
+  margin-bottom: 11px;
+}
+
+.donate {
+  background-image: url(../../assets/images/zoos-donate-bg-alligator.png);
+}
+
+// @include donate('-panda','../../assets/images/zoos-donate-bg-panda.png');
