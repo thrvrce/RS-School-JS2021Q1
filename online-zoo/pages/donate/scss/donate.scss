@@ -70,6 +70,9 @@
       margin-top: 41px;
       margin-top: 60px;
       padding: 40px 92px 62px 92px;
+      background: rgba(255, 255, 255, 0.52);
+      backdrop-filter: blur(4px);
+      border-radius: 20px;
 
       &-title {
         @include robotoNorma48120($orang);
