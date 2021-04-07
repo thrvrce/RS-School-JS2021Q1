@@ -1,11 +1,362 @@
-@import '../../../_scss/commonStyles';
-@import '../../../_scss/components';
-@import '../../../_scss/buttons';
-@import '../../../_scss/fonts';
-@import '../../../_scss/variables';
+@import "../../../_scss/commonStyles";
+@import "../../../_scss/components";
+@import "../../../_scss/buttons";
+@import "../../../_scss/fonts";
+@import "../../../_scss/variables";
 
 @include basicPageSettings;
 @include header;
 @include footer;
 @include standarPageButonRound;
 @include standarPageButonNotRound;
+
+@mixin donate($animal,$bgImgSrc) {
+  .donate#{$animal} {
+    @include BlockWrapper($black);
+    align-items: flex-end;
+    // background-image: url(../../assets/images/zoos-donate-bg-panda.png);
+    background-image: url($bgImgSrc);
+    background-repeat: no-repeat;
+    height: 390px;
+    padding-bottom: 60px;
+    background-size: cover;
+  }
+}
+
+@include donate('-panda','../../assets/images/zoos-donate-bg-panda.png');
+
+
+.animal-info {
+  @include BlockWrapper($commonWhiteColor);
+  position: relative;
+
+  &__content {
+    @include displayFlex(flex-start, flex-start);
+    flex-direction: column;
+    width: 1160px;
+    margin-bottom: 180px;
+  }
+
+  &__title {
+    @include robotoMedium48120($green);
+    margin-bottom: 25px;
+  }
+
+  &-shortinfo {
+    @include displayFlex(flex-start, flex-start);
+    border-bottom: 1px solid $gray;
+    padding-bottom: 20px;
+
+    &__description {
+      @include displayFlex(flex-start, flex-start);
+      flex-direction: column;
+      margin-left: 70px;
+
+      &-text {
+        @include robotoMedium26140($graySmoky);
+        margin-bottom: 41px;
+
+        &-green {
+          color: $green;
+        }
+      }
+
+      & .standarPageButon {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  &-topic-name {
+    @include robotoNormal24120($black);
+  }
+
+  &-text__link {
+    color: $green;
+
+    &:hover {
+      cursor: pointer;
+      color: $orang;
+    }
+  }
+
+  &-text__link-styled {
+    @include robotoNormal16140($green);
+    text-transform: uppercase;
+
+    &:hover {
+      cursor: pointer;
+      color: $orang;
+    }
+  }
+
+  &-diet,
+  &-range,
+  &-habitat,
+  &-text__blured-lvl1,
+  &-text__blured-lvl2,
+  &-paragraph {
+    @include robotoNormal16140($black);
+  }
+
+  &-paragraph {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  &-diet {
+    margin-top: 42px;
+  }
+
+  &-range {
+    margin-top: 21px;
+  }
+
+  &-habitat {
+    margin-top: 29px;
+  }
+
+  &-general {
+    margin-top: 33px;
+  }
+
+  &-features {
+    margin-top: 10px;
+  }
+
+  &-lifestyle,
+  &-habitat-more,
+  &-diet-more {
+    margin-top: 11px;
+  }
+
+  &-diet-more {
+    margin-top: 11px;
+    margin-bottom: 20px;
+  }
+}
+
+.sideStrelitzia-zoos {
+  background-image: url(../../assets/images/strelitziaZoos.png);
+  background-repeat: no-repeat;
+  width: 306px;
+  height: 229px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.sidePalm-zoos {
+  background-image: url(../../assets/images/leavFotoZoos.png);
+  background-repeat: no-repeat;
+  width: 215px;
+  height: 199px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.animal-camera {
+  @include BlockWrapper($commonWhiteColor);
+  margin-bottom: 138px;
+
+  &__content {
+    width: 1324x;
+    @include displayFlex(flex-start, flex-start);
+    flex-direction: column;
+  }
+
+  &__title {
+    @include robotoNorma48120($blackBlue);
+    margin-top: 40px;
+    margin-left: 82px;
+  }
+
+  &__main-video {
+    width: 1162px;
+    height: 652px;
+    margin-top: 15px;
+    margin-left: 81px;
+
+    &-frame {
+      width: 1162px;
+      height: 652px;
+      margin-left: -1px;
+    }
+  }
+
+  &__video-selector {
+    @include displayFlex(center, center);
+    margin-top: 80px;
+
+    @include roundArrowButtonLeft;
+    .round-arrow-button_left {
+      margin-right: 21px;
+    }
+
+    @include roundArrowButtonRight;
+    .round-arrow-button_right {
+      margin-left: 21px;
+    }
+
+    &-videos {
+      @include displayFlex(space-between, center);
+      width: 1160px;
+    }
+
+    &-video {
+      position: relative;
+
+      &-plug {
+        position: absolute;
+        width: 268px;
+        height: 210px;
+        top: 0px;
+        background-color: grey;
+        opacity: 0.5;
+
+        // &::before {
+        &-live {
+          // content: "LIVE";
+          font-family: Roboto, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.6rem;
+          line-height: 140%;
+          color: #000000;
+          text-transform: uppercase;
+          display: block;
+          width: 55px;
+          height: 24px;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 5px;
+          position: relative;
+          top: 9px;
+          left: 9px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &-cam {
+          top: -14px;
+          left: 70px;
+          font-family: Roboto, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.6rem;
+          line-height: 140%;
+          color: #000000;
+          text-transform: uppercase;
+          display: block;
+          width: 138px;
+          height: 24px;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 5px;
+          position: relative;
+          top: -16px;
+          left: 123px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+      }
+
+      &-frame {
+        width: 268px;
+        height: 210px;
+      }
+    }
+  }
+}
+
+.page-content-wrapper {
+}
+
+.sidebar {
+  position: absolute;
+  height: 3879px;
+
+  &__content {
+    position: sticky;
+    margin-top: 112px;
+    margin-left: 30px;
+    top: 30px;
+    width: 99px;
+    height: 652px;
+    right: 3436x;
+    z-index: 200;
+    background: linear-gradient(
+        315.75deg,
+        rgba(254, 210, 144, 0.7) 30.06%,
+        #febdab 100.95%,
+        rgba(254, 210, 144, 0.7) 106.36%
+      ),
+      linear-gradient(
+        315.75deg,
+        rgba(254, 189, 171, 0.74) 30.06%,
+        rgba(243, 169, 248, 0.66) 50.74%,
+        #e0d8f0 80.49%,
+        #eaf7fe 127.9%,
+        #eaf7fe 149.54%
+      ),
+      linear-gradient(
+        315.75deg,
+        rgba(254, 189, 171, 0.74) 30.06%,
+        rgba(243, 169, 248, 0.66) 50.74%,
+        #e0d8f0 80.49%,
+        #eaf7fe 127.9%,
+        #eaf7fe 149.54%
+      );
+    border-radius: 5px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @include displayFlex(space-between, center);
+    flex-direction: column;
+
+    &-icon-wrapper,
+    &-icon-wrapper-active {
+      @include displayFlex(center, center);
+      width: 80px;
+      height: 80px;
+      border: 1px solid $orang;
+      border-radius: 50%;
+      background-color: $commonWhiteColor;
+    }
+
+    &-icon-wrapper:hover {
+      cursor: pointer;
+      border-color: $green;
+    }
+
+    &-icon-wrapper-active,
+    &-icon-wrapper-active > &-icon {
+      // pointer-events: none;
+      fill: green;
+      border-color: $green;
+    }
+
+    &-icon {
+      fill: $black;
+    }
+
+    &-icon-wrapper:hover &-icon {
+      fill: green;
+    }
+
+    &-icon-stroke {
+      stroke: black;
+    }
+
+    &-icon-wrapper:hover &-icon-stroke {
+      stroke: green;
+    }
+  }
+}

@@ -105,7 +105,6 @@ li {
   font-size: 1.6rem;
   line-height: 140%;
   color: #F9804B;
-  pointer-events: none;
 }
 
 .header {
@@ -360,6 +359,15 @@ li {
 }
 
 .submitFormButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #F1F3F2;
   border-radius: 5px;
   width: 129px;
@@ -370,8 +378,9 @@ li {
   font-size: 1.6rem;
   line-height: 140%;
   color: #000000;
-  border: none;
+  border: 1px solid #333b41;
   outline: none;
+  z-index: 100;
 }
 
 .submitFormButton:hover {
