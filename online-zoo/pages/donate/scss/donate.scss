@@ -185,6 +185,11 @@
             background-image: url(../../assets//icons/roller_icon.svg);
           }
 
+          &-button:checked + &-label::after {
+            color: $anotherOrange;
+            background-image: url(../../assets//icons/dollar-anotherorange.svg);
+          }
+
           &-label {
             width: 10px;
             height: 10px;

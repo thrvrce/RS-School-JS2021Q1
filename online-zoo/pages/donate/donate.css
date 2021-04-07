@@ -739,6 +739,11 @@ li {
   background-image: url(../../assets//icons/roller_icon.svg);
 }
 
+.donate__content-donation-content-amount-radio-inputs-button:checked + .donate__content-donation-content-amount-radio-inputs-label::after {
+  color: #fe9013;
+  background-image: url(../../assets//icons/dollar-anotherorange.svg);
+}
+
 .donate__content-donation-content-amount-radio-inputs-label {
   width: 10px;
   height: 10px;
