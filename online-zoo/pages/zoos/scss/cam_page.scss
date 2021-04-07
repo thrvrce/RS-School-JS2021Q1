@@ -280,11 +280,12 @@
 }
 
 .page-content-wrapper {
+  position: relative;
 }
 
 .sidebar {
   position: absolute;
-  height: 3879px;
+  height: 100%;
 
   &__content {
     position: sticky;
