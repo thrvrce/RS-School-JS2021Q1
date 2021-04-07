@@ -10,14 +10,21 @@
 @include standarPageButonRound;
 @include standarPageButonNotRound;
 
-.donate {
-  @include BlockWrapper($black);
-  align-items: flex-end;
-  background-image: url(../../assets/images/zoos-donate-bg-panda.png);
-  background-repeat: no-repeat;
-  height: 390px;
-  padding-bottom: 60px;
+@mixin donate($animal,$bgImgSrc) {
+  .donate#{$animal} {
+    @include BlockWrapper($black);
+    align-items: flex-end;
+    // background-image: url(../../assets/images/zoos-donate-bg-panda.png);
+    background-image: url($bgImgSrc);
+    background-repeat: no-repeat;
+    height: 390px;
+    padding-bottom: 60px;
+    background-size: cover;
+  }
 }
+
+@include donate('-panda','../../assets/images/zoos-donate-bg-panda.png');
+
 
 .animal-info {
   @include BlockWrapper($commonWhiteColor);
@@ -265,6 +272,91 @@
         width: 268px;
         height: 210px;
       }
+    }
+  }
+}
+
+.page-content-wrapper {
+}
+
+.sidebar {
+  position: absolute;
+  height: 3879px;
+
+  &__content {
+    position: sticky;
+    margin-top: 112px;
+    margin-left: 30px;
+    top: 30px;
+    width: 99px;
+    height: 652px;
+    right: 3436x;
+    z-index: 200;
+    background: linear-gradient(
+        315.75deg,
+        rgba(254, 210, 144, 0.7) 30.06%,
+        #febdab 100.95%,
+        rgba(254, 210, 144, 0.7) 106.36%
+      ),
+      linear-gradient(
+        315.75deg,
+        rgba(254, 189, 171, 0.74) 30.06%,
+        rgba(243, 169, 248, 0.66) 50.74%,
+        #e0d8f0 80.49%,
+        #eaf7fe 127.9%,
+        #eaf7fe 149.54%
+      ),
+      linear-gradient(
+        315.75deg,
+        rgba(254, 189, 171, 0.74) 30.06%,
+        rgba(243, 169, 248, 0.66) 50.74%,
+        #e0d8f0 80.49%,
+        #eaf7fe 127.9%,
+        #eaf7fe 149.54%
+      );
+    border-radius: 5px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @include displayFlex(space-between, center);
+    flex-direction: column;
+
+    &-icon-wrapper,
+    &-icon-wrapper-active {
+      @include displayFlex(center, center);
+      width: 80px;
+      height: 80px;
+      border: 1px solid $orang;
+      border-radius: 50%;
+      background-color: $commonWhiteColor;
+    }
+
+    &-icon-wrapper:hover {
+      cursor: pointer;
+      border-color: $green;
+    }
+
+    &-icon-wrapper-active,
+    &-icon-wrapper-active > &-icon {
+      // pointer-events: none;
+      fill: green;
+      border-color: $green;
+    }
+
+    &-icon {
+      fill: $black;
+    }
+
+    &-icon-wrapper:hover &-icon {
+      fill: green;
+    }
+
+    &-icon-stroke {
+      stroke: black;
+    }
+
+    &-icon-wrapper:hover &-icon-stroke {
+      stroke: green;
     }
   }
 }

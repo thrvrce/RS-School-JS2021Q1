@@ -63,7 +63,7 @@
 
     &__list-item_selected {
       @include robotoMedium16140($orang);
-      pointer-events: none;
+      // pointer-events: none;
     }
   }
 }
