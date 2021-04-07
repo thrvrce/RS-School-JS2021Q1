@@ -408,7 +408,7 @@ li {
   cursor: pointer;
 }
 
-.donate-panda {
+.donate {
   background-color: #000000;
   width: 100%;
   display: -webkit-box;
@@ -420,7 +420,7 @@ li {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  background-image: url("../../assets/images/zoos-donate-bg-panda.png");
+  background-image: url(../../assets/images/zoos-donate-bg-panda.png);
   background-repeat: no-repeat;
   height: 390px;
   padding-bottom: 60px;

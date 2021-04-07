@@ -10,20 +10,21 @@
 @include standarPageButonRound;
 @include standarPageButonNotRound;
 
-@mixin donate($animal,$bgImgSrc) {
-  .donate#{$animal} {
+// @mixin donate($animal,$bgImgSrc) {
+  // .donate#{$animal} {
+    .donate {
     @include BlockWrapper($black);
     align-items: flex-end;
-    // background-image: url(../../assets/images/zoos-donate-bg-panda.png);
-    background-image: url($bgImgSrc);
+    background-image: url(../../assets/images/zoos-donate-bg-panda.png);
+    // background-image: url($bgImgSrc);
     background-repeat: no-repeat;
     height: 390px;
     padding-bottom: 60px;
     background-size: cover;
   }
-}
+// }
 
-@include donate('-panda','../../assets/images/zoos-donate-bg-panda.png');
+// @include donate('-panda','../../assets/images/zoos-donate-bg-panda.png');
 
 
 .animal-info {
