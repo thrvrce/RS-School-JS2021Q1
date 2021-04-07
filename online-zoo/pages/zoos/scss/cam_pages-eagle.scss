@@ -1,0 +1,30 @@
+@import './cam_page.scss';
+
+.animal-info-shortinfo__img{
+  margin-top: -4px;
+}
+
+.animal-info-shortinfo{
+padding-bottom: 23px;
+}
+
+.animal-info-range {
+  margin-top: 24px;
+}
+
+.animal-info-general {
+  margin-top: 26px;
+}
+
+.animal-info-diet-more {
+  margin-bottom: 11px;
+}
+
+.donate {
+  background-image: url(../../assets/images/zoos-donate-bg-eagle.png);
+}
+
+.sidebar {
+  height: 3714px;
+}
+// @include donate('-panda','../../assets/images/zoos-donate-bg-panda.png');
