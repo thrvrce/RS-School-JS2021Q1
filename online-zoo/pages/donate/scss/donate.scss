@@ -60,7 +60,7 @@
     }
 
     &-donation-information-title {
-      @include robotoNormal36130($orang);
+      @include robotoNormal36130($anotherOrange);
       margin-top: 47px;
     }
 
@@ -75,7 +75,7 @@
       border-radius: 20px;
 
       &-title {
-        @include robotoNorma48120($orang);
+        @include robotoNorma48120($anotherOrange);
         margin-bottom: 22px;
         margin-left: 250px;
       }
