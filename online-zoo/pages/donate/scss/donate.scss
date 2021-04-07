@@ -1,0 +1,291 @@
+@import "../../../_scss/commonStyles";
+@import "../../../_scss/components";
+@import "../../../_scss/buttons";
+@import "../../../_scss/fonts";
+@import "../../../_scss/variables";
+
+@include basicPageSettings;
+@include header;
+@include footer;
+@include standarPageButonRound;
+@include standarPageButonNotRound;
+
+.pandaWrapper {
+  background-image: url(../../assets/images/GiantPanda.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 386px;
+}
+
+.donate {
+  @include BlockWrapper($orang);
+  background: linear-gradient(
+      315.75deg,
+      rgba(254, 210, 144, 0.7) 30.06%,
+      #febdab 100.95%,
+      rgba(254, 210, 144, 0.7) 106.36%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
+
+  &__content {
+    @include displayFlex(flex-start, flex-start);
+    flex-direction: column;
+    width: 1160px;
+    margin-bottom: 180px;
+
+    &-help-title {
+      @include robotoNormal36130($commonWhiteColor);
+      margin-top: 41px;
+    }
+
+    &-help-text {
+      @include robotoMedium16140($commonWhiteColor);
+      margin-top: 10px;
+    }
+
+    &-donation-information-title {
+      @include robotoNormal36130($orang);
+      margin-top: 47px;
+    }
+
+    &-donation-content {
+      @include displayFlex(flex-start, flex-start);
+      flex-direction: column;
+      margin-top: 41px;
+      margin-top: 60px;
+      padding: 40px 92px 62px 92px;
+
+      &-title {
+        @include robotoNorma48120($orang);
+        margin-bottom: 22px;
+        margin-left: 250px;
+      }
+
+      &-text {
+        @include robotoNormal24120($blackBlue);
+      }
+
+      &-diet {
+        @include displayFlex(flex-start, flex-end);
+        margin-top: 61px;
+        margin-left: 216px;
+
+        &-amount {
+          @include displayFlex(flex-end, center);
+          flex-direction: column;
+          margin-right: 2.3%;
+          margin-bottom: 11.5%;
+
+          &-number {
+            @include robotoMedium7280($black);
+            margin-bottom: 11px;
+          }
+
+          &-text {
+            @include robotoNormal16140($blackBlue);
+            width: 159px;
+          }
+        }
+
+        &-cross-icon {
+          margin-bottom: 22.4%;
+          margin-right: 14%;
+        }
+
+        &-animal-icon {
+        }
+      }
+
+      &-another-amount-form {
+        // margin-top: 108px;
+      }
+
+      &-another-amount-input {
+        margin-top: 108px;
+        width: 268px;
+        height: 54px;
+        border: 1px solid #929699;
+        outline: none;
+        background-color: transparent;
+        background-image: url(../../assets//icons/dollar-grey.svg);
+        background-repeat: no-repeat;
+        background-position: 247px;
+        padding-left: 8px;
+        @include robotoNormal16140(#929699);
+
+        &::placeholder {
+          @include robotoNormal16140(#929699);
+          margin-left: 9px;
+        }
+
+        /* Chrome, Safari, Edge, Opera */
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        /* Firefox */
+        &[type="number"] {
+          -moz-appearance: textfield;
+        }
+      }
+
+      &-amount-radio {
+        margin-top: 45px;
+
+        &-title {
+          @include robotoNormal16140($black);
+          margin-left: 4px;
+          margin-bottom: 17px;
+        }
+
+        &-inputs {
+          width: 976px;
+          height: 27px;
+          background: #404950;
+          border-radius: 2px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0px 30px 2px 26px;
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 915px;
+            border: 1px solid #72828e;
+          }
+
+          &-button {
+            display: none;
+          }
+
+          &-button:checked + &-label::before {
+            background-image: url(../../assets//icons/roller_icon.svg);
+          }
+
+          &-label {
+            width: 10px;
+            height: 10px;
+            background: $yellow;
+            position: relative;
+            border-radius: 50%;
+
+            &::before {
+              content: "";
+              display: block;
+              width: 40px;
+              height: 40px;
+              background-repeat: no-repeat;
+              position: absolute;
+              bottom: -15px;
+              right: -15px;
+            }
+
+            &:hover::before {
+              cursor: pointer;
+            }
+
+            &::after {
+              pointer-events: none;
+              content: attr(data-ammount);
+              font-family: Roboto, sans-serif;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 2.6rem;
+              line-height: 140%;
+              color: #333b41;
+              display: block;
+              height: 40px;
+              background-image: url(../../assets//icons/dollar.svg);
+              background-repeat: no-repeat;
+              position: absolute;
+              background-position: 0% 9px;
+              text-align: right;
+              padding-left: 13px;
+              top: 31px;
+              left: -26px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.orange-checkbox {
+  width: 16px;
+  height: 16px;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    margin-left: 382px;
+    margin-top: 8px;
+  }
+
+  &-input {
+    display: none;
+  }
+
+  &-input:checked + &-label {
+    background: $green;
+    border-color: $green;
+  }
+
+  &-label {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #fe9013;
+    box-sizing: $anotherOrange;
+    background-color: transparent;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::after {
+      content: attr(data-name);
+      @include robotoNormal16140($blackBlue);
+      position: absolute;
+      position: absolute;
+      left: 25px;
+      top: -4px;
+    }
+  }
+}
+
+@include standarPageButonRound;
+.standarPageButon {
+  margin-top: 43px;
+  margin-left: 342px;
+}
+
+.share-title {
+  @include robotoNormal16140($blackBlue);
+  margin-top: 30px;
+  margin-left: 340px;
+}
