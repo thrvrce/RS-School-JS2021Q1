@@ -58,6 +58,10 @@
   @include useRobotoFont(normal, 500, 4.8rem, 120%, $color);
 }
 
+@mixin robotoMedium7280($color) {
+  @include useRobotoFont(normal, 500, 7.2rem, 80%, $color);
+}
+
 
 
 @mixin logoText {
