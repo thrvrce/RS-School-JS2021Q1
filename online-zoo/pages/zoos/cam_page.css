@@ -290,6 +290,15 @@ li {
 }
 
 .submitFormButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #F1F3F2;
   border-radius: 5px;
   width: 129px;
@@ -300,8 +309,9 @@ li {
   font-size: 1.6rem;
   line-height: 140%;
   color: #000000;
-  border: none;
+  border: 1px solid #333b41;
   outline: none;
+  z-index: 100;
 }
 
 .submitFormButton:hover {
@@ -415,4 +425,189 @@ li {
   background-repeat: no-repeat;
   height: 390px;
   padding-bottom: 60px;
+}
+
+.animal-info {
+  background-color: #FFFFFF;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.animal-info__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1160px;
+  margin-bottom: 180px;
+}
+
+.animal-info__title {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4.8rem;
+  line-height: 120%;
+  color: #4b9200;
+  margin-bottom: 25px;
+}
+
+.animal-info-shortinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-bottom: 1px solid #767474;
+  padding-bottom: 20px;
+}
+
+.animal-info-shortinfo__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 70px;
+}
+
+.animal-info-shortinfo__description-text {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.6rem;
+  line-height: 140%;
+  color: #ababab;
+  margin-bottom: 41px;
+}
+
+.animal-info-shortinfo__description-text-green {
+  color: #4b9200;
+}
+
+.animal-info-shortinfo__description .standarPageButon {
+  margin-left: 4px;
+}
+
+.animal-info-topic-name {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.4rem;
+  line-height: 120%;
+  color: #000000;
+}
+
+.animal-info-text__link {
+  color: #4b9200;
+}
+
+.animal-info-text__link:hover {
+  cursor: pointer;
+  color: #F9804B;
+}
+
+.animal-info-text__link-styled {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #4b9200;
+  text-transform: uppercase;
+}
+
+.animal-info-text__link-styled:hover {
+  cursor: pointer;
+  color: #F9804B;
+}
+
+.animal-info-diet, .animal-info-range, .animal-info-habitat, .animal-info-text__blured-lvl1, .animal-info-text__blured-lvl2, .animal-info-paragraph {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #000000;
+}
+
+.animal-info-paragraph {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.animal-info-diet {
+  margin-top: 42px;
+}
+
+.animal-info-range {
+  margin-top: 21px;
+}
+
+.animal-info-habitat {
+  margin-top: 29px;
+}
+
+.animal-info-general {
+  margin-top: 33px;
+}
+
+.animal-info-features {
+  margin-top: 10px;
+}
+
+.animal-info-lifestyle, .animal-info-habitat-more, .animal-info-diet-more {
+  margin-top: 11px;
+}
+
+.animal-info-diet-more {
+  margin-top: 11px;
+  margin-bottom: 20px;
+}
+
+.sideStrelitzia-zoos {
+  background-image: url(../../assets/images/strelitziaZoos.png);
+  background-repeat: no-repeat;
+  width: 306px;
+  height: 229px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.sidePalm-zoos {
+  background-image: url(../../assets/images/leavFotoZoos.png);
+  background-repeat: no-repeat;
+  width: 215px;
+  height: 199px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }

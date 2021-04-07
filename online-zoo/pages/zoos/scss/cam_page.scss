@@ -1,8 +1,8 @@
-@import '../../../_scss/commonStyles';
-@import '../../../_scss/components';
-@import '../../../_scss/buttons';
-@import '../../../_scss/fonts';
-@import '../../../_scss/variables';
+@import "../../../_scss/commonStyles";
+@import "../../../_scss/components";
+@import "../../../_scss/buttons";
+@import "../../../_scss/fonts";
+@import "../../../_scss/variables";
 
 @include basicPageSettings;
 @include header;
@@ -10,13 +10,141 @@
 @include standarPageButonRound;
 @include standarPageButonNotRound;
 
-.donate{
+.donate {
   @include BlockWrapper($black);
   align-items: flex-end;
   background-image: url(../../assets/images/zoos-donate-bg-panda.png);
   background-repeat: no-repeat;
   height: 390px;
   padding-bottom: 60px;
+}
 
+.animal-info {
+  @include BlockWrapper($commonWhiteColor);
+  position: relative;
 
+  &__content {
+    @include displayFlex(flex-start, flex-start);
+    flex-direction: column;
+    width: 1160px;
+    margin-bottom: 180px;
+  }
+
+  &__title {
+    @include robotoMedium48120($green);
+    margin-bottom: 25px;
+  }
+
+  &-shortinfo {
+    @include displayFlex(flex-start, flex-start);
+    border-bottom: 1px solid $gray;
+    padding-bottom: 20px;
+
+    &__description {
+      @include displayFlex(flex-start, flex-start);
+      flex-direction: column;
+      margin-left: 70px;
+
+      &-text {
+        @include robotoMedium26140($graySmoky);
+        margin-bottom: 41px;
+
+        &-green {
+          color: $green;
+        }
+      }
+
+      & .standarPageButon {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  &-topic-name {
+    @include robotoNormal24120($black);
+  }
+
+  &-text__link {
+    color: $green;
+
+    &:hover {
+      cursor: pointer;
+      color: $orang;
+    }
+  }
+
+  &-text__link-styled {
+    @include robotoNormal16140($green);
+    text-transform: uppercase;
+
+    &:hover {
+      cursor: pointer;
+      color: $orang;
+    }
+  }
+
+  &-diet,
+  &-range,
+  &-habitat,
+  &-text__blured-lvl1,
+  &-text__blured-lvl2,
+  &-paragraph {
+    @include robotoNormal16140($black);
+  }
+
+  &-paragraph {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  &-diet {
+    margin-top: 42px;
+  }
+
+  &-range {
+    margin-top: 21px;
+  }
+
+  &-habitat {
+    margin-top: 29px;
+  }
+
+  &-general {
+    margin-top: 33px;
+  }
+
+  &-features {
+    margin-top: 10px;
+  }
+
+  &-lifestyle,
+  &-habitat-more,
+  &-diet-more {
+    margin-top: 11px;
+  }
+
+  &-diet-more {
+    margin-top: 11px;
+    margin-bottom: 20px;
+  }
+}
+
+.sideStrelitzia-zoos {
+  background-image: url(../../assets/images/strelitziaZoos.png);
+  background-repeat: no-repeat;
+  width: 306px;
+  height: 229px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.sidePalm-zoos {
+  background-image: url(../../assets/images/leavFotoZoos.png);
+  background-repeat: no-repeat;
+  width: 215px;
+  height: 199px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }

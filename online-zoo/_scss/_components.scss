@@ -173,13 +173,15 @@
   }
 
   .submitFormButton{
+    @include displayFlex(center, center);
     background: #F1F3F2;
     border-radius: 5px;
     width: 129px;
     height: 42px;
     @include robotoNormal16140(#000000);
-    border: none;
+    border: 1px solid $blackBlue;
     outline: none;
+    z-index: 100;
     &:hover{
       cursor: pointer;
     }

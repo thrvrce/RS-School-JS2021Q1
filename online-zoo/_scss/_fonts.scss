@@ -42,12 +42,20 @@
   @include useRobotoFont(normal, normal, 2.4rem, 120%, $color);
 }
 
+@mixin robotoMedium26140($color) {
+  @include useRobotoFont(normal, 500, 2.6rem, 140%, $color);
+}
+
 @mixin robotoNormal36130($color) {
   @include useRobotoFont(normal, normal, 3.6rem, 130%, $color);
 }
 
 @mixin robotoNorma48120($color) {
   @include useRobotoFont(normal, normal, 4.8rem, 120%, $color);
+}
+
+@mixin robotoMedium48120($color) {
+  @include useRobotoFont(normal, 500, 4.8rem, 120%, $color);
 }
 
 
