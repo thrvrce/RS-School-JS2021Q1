@@ -51,10 +51,12 @@
       @include displayFlex(flex-start, flex-start);
       flex-direction: column;
       margin-left: 70px;
+      height: 383px;
+      justify-content: space-between;
 
       &-text {
         @include robotoMedium26140($graySmoky);
-        margin-bottom: 41px;
+        // margin-bottom: 41px;
 
         &-green {
           color: $green;
