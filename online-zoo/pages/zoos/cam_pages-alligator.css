@@ -336,6 +336,51 @@ li {
   font-size: 1.6rem;
   line-height: 140%;
   color: #BDBDBD;
+  background-color: transparent;
+  outline: none;
+  border-radius: 2px;
+  border: 1px solid #F9804B;
+  padding-left: 8px;
+}
+
+.email::-webkit-input-placeholder {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #BDBDBD;
+  margin-left: 9px;
+}
+
+.email:-ms-input-placeholder {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #BDBDBD;
+  margin-left: 9px;
+}
+
+.email::-ms-input-placeholder {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #BDBDBD;
+  margin-left: 9px;
+}
+
+.email::placeholder {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #BDBDBD;
+  margin-left: 9px;
 }
 
 .standarPageButon {
@@ -818,9 +863,13 @@ li {
   height: 210px;
 }
 
+.page-content-wrapper {
+  position: relative;
+}
+
 .sidebar {
   position: absolute;
-  height: 3879px;
+  height: 100%;
 }
 
 .sidebar__content {
