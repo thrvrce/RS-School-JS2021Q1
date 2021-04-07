@@ -203,5 +203,17 @@
     width: 228px;
     height: 42px;
     @include robotoNormal16140(#BDBDBD);
+    background-color: transparent;
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid $orang;
+    padding-left: 8px;
+
+
+
+    &::placeholder {
+      @include robotoNormal16140(#BDBDBD);
+      margin-left: 9px;
+    }
   }
 }
