@@ -1,0 +1,43 @@
+@import "./cam_page.scss";
+
+.animal-info-shortinfo__img {
+  margin-top: -4px;
+}
+
+.animal-info-shortinfo {
+  padding-bottom: 23px;
+}
+
+.animal-info-range {
+  margin-top: 24px;
+}
+
+.animal-info-general {
+  margin-top: 26px;
+}
+
+.animal-info-lifestyle,
+.animal-info-habitat-more,
+.animal-info-diet-more {
+  margin-top: 13px;
+}
+
+.animal-camera__title {
+  font-size: 36px;
+  line-height: 130%;
+  margin-top: 41px;
+    margin-left: 82px;
+    margin-bottom: 10px;
+}
+
+.animal-info-diet-more {
+  margin-bottom: 7px;
+}
+
+.donate {
+  background-image: url(../../assets/images/zoos-donate-bg-gorilla.png);
+}
+
+// .sidebar {
+//   height: 3714px;
+// }
