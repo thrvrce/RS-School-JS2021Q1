@@ -977,6 +977,14 @@ li {
   height: 386px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .pandaWrapper {
+    height: 390px;
+    background-size: 160%;
+    background-position: -173px -194px;
+  }
+}
+
 .donate {
   background-color: #F9804B;
   width: 100%;
@@ -1007,6 +1015,13 @@ li {
   margin-bottom: 180px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .donate__content {
+    width: 940px;
+    margin-bottom: 30px;
+  }
+}
+
 .donate__content-help-title {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1015,6 +1030,12 @@ li {
   line-height: 130%;
   color: #FFFFFF;
   margin-top: 41px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .donate__content-help-title {
+    width: 778px;
+  }
 }
 
 .donate__content-help-text {
@@ -1027,6 +1048,12 @@ li {
   margin-top: 10px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .donate__content-help-text {
+    margin-top: 31px;
+  }
+}
+
 .donate__content-donation-information-title {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1035,6 +1062,12 @@ li {
   line-height: 130%;
   color: #fe9013;
   margin-top: 47px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .donate__content-donation-information-title {
+    margin-bottom: 40px;
+  }
 }
 
 .donate__content-donation-content {
@@ -1060,6 +1093,14 @@ li {
   border-radius: 20px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .donate__content-donation-content {
+    margin: 0;
+    padding: 0;
+    width: 940px;
+  }
+}
+
 .donate__content-donation-content-title {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1071,6 +1112,14 @@ li {
   margin-left: 250px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .donate__content-donation-content-title {
+    margin-top: 20px;
+    margin-left: 231px;
+    margin-bottom: 12px;
+  }
+}
+
 .donate__content-donation-content-text {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1078,6 +1127,12 @@ li {
   font-size: 2.4rem;
   line-height: 120%;
   color: #333b41;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .donate__content-donation-content-text {
+    margin-left: 47px;
+  }
 }
 
 .donate__content-donation-content-diet {
@@ -1092,6 +1147,12 @@ li {
           align-items: flex-end;
   margin-top: 61px;
   margin-left: 216px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .donate__content-donation-content-diet {
+    margin-left: 196px;
+  }
 }
 
 .donate__content-donation-content-diet-amount {
@@ -1222,6 +1283,12 @@ li {
   margin-bottom: 17px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .donate__content-donation-content-amount-radio-title {
+    margin-left: 65px;
+  }
+}
+
 .donate__content-donation-content-amount-radio-inputs {
   width: 976px;
   height: 27px;
@@ -1239,12 +1306,26 @@ li {
   padding: 0px 30px 2px 26px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .donate__content-donation-content-amount-radio-inputs {
+    width: 810px;
+    margin-left: 65px;
+    padding: 0px 9px 2px 11px;
+  }
+}
+
 .donate__content-donation-content-amount-radio-inputs::before {
   content: "";
   display: block;
   position: absolute;
   width: 915px;
   border: 1px solid #72828e;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .donate__content-donation-content-amount-radio-inputs::before {
+    width: 785px;
+  }
 }
 
 .donate__content-donation-content-amount-radio-inputs-button {
@@ -1304,6 +1385,12 @@ li {
   left: -26px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .donate__content-donation-content-amount-radio-inputs-label::after {
+    left: -11px;
+  }
+}
+
 .orange-checkbox {
   width: 16px;
   height: 16px;
@@ -1322,6 +1409,12 @@ li {
   width: 150px;
   margin-left: 382px;
   margin-top: 8px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .orange-checkbox-container {
+    margin-left: 363px;
+  }
 }
 
 .orange-checkbox-input {
@@ -1403,6 +1496,12 @@ li {
   margin-left: 342px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .standarPageButon {
+    margin-left: 323px;
+  }
+}
+
 .share-title {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1412,4 +1511,11 @@ li {
   color: #333b41;
   margin-top: 30px;
   margin-left: 340px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .share-title {
+    margin-left: 321px;
+    margin-bottom: 46px;
+  }
 }
