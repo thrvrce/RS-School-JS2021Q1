@@ -985,6 +985,14 @@ li {
   }
 }
 
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .pandaWrapper {
+    height: 369px;
+    background-size: 213%;
+    background-position: -267px -130px;
+  }
+}
+
 .donate {
   background-color: #F9804B;
   width: 100%;
@@ -1022,6 +1030,13 @@ li {
   }
 }
 
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content {
+    width: 600px;
+    margin-bottom: 46px;
+  }
+}
+
 .donate__content-help-title {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1035,6 +1050,14 @@ li {
 @media screen and (min-width: 1000px) and (max-width: 1599px) {
   .donate__content-help-title {
     width: 778px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content-help-title {
+    font-size: 24px;
+    line-height: 120%;
+    margin-top: 32px;
   }
 }
 
@@ -1054,6 +1077,12 @@ li {
   }
 }
 
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content-help-text {
+    margin-top: 20px;
+  }
+}
+
 .donate__content-donation-information-title {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1067,6 +1096,12 @@ li {
 @media screen and (min-width: 1000px) and (max-width: 1599px) {
   .donate__content-donation-information-title {
     margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content-donation-information-title {
+    margin-top: 31px;
   }
 }
 
@@ -1101,6 +1136,14 @@ li {
   }
 }
 
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content-donation-content {
+    padding: 0;
+    width: 600px;
+    margin-top: 30px;
+  }
+}
+
 .donate__content-donation-content-title {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1120,6 +1163,14 @@ li {
   }
 }
 
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content-donation-content-title {
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-bottom: 22px;
+  }
+}
+
 .donate__content-donation-content-text {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1132,6 +1183,12 @@ li {
 @media screen and (min-width: 1000px) and (max-width: 1599px) {
   .donate__content-donation-content-text {
     margin-left: 47px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content-donation-content-text {
+    width: 600px;
   }
 }
 
@@ -1152,6 +1209,13 @@ li {
 @media screen and (min-width: 1000px) and (max-width: 1599px) {
   .donate__content-donation-content-diet {
     margin-left: 196px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content-donation-content-diet {
+    margin-top: 52px;
+    margin-left: 29px;
   }
 }
 
@@ -1198,6 +1262,18 @@ li {
   margin-right: 14%;
 }
 
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content-donation-content-another-amount-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .donate__content-donation-content-another-amount-input {
   margin-top: 108px;
   width: 268px;
@@ -1217,6 +1293,19 @@ li {
   color: #929699;
   /* Chrome, Safari, Edge, Opera */
   /* Firefox */
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content-donation-content-another-amount-input {
+    margin-top: 88px;
+    margin-left: 10px;
+    width: 180px;
+    height: 42px;
+    background-position: 159px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .donate__content-donation-content-another-amount-input::-webkit-input-placeholder {
@@ -1272,6 +1361,15 @@ li {
   margin-top: 45px;
 }
 
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content-donation-content-amount-radio {
+    margin-top: 39px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 .donate__content-donation-content-amount-radio-title {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1286,6 +1384,13 @@ li {
 @media screen and (min-width: 1000px) and (max-width: 1599px) {
   .donate__content-donation-content-amount-radio-title {
     margin-left: 65px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content-donation-content-amount-radio-title {
+    margin-left: 11px;
+    margin-bottom: 6px;
   }
 }
 
@@ -1314,6 +1419,13 @@ li {
   }
 }
 
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content-donation-content-amount-radio-inputs {
+    width: 600px;
+    padding: 0px 35px 2px 35px;
+  }
+}
+
 .donate__content-donation-content-amount-radio-inputs::before {
   content: "";
   display: block;
@@ -1325,6 +1437,18 @@ li {
 @media screen and (min-width: 1000px) and (max-width: 1599px) {
   .donate__content-donation-content-amount-radio-inputs::before {
     width: 785px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content-donation-content-amount-radio-inputs::before {
+    width: 525px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .donate__content-donation-content-amount-radio-inputs::before {
+    width: 262px;
   }
 }
 
@@ -1391,6 +1515,12 @@ li {
   }
 }
 
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate__content-donation-content-amount-radio-inputs-label::after {
+    left: -18px;
+  }
+}
+
 .orange-checkbox {
   width: 16px;
   height: 16px;
@@ -1414,6 +1544,16 @@ li {
 @media screen and (min-width: 1000px) and (max-width: 1599px) {
   .orange-checkbox-container {
     margin-left: 363px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .orange-checkbox-container {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-top: 43px;
+    margin-left: 192px;
   }
 }
 
@@ -1502,6 +1642,17 @@ li {
   }
 }
 
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .standarPageButon {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    margin: 0;
+    margin-top: 33px;
+    margin-left: 152px;
+  }
+}
+
 .share-title {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1517,5 +1668,12 @@ li {
   .share-title {
     margin-left: 321px;
     margin-bottom: 46px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .share-title {
+    margin-left: 150px;
+    margin-bottom: 31px;
   }
 }

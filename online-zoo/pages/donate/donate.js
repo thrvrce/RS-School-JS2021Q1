@@ -25,8 +25,8 @@ const handleResize = () => {
 
 
   input5000.style.display = windowWidth >= 1600 ? 'block' : 'none';
-  input2000.style.display = windowWidth >= 640 ? 'block' : 'none';
-  input1000.style.display = windowWidth >= 640 ? 'block' : 'none';
+  input2000.style.display = windowWidth >= 1000 ? 'block' : 'none';
+  input1000.style.display = windowWidth >= 1000 ? 'block' : 'none';
 
 
 }
