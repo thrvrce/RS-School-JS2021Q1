@@ -12,7 +12,6 @@
 
 body {
   width: 100%;
-  height: 100vh;
   margin: 0 auto;
 }
 
@@ -85,33 +84,9 @@ li {
   width: 52.6rem;
 }
 
-@media screen and (min-width: 1600px) {
-  .nav__list_default {
-    width: 526px;
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
 @media screen and (min-width: 1000px) and (max-width: 1599px) {
   .nav__list_default {
     width: 485px;
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 640) and (max-width: 999px) {
-  .nav__list_default {
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 639px) {
-  .nav__list_default {
-    -webkit-transition: width 1s;
-    transition: width 1s;
   }
 }
 
@@ -165,33 +140,9 @@ li {
   width: 116rem;
 }
 
-@media screen and (min-width: 1600px) {
+@media (min-width: 1000px) {
   .header__wrapper {
-    width: 1160px;
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1599px) {
-  .header__wrapper {
-    width: 940px;
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 640) and (max-width: 999px) {
-  .header__wrapper {
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 639px) {
-  .header__wrapper {
-    -webkit-transition: width 1s;
-    transition: width 1s;
+    width: 1000px;
   }
 }
 
@@ -294,37 +245,8 @@ li {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  width: 1160px;
   height: 443px;
-}
-
-@media screen and (min-width: 1600px) {
-  .footer__content {
-    width: 1160px;
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1599px) {
-  .footer__content {
-    width: 940px;
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 640) and (max-width: 999px) {
-  .footer__content {
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 639px) {
-  .footer__content {
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
 }
 
 .footer__firstColumn {
@@ -391,38 +313,8 @@ li {
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding-bottom: 50px;
-}
-
-@media screen and (min-width: 1600px) {
-  .footer__secondColumn {
-    width: 425px;
-    margin-left: 38px;
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1599px) {
-  .footer__secondColumn {
-    width: 395px;
-    margin-left: -57px;
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 640) and (max-width: 999px) {
-  .footer__secondColumn {
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 639px) {
-  .footer__secondColumn {
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
+  width: 425px;
+  margin-left: 38px;
 }
 
 .footer__thirdColumn {
@@ -440,36 +332,6 @@ li {
           align-items: flex-end;
 }
 
-@media screen and (min-width: 1600px) {
-  .footer__thirdColumn {
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1599px) {
-  .footer__thirdColumn {
-    position: relative;
-    left: -127px;
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 640) and (max-width: 999px) {
-  .footer__thirdColumn {
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 639px) {
-  .footer__thirdColumn {
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
 .subscribe {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
@@ -482,48 +344,13 @@ li {
   color: #FFFFFF;
 }
 
-.designer-Alisa,
-.designer-Tony {
+.designer-Alisa, .designer-Tony {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 200;
   font-size: 1.6rem;
   line-height: 130%;
   color: #FFFFFF;
-}
-
-@media screen and (min-width: 1600px) {
-  .designer-Alisa,
-  .designer-Tony {
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1599px) {
-  .designer-Alisa,
-  .designer-Tony {
-    position: relative;
-    left: 32px;
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 640) and (max-width: 999px) {
-  .designer-Alisa,
-  .designer-Tony {
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 639px) {
-  .designer-Alisa,
-  .designer-Tony {
-    -webkit-transition: width 1s;
-    transition: width 1s;
-  }
 }
 
 .designer-Alisa {
@@ -553,7 +380,7 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #f1f3f2;
+  background: #F1F3F2;
   border-radius: 5px;
   width: 129px;
   height: 42px;
@@ -574,12 +401,12 @@ li {
 
 .email:valid + .submitFormButton {
   color: #000000;
-  border: 1px solid #333b41;
+  border: 1px solid #333B41;
 }
 
 .email:invalid + .submitFormButton {
-  border: 1px solid #d31414;
-  color: #d31414;
+  border: 1px solid #D31414;
+  color: #D31414;
 }
 
 .email {
@@ -590,7 +417,7 @@ li {
   font-weight: normal;
   font-size: 1.6rem;
   line-height: 140%;
-  color: #bdbdbd;
+  color: #BDBDBD;
   background-color: transparent;
   outline: none;
   border-radius: 2px;
@@ -604,7 +431,7 @@ li {
   font-weight: normal;
   font-size: 1.6rem;
   line-height: 140%;
-  color: #bdbdbd;
+  color: #BDBDBD;
   margin-left: 9px;
 }
 
@@ -614,7 +441,7 @@ li {
   font-weight: normal;
   font-size: 1.6rem;
   line-height: 140%;
-  color: #bdbdbd;
+  color: #BDBDBD;
   margin-left: 9px;
 }
 
@@ -624,7 +451,7 @@ li {
   font-weight: normal;
   font-size: 1.6rem;
   line-height: 140%;
-  color: #bdbdbd;
+  color: #BDBDBD;
   margin-left: 9px;
 }
 
@@ -634,7 +461,7 @@ li {
   font-weight: normal;
   font-size: 1.6rem;
   line-height: 140%;
-  color: #bdbdbd;
+  color: #BDBDBD;
   margin-left: 9px;
 }
 
@@ -1486,3 +1313,4 @@ li {
   right: 0px;
   bottom: -119px;
 }
+/*# sourceMappingURL=landing.css.map */

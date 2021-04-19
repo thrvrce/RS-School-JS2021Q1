@@ -10,6 +10,9 @@
 @include standarPageButonRound;
 @include standarPageButonNotRound;
 
+body {
+  background-color: #111115;
+}
 .map {
   @include displayFlex(center, flex-start);
   background: #eaf7fe;
@@ -17,7 +20,45 @@
   height: 938px;
   position: relative;
 
-  &__content {
+  @media screen and (min-width: 1600px) {
+    height: 938px;
+    transition: width 1s;
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1599px) {
+    height: 747px;
+    transition: width 1s;
+  }
+
+  @media screen and (min-width: 640) and (max-width: 999px) {
+    transition: width 1s;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 639px) {
+    transition: width 1s;
+  }
+
+  &__sticky-container {
+    height: 100%;
+    position: absolute;
+
+    display: flex;
+
+    @media screen and (min-width: 1600px) {
+      right: 40px;
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      right: 20px;
+    }
+
+    @media screen and (min-width: 640) and (max-width: 999px) {
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
+  }
+  &__background {
     width: 1160px;
     height: 717px;
     background-image: url(../../assets/images/map.png);
@@ -25,16 +66,85 @@
     margin-top: 103px;
     background-position-x: 41px;
     position: relative;
+    @media screen and (min-width: 1600px) {
+      width: 1160px;
+      transition: width 1s;
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      width: 940px;
+      background-size: 100%;
+      background-position-x: 3px;
+      margin-top: 87px;
+      transition: width 1s;
+    }
+
+    @media screen and (min-width: 640) and (max-width: 999px) {
+      transition: width 1s;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      transition: width 1s;
+    }
+  }
+
+  &__content {
+    // width: 1160px;
+    //  height: 717px;
+    height: 100%;
+    // background-image: url(../../assets/images/map.png);
+    // background-repeat: no-repeat;
+    // margin-top: 103px;
+    // background-position-x: 41px;
+    position: relative;
+    @media screen and (min-width: 1600px) {
+      width: 1160px;
+      transition: width 1s;
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      transform: scale(0.866);
+      width: 100%;
+      margin-left: -95px;
+      margin-top: -47px;
+      transition: width 1s;
+    }
+
+    @media screen and (min-width: 640) and (max-width: 999px) {
+      transition: width 1s;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      transition: width 1s;
+    }
   }
 
   &__buttons {
     @include displayFlex(space-between, center);
     flex-direction: column;
     width: 54px;
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
+    // position: absolute;
+    // right: 40px;
+    // bottom: 40px;
     height: 118px;
+
+    @media screen and (min-width: 1600px) {
+      position: sticky;
+      margin-top: auto;
+      margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      position: sticky;
+      margin-top: auto;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 640) and (max-width: 999px) {
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
 
     &-button {
       @include displayFlex(center, center);

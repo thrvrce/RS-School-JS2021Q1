@@ -51,6 +51,24 @@
     &__list_default {
       @include displayFlex(space-between, center);
       width: 52.6rem;
+
+      @media screen and (min-width: 1600px) {
+        width: 526px;
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        width: 485px;
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 640) and (max-width: 999px) {
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        transition: width 1s;
+      }
     }
 
     &__list-item_default {
@@ -74,11 +92,41 @@
   .header {
     @include BlockWrapper($headerBGColor);
     backdrop-filter: blur(4px);
+    @media screen and (min-width: 1600px) {
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+
+    }
+
+    @media screen and (min-width: 640) and (max-width: 999px) {
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
 
     &__wrapper {
       @include displayFlex(flex-start, center);
       padding: 1.4rem 0;
       width: 116rem;
+
+      @media screen and (min-width: 1600px) {
+        width: 1160px;
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        width: 940px;
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 640) and (max-width: 999px) {
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        transition: width 1s;
+      }
     }
   }
 }
@@ -86,16 +134,34 @@
 @mixin footer {
   .footer {
     @include BlockWrapper(#111115);
-    .logo_footer{
-      margin-top: 39px
+
+    .logo_footer {
+      margin-top: 39px;
     }
-    .footerstdButton{
+    .footerstdButton {
       margin-top: 70px;
     }
     &__content {
       @include displayFlex(flex-start, flex-start);
-      width: 1160px;
       height: 443px;
+
+      @media screen and (min-width: 1600px) {
+        width: 1160px;
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        width: 940px;
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 640) and (max-width: 999px) {
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        transition: width 1s;
+      }
     }
 
     &__firstColumn {
@@ -104,9 +170,9 @@
       justify-content: flex-start;
       align-items: flex-start;
 
-      &-socials{
+      &-socials {
         margin-top: 44px;
-        &-wrapper{
+        &-wrapper {
           display: flex;
           height: 26px;
           align-items: center;
@@ -135,46 +201,101 @@
       @include robotoNormal16140($commonWhiteColor);
     }
 
-    &__secondColumn{
+    &__secondColumn {
       align-self: flex-end;
       padding-bottom: 50px;
-      width: 425px;
-      margin-left: 38px;
+
+      @media screen and (min-width: 1600px) {
+        width: 425px;
+        margin-left: 38px;
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        width: 395px;
+        margin-left: -57px;
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 640) and (max-width: 999px) {
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        transition: width 1s;
+      }
     }
 
-    &__thirdColumn{
+    &__thirdColumn {
       margin-left: 32px;
       margin-top: 41px;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+
+      @media screen and (min-width: 1600px) {
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        position: relative;
+        left: -127px;
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 640) and (max-width: 999px) {
+        transition: width 1s;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        transition: width 1s;
+      }
     }
   }
 
-  .subscribe{
+  .subscribe {
     align-self: start;
     @include robotoNormal24120($commonWhiteColor);
   }
 
-  .designer-Alisa, .designer-Tony{
+  .designer-Alisa,
+  .designer-Tony {
     @include robotoThin16130($commonWhiteColor);
+
+    @media screen and (min-width: 1600px) {
+      transition: width 1s;
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      position: relative;
+      left: 32px;
+      transition: width 1s;
+    }
+
+    @media screen and (min-width: 640) and (max-width: 999px) {
+      transition: width 1s;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      transition: width 1s;
+    }
   }
-  .designer-Alisa{
+  .designer-Alisa {
     margin-bottom: 11px;
-      margin-right: 6px;
-      margin-top: 217px;
+    margin-right: 6px;
+    margin-top: 217px;
   }
 
-  .form{
+  .form {
     display: flex;
     width: 367px;
     justify-content: space-between;
     margin-top: 14px;
   }
 
-  .submitFormButton{
+  .submitFormButton {
     @include displayFlex(center, center);
-    background: #F1F3F2;
+    background: #f1f3f2;
     border-radius: 5px;
     width: 129px;
     height: 42px;
@@ -182,37 +303,33 @@
     border: 1px solid $blackBlue;
     outline: none;
     z-index: 100;
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
-
   }
 
-  .email:valid + .submitFormButton{
+  .email:valid + .submitFormButton {
     color: #000000;
-    border: 1px solid #333B41;
-
+    border: 1px solid #333b41;
   }
 
-  .email:invalid + .submitFormButton{
-    border: 1px solid #D31414;
-    color: #D31414;
+  .email:invalid + .submitFormButton {
+    border: 1px solid #d31414;
+    color: #d31414;
   }
 
-  .email{
+  .email {
     width: 228px;
     height: 42px;
-    @include robotoNormal16140(#BDBDBD);
+    @include robotoNormal16140(#bdbdbd);
     background-color: transparent;
     outline: none;
     border-radius: 2px;
     border: 1px solid $orang;
     padding-left: 8px;
 
-
-
     &::placeholder {
-      @include robotoNormal16140(#BDBDBD);
+      @include robotoNormal16140(#bdbdbd);
       margin-left: 9px;
     }
   }
