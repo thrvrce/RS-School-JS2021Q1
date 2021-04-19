@@ -10,6 +10,9 @@
 @include standarPageButonRound;
 @include standarPageButonNotRound;
 
+body {
+  background-color: #111115;
+}
 .map {
   @include displayFlex(center, flex-start);
   background: #eaf7fe;
@@ -17,7 +20,49 @@
   height: 938px;
   position: relative;
 
-  &__content {
+  @media screen and (min-width: 1600px) {
+    height: 938px;
+
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1599px) {
+    height: 747px;
+
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 999px) {
+    height: 474px;
+    margin-top: 34px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 639px) {
+    height: 324px;
+    margin-top: 34px;
+  }
+
+  &__sticky-container {
+    height: 100%;
+    position: absolute;
+
+    display: flex;
+
+    @media screen and (min-width: 1600px) {
+      right: 40px;
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      right: 20px;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      display: none;
+    }
+  }
+  &__background {
     width: 1160px;
     height: 717px;
     background-image: url(../../assets/images/map.png);
@@ -25,16 +70,100 @@
     margin-top: 103px;
     background-position-x: 41px;
     position: relative;
+
+    @media screen and (min-width: 1600px) {
+      width: 1160px;
+
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      width: 940px;
+      background-size: 100%;
+      background-position-x: 3px;
+      margin-top: 87px;
+
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 600px;
+      background-size: 99%;
+      background-position-x: 5px;
+      margin-top: 56px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 320px;
+      background-size: 127%;
+      background-position-x: -28px;
+      margin-top: 38px;
+    }
+  }
+
+  &__content {
+    // width: 1160px;
+    //  height: 717px;
+    height: 100%;
+    // background-image: url(../../assets/images/map.png);
+    // background-repeat: no-repeat;
+    // margin-top: 103px;
+    // background-position-x: 41px;
+    position: relative;
+    @media screen and (min-width: 1600px) {
+      width: 1160px;
+
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      transform: scale(0.866);
+      width: 100%;
+      margin-left: -95px;
+      margin-top: -47px;
+
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      transform: scale(0.549);
+      width: 100%;
+      margin-left: -154px;
+      margin-top: -161px;
+
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      transform: scale(0.375);
+      width: 100%;
+      margin-left: -143px;
+      margin-top: -223px;
+
+    }
   }
 
   &__buttons {
     @include displayFlex(space-between, center);
     flex-direction: column;
     width: 54px;
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
+    // position: absolute;
+    // right: 40px;
+    // bottom: 40px;
     height: 118px;
+
+    @media screen and (min-width: 1600px) {
+      position: sticky;
+      margin-top: auto;
+      margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      position: sticky;
+      margin-top: auto;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
 
     &-button {
       @include displayFlex(center, center);
@@ -64,6 +193,22 @@
     border: 1px solid #000000;
     border-radius: 4px;
     position: relative;
+
+    @media screen and (min-width: 1600px) {
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      transform: scale(1.155);
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      transform: scale(1.821);
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      transform: scale(2.666);
+      display: none;
+    }
 
     &-arrow {
       margin-bottom: 0px;
@@ -110,6 +255,9 @@
       opacity: 1;
       transition: opacity 1s;
       visibility: visible;
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        display: block;
+      }
     }
   }
 

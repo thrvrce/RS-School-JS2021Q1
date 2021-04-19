@@ -16,6 +16,23 @@
   background-size: cover;
   background-position: center;
   height: 386px;
+  @media screen and (min-width: 1600px) {
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1599px) {
+    height: 390px;
+    background-size: 160%;
+    background-position: -173px -194px;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 999px) {
+    height: 369px;
+    background-size: 213%;
+    background-position: -267px -130px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 639px) {
+  }
 }
 
 .donate {
@@ -49,19 +66,79 @@
     width: 1160px;
     margin-bottom: 180px;
 
+    @media screen and (min-width: 1600px) {
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      width: 940px;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 600px;
+      margin-bottom: 46px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
+
     &-help-title {
       @include robotoNormal36130($commonWhiteColor);
       margin-top: 41px;
+
+      @media screen and (min-width: 1600px) {
+      }
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        width: 778px;
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        font-size: 24px;
+        line-height: 120%;
+        margin-top: 32px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
     }
 
     &-help-text {
       @include robotoMedium16140($commonWhiteColor);
       margin-top: 10px;
+
+      @media screen and (min-width: 1600px) {
+      }
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        margin-top: 31px;
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        margin-top: 20px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
     }
 
     &-donation-information-title {
       @include robotoNormal36130($anotherOrange);
       margin-top: 47px;
+
+      @media screen and (min-width: 1600px) {
+      }
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        margin-bottom: 40px;
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        margin-top: 31px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
     }
 
     &-donation-content {
@@ -74,20 +151,85 @@
       backdrop-filter: blur(4px);
       border-radius: 20px;
 
+      @media screen and (min-width: 1600px) {
+      }
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        margin: 0;
+        padding: 0;
+        width: 940px;
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        padding: 0;
+        width: 600px;
+        margin-top: 30px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
+
       &-title {
         @include robotoNorma48120($anotherOrange);
         margin-bottom: 22px;
         margin-left: 250px;
+
+        @media screen and (min-width: 1600px) {
+        }
+
+        @media screen and (min-width: 1000px) and (max-width: 1599px) {
+          margin-top: 20px;
+          margin-left: 231px;
+          margin-bottom: 12px;
+        }
+
+        @media screen and (min-width: 640px) and (max-width: 999px) {
+          margin-top: 30px;
+          margin-left: 70px;
+          margin-bottom: 22px;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 639px) {
+        }
       }
 
       &-text {
         @include robotoNormal24120($blackBlue);
+
+        @media screen and (min-width: 1600px) {
+        }
+
+        @media screen and (min-width: 1000px) and (max-width: 1599px) {
+          margin-left: 47px;
+        }
+
+        @media screen and (min-width: 640px) and (max-width: 999px) {
+          width: 600px;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 639px) {
+        }
       }
 
       &-diet {
         @include displayFlex(flex-start, flex-end);
         margin-top: 61px;
         margin-left: 216px;
+
+        @media screen and (min-width: 1600px) {
+        }
+
+        @media screen and (min-width: 1000px) and (max-width: 1599px) {
+          margin-left: 196px;
+        }
+
+        @media screen and (min-width: 640px) and (max-width: 999px) {
+          margin-top: 52px;
+          margin-left: 29px;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 639px) {
+        }
 
         &-amount {
           @include displayFlex(flex-end, center);
@@ -116,7 +258,14 @@
       }
 
       &-another-amount-form {
-        // margin-top: 108px;
+        @media screen and (min-width: 640px) and (max-width: 999px) {
+          display: flex;
+    flex-direction: column;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 639px) {
+        }
+
       }
 
       &-another-amount-input {
@@ -131,6 +280,18 @@
         background-position: 247px;
         padding-left: 8px;
         @include robotoNormal16140(#929699);
+
+        @media screen and (min-width: 640px) and (max-width: 999px) {
+          margin-top: 88px;
+          margin-left: 10px;
+          width: 180px;
+          height: 42px;
+          background-position: 159px;
+          order: 2;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 639px) {
+        }
 
         &::placeholder {
           @include robotoNormal16140(#929699);
@@ -153,10 +314,33 @@
       &-amount-radio {
         margin-top: 45px;
 
+        @media screen and (min-width: 640px) and (max-width: 999px) {
+          margin-top: 39px;
+          order: 1;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 639px) {
+        }
+
         &-title {
           @include robotoNormal16140($black);
           margin-left: 4px;
           margin-bottom: 17px;
+
+          @media screen and (min-width: 1600px) {
+          }
+
+          @media screen and (min-width: 1000px) and (max-width: 1599px) {
+            margin-left: 65px;
+          }
+
+          @media screen and (min-width: 640px) and (max-width: 999px) {
+            margin-left: 11px;
+            margin-bottom: 6px;
+          }
+
+          @media screen and (min-width: 320px) and (max-width: 639px) {
+          }
         }
 
         &-inputs {
@@ -169,12 +353,41 @@
           align-items: center;
           padding: 0px 30px 2px 26px;
 
+          @media screen and (min-width: 1600px) {
+          }
+
+          @media screen and (min-width: 1000px) and (max-width: 1599px) {
+            width: 810px;
+
+            margin-left: 65px;
+            padding: 0px 9px 2px 11px;
+          }
+
+          @media screen and (min-width: 640px) and (max-width: 999px) {
+            width: 600px;
+            padding: 0px 35px 2px 35px;
+          }
+
+          @media screen and (min-width: 320px) and (max-width: 639px) {
+          }
+
           &::before {
             content: "";
             display: block;
             position: absolute;
             width: 915px;
             border: 1px solid #72828e;
+            @media screen and (min-width: 1000px) and (max-width: 1599px) {
+              width: 785px;
+            }
+
+            @media screen and (min-width: 640px) and (max-width: 999px) {
+              width: 525px;
+            }
+
+            @media screen and (min-width: 320px) and (max-width: 639px) {
+              width: 262px;
+            }
           }
 
           &-button {
@@ -231,6 +444,17 @@
               padding-left: 13px;
               top: 31px;
               left: -26px;
+
+              @media screen and (min-width: 1000px) and (max-width: 1599px) {
+                left: -11px;
+              }
+
+              @media screen and (min-width: 640px) and (max-width: 999px) {
+                left: -18px;
+              }
+
+              @media screen and (min-width: 320px) and (max-width: 639px) {
+              }
             }
           }
         }
@@ -250,6 +474,19 @@
     width: 150px;
     margin-left: 382px;
     margin-top: 8px;
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      margin-left: 363px;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      order: 3;
+      margin-top: 43px;
+      margin-left: 192px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
   }
 
   &-input {
@@ -290,10 +527,36 @@
 .standarPageButon {
   margin-top: 43px;
   margin-left: 342px;
+  @media screen and (min-width: 1000px) and (max-width: 1599px) {
+    margin-left: 323px;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 999px) {
+    order: 4;
+    margin: 0;
+    margin-top: 33px;
+    margin-left: 152px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 639px) {
+  }
 }
 
 .share-title {
   @include robotoNormal16140($blackBlue);
   margin-top: 30px;
   margin-left: 340px;
+
+  @media screen and (min-width: 1000px) and (max-width: 1599px) {
+    margin-left: 321px;
+    margin-bottom: 46px;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 999px) {
+    margin-left: 150px;
+    margin-bottom: 31px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 639px) {
+  }
 }
