@@ -37,8 +37,66 @@
     background-size: 15%;
     background-position: 0.9rem 2.2rem;
 
+    @media screen and (min-width: 1600px) {
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      border: none;
+      font-size: 12px;
+      width: 46.86px;
+      height: 29.03px;
+      /* background-size: 15%; */
+      background-position: 4px 17px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      border: none;
+      font-size: 12px;
+      width: 46.86px;
+      height: 29.03px;
+      /* background-size: 15%; */
+      background-position: 4px 17px;
+    }
+
     &:hover {
       cursor: pointer;
+    }
+
+    &-footer {
+      @media screen and (min-width: 1600px) {
+      }
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        padding: 0.35rem 0rem;
+        @include logoText;
+        width: 8.2rem;
+        height: 5.2rem;
+        border: 0.1rem solid $commonWhiteColor;
+        border-radius: 0.2rem;
+        background-image: url(../../assets/icons/bamboo.svg);
+        background-repeat: no-repeat;
+        background-size: 15%;
+        background-position: 0.9rem 2.2rem;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        padding: 0.35rem 0rem;
+        @include logoText;
+        width: 8.2rem;
+        height: 5.2rem;
+        border: 0.1rem solid $commonWhiteColor;
+        border-radius: 0.2rem;
+        background-image: url(../../assets/icons/bamboo.svg);
+        background-repeat: no-repeat;
+        background-size: 15%;
+        background-position: 0.9rem 2.2rem;
+      }
     }
   }
 }
@@ -47,6 +105,20 @@
   .nav {
     @include displayFlex(center, center);
     margin-left: $marginLeft;
+
+    @media screen and (min-width: 1600px) {
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      display: none;
+    }
 
     &__list_default {
       @include displayFlex(space-between, center);
@@ -62,8 +134,8 @@
         transition: width 1s;
       }
 
-      @media screen and (min-width: 640) and (max-width: 999px) {
-        transition: width 1s;
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        width: 299px;
       }
 
       @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -83,12 +155,29 @@
       @include robotoMedium16140($orang);
       // pointer-events: none;
     }
+
+    &__footer {
+      @media screen and (min-width: 1600px) {
+      }
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        display: block;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        display: block;
+      }
+    }
   }
 }
 
 @mixin header {
   @include logotype;
   @include nav-default(63px);
+
   .header {
     @include BlockWrapper($headerBGColor);
     backdrop-filter: blur(4px);
@@ -96,13 +185,44 @@
     }
 
     @media screen and (min-width: 1000px) and (max-width: 1599px) {
-
     }
 
-    @media screen and (min-width: 640) and (max-width: 999px) {
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      position: fixed;
+      top: 0px;
+      z-index: 10;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      position: fixed;
+      top: 0px;
+      z-index: 10;
+    }
+
+    &__burger-ico {
+      background-color: transparent;
+      background-image: url(../../assets/icons/burger_menu.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 18px;
+      height: 10px;
+
+      @media screen and (min-width: 1600px) {
+        display: none;
+      }
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        display: none;
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        display: block;
+        margin-left: 536px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        display: block;
+      }
     }
 
     &__wrapper {
@@ -120,8 +240,9 @@
         transition: width 1s;
       }
 
-      @media screen and (min-width: 640) and (max-width: 999px) {
-        transition: width 1s;
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        width: 600px;
+        height: 34px;
       }
 
       @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -137,6 +258,12 @@
 
     .logo_footer {
       margin-top: 39px;
+
+      @media (min-width: 640px) and (max-width: 999px) {
+        margin-top: 12px;
+        /* position: relative; */
+        margin-bottom: -37px;
+      }
     }
     .footerstdButton {
       margin-top: 70px;
@@ -155,12 +282,13 @@
         transition: width 1s;
       }
 
-      @media screen and (min-width: 640) and (max-width: 999px) {
-        transition: width 1s;
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        height: 282px;
+        width: 600px;
       }
 
       @media screen and (min-width: 320px) and (max-width: 639px) {
-        transition: width 1s;
+        height: 540px;
       }
     }
 
@@ -170,13 +298,39 @@
       justify-content: flex-start;
       align-items: flex-start;
 
+      @media screen and (min-width: 1600px) {
+      }
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        position: relative;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
+
       &-socials {
         margin-top: 44px;
+
+        @media screen and (min-width: 640px) and (max-width: 999px) {
+          position: absolute;
+          right: -302px;
+          top: -32px;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 639px) {
+        }
         &-wrapper {
           display: flex;
           height: 26px;
           align-items: center;
           margin-bottom: 10px;
+
+          @media screen and (min-width: 640px) and (max-width: 999px) {
+            margin-bottom: 20px;
+          }
         }
 
         & a:hover {
@@ -199,6 +353,10 @@
     &__social-text {
       margin-left: 12px;
       @include robotoNormal16140($commonWhiteColor);
+
+      @media (min-width: 640px) and (max-width: 999px) {
+        display: none;
+      }
     }
 
     &__secondColumn {
@@ -217,8 +375,10 @@
         transition: width 1s;
       }
 
-      @media screen and (min-width: 640) and (max-width: 999px) {
-        transition: width 1s;
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        margin-left: -360px;
+        /* margin-top: -44px; */
+        padding-bottom: 12px;
       }
 
       @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -243,8 +403,9 @@
         transition: width 1s;
       }
 
-      @media screen and (min-width: 640) and (max-width: 999px) {
-        transition: width 1s;
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        margin-top: 3px;
+        margin-left: 70px;
       }
 
       @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -256,6 +417,14 @@
   .subscribe {
     align-self: start;
     @include robotoNormal24120($commonWhiteColor);
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+     display: none;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+
+    }
   }
 
   .designer-Alisa,
@@ -272,7 +441,7 @@
       transition: width 1s;
     }
 
-    @media screen and (min-width: 640) and (max-width: 999px) {
+    @media screen and (min-width: 640px) and (max-width: 999px) {
       transition: width 1s;
     }
 
@@ -291,6 +460,14 @@
     width: 367px;
     justify-content: space-between;
     margin-top: 14px;
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      display: none;
+     }
+
+     @media screen and (min-width: 320px) and (max-width: 639px) {
+
+     }
   }
 
   .submitFormButton {
