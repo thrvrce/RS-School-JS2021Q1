@@ -11,21 +11,33 @@
 @include standarPageButonNotRound;
 
 // @mixin donate($animal,$bgImgSrc) {
-  // .donate#{$animal} {
-    .donate {
-    @include BlockWrapper($black);
-    align-items: flex-end;
-    background-image: url(../../assets/images/zoos-donate-bg-panda.png);
-    // background-image: url($bgImgSrc);
-    background-repeat: no-repeat;
-    height: 390px;
-    padding-bottom: 60px;
-    background-size: cover;
+// .donate#{$animal} {
+.donate {
+  @include BlockWrapper($black);
+  align-items: flex-end;
+  background-image: url(../../assets/images/zoos-donate-bg-panda.png);
+  // background-image: url($bgImgSrc);
+  background-repeat: no-repeat;
+  height: 390px;
+  padding-bottom: 60px;
+  background-size: cover;
+  @media screen and (min-width: 1000px) and (max-width: 1270px) {
+    background-position: -273px;
   }
+  //
+  @media screen and (min-width: 640px) and (max-width: 999px) {
+    height: 287px;
+    padding-bottom: 34px;
+    background-size: 244%;
+    background-position: -230px -37px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 639px) {
+  }
+}
 // }
 
 // @include donate('-panda','../../assets/images/zoos-donate-bg-panda.png');
-
 
 .animal-info {
   @include BlockWrapper($commonWhiteColor);
@@ -36,17 +48,60 @@
     flex-direction: column;
     width: 1160px;
     margin-bottom: 180px;
+
+    @media (min-width: 1000px) and (max-width: 1599px) {
+      width: 940px;
+    }
+
+    @media (min-width: 640px) and (max-width: 999px) {
+      width: 600px;
+    }
   }
 
   &__title {
     @include robotoMedium48120($green);
     margin-bottom: 25px;
+
+    @media (min-width: 640px) and (max-width: 1599px) {
+      margin-left: 173px;
+      margin-bottom: 21px;
+    }
   }
 
   &-shortinfo {
     @include displayFlex(flex-start, flex-start);
     border-bottom: 1px solid $gray;
     padding-bottom: 20px;
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      border-color: white;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      border-color: white;
+      flex-flow: column;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
+
+    &__img {
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        width: 455px;
+        height: 458px;
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        width: 390px;
+        height: 393px;
+        margin-left: 4px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        width: 319px;
+        height: 193px;
+      }
+    }
 
     &__description {
       @include displayFlex(flex-start, flex-start);
@@ -55,9 +110,36 @@
       height: 383px;
       justify-content: space-between;
 
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        margin-left: 30px;
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        margin: 0;
+        margin-top: 31px;
+        margin-left: 5px;
+        width: 420px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
+
       &-text {
         @include robotoMedium26140($graySmoky);
         // margin-bottom: 41px;
+
+        @media screen and (min-width: 1000px) and (max-width: 1599px) {
+          font-size: 22px;
+          line-height: 141%;
+        }
+
+        @media screen and (min-width: 640px) and (max-width: 999px) {
+          font-size: 22px;
+          line-height: 141%;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 639px) {
+        }
 
         &-green {
           color: $green;
@@ -66,6 +148,19 @@
 
       & .standarPageButon {
         margin-left: 4px;
+
+        @media screen and (min-width: 1000px) and (max-width: 1599px) {
+          margin-top: 94px;
+          margin-left: 0px;
+        }
+
+        @media screen and (min-width: 640px) and (max-width: 999px) {
+          margin-top: 39px;
+          margin-left: 150px;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 639px) {
+        }
       }
     }
   }
@@ -109,10 +204,38 @@
 
   &-diet {
     margin-top: 42px;
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      & .animal-info-topic-text {
+        display: block;
+        width: 510px;
+      }
+
+      & .animal-info-topic-name {
+        display: block;
+        width: 60px;
+      }
+
+      align-items: baseline;
+      display: flex;
+      margin-top: 91px;
+      margin-left: 4px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
   }
 
   &-range {
     margin-top: 21px;
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      margin-top: 2px;
+      margin-left: 3px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
   }
 
   &-habitat {
@@ -121,6 +244,19 @@
 
   &-general {
     margin-top: 33px;
+    & .animal-info-topic-name {
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        margin-bottom: 23px;
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        margin-top: 3px;
+        margin-bottom: 21px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
+    }
   }
 
   &-features {
@@ -147,6 +283,19 @@
   position: absolute;
   bottom: 0px;
   left: 0px;
+
+  @media screen and (min-width: 1000px) and (max-width: 1599px) {
+    background-size: 62%;
+    background-position: 0px 88px;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 999px) {
+    background-size: 49%;
+    background-position: 0px 119px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 639px) {
+  }
 }
 
 .sidePalm-zoos {
@@ -157,22 +306,74 @@
   position: absolute;
   bottom: 0px;
   right: 0px;
+
+  @media screen and (min-width: 1000px) and (max-width: 1599px) {
+    background-size: 84%;
+    background-position: 47px 33px;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 999px) {
+    background-size: 60%;
+    background-position: 91px 95px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 639px) {
+  }
 }
 
 .animal-camera {
   @include BlockWrapper($commonWhiteColor);
   margin-bottom: 138px;
 
+  @media screen and (min-width: 1000px) and (max-width: 1599px) {
+    margin-bottom: 100px;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 999px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 639px) {
+  }
+
   &__content {
     width: 1324x;
     @include displayFlex(flex-start, flex-start);
     flex-direction: column;
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      width: 940px;
+      margin: 0;
+      margin-top: 20px;
+      padding-left: 162px;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 600px;
+      margin-top: 56px;
+      padding-left: 109px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
   }
 
   &__title {
     @include robotoNorma48120($blackBlue);
     margin-top: 40px;
     margin-left: 82px;
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      margin: 0px;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      font-size: 36px;
+      margin: 0;
+      margin-bottom: 12px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
   }
 
   &__main-video {
@@ -181,10 +382,39 @@
     margin-top: 15px;
     margin-left: 81px;
 
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      margin: 0;
+      margin-top: 15px;
+      width: 778px;
+      height: 438px;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 495px;
+      height: 278px;
+      margin: 0;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
+
     &-frame {
       width: 1162px;
       height: 652px;
       margin-left: -1px;
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        width: 778px;
+        height: 438px;
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        width: 495px;
+        height: 278px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
     }
   }
 
@@ -192,23 +422,117 @@
     @include displayFlex(center, center);
     margin-top: 80px;
 
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      margin-top: 60px;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      margin-top: 20px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
+
     @include roundArrowButtonLeft;
     .round-arrow-button_left {
       margin-right: 21px;
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        order: 2;
+        position: relative;
+        top: 30px;
+        left: 29px;
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        order: 2;
+        position: relative;
+
+        width: 42.81px;
+        height: 42.81px;
+        top: 25px;
+        left: 30px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
     }
 
     @include roundArrowButtonRight;
     .round-arrow-button_right {
       margin-left: 21px;
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        order: 3;
+        position: relative;
+        top: -43px;
+        left: -73px;
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        order: 3;
+        position: relative;
+        width: 42.81px;
+        height: 42.81px;
+        top: -25px;
+        left: -55px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
     }
 
     &-videos {
       @include displayFlex(space-between, center);
       width: 1160px;
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        overflow: hidden;
+        width: 617px;
+        order: 1;
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        width: 390px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
     }
 
     &-video {
       position: relative;
+
+      @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        width: 293px;
+        height: 210px;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          display: none;
+        }
+
+        // &-plug,
+        // &-frame {
+        //   width: 293px;
+        //   height: 210px;
+        // }
+      }
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        width: 180px;
+        height: 140px;
+        &:nth-child(1),
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
+
+      &-selector-video {
+      }
 
       &-plug {
         position: absolute;
@@ -217,6 +541,19 @@
         top: 0px;
         background-color: grey;
         opacity: 0.5;
+
+        @media screen and (min-width: 1000px) and (max-width: 1599px) {
+          width: 293px;
+          height: 210px;
+        }
+
+        @media screen and (min-width: 640px) and (max-width: 999px) {
+          width: 180px;
+          height: 140px;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 639px) {
+        }
 
         // &::before {
         &-live {
@@ -239,6 +576,14 @@
           display: flex;
           justify-content: center;
           align-items: center;
+
+          @media screen and (min-width: 640px) and (max-width: 999px) {
+            left: 0px;
+            top: 8px;
+          }
+
+          @media screen and (min-width: 320px) and (max-width: 639px) {
+          }
         }
 
         &-cam {
@@ -268,12 +613,33 @@
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
+
+          @media screen and (min-width: 640px) and (max-width: 999px) {
+            left: 58px;
+            width: 120px;
+          }
+
+          @media screen and (min-width: 320px) and (max-width: 639px) {
+          }
         }
       }
 
       &-frame {
         width: 268px;
         height: 210px;
+
+        @media screen and (min-width: 1000px) and (max-width: 1599px) {
+          width: 293px;
+          height: 210px;
+        }
+
+        @media screen and (min-width: 640px) and (max-width: 999px) {
+          width: 180px;
+          height: 140px;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 639px) {
+        }
       }
     }
   }
@@ -281,11 +647,23 @@
 
 .page-content-wrapper {
   position: relative;
+
+  @media (min-width: 1000px) and (max-width: 1599px) {
+    // width: 940px;
+    margin: 0px auto;
+  }
 }
 
 .sidebar {
   position: absolute;
   height: 100%;
+
+  @media (min-width: 640px) and (max-width: 1599px) {
+    height: 900px;
+  }
+
+  @media (min-width: 320px) and (max-width: 639px) {
+  }
 
   &__content {
     position: sticky;
@@ -296,6 +674,31 @@
     height: 652px;
     right: 3436x;
     z-index: 200;
+
+    @media (min-width: 1000px) and (max-width: 1599px) {
+      width: 72px;
+      height: 438px;
+      margin: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 92px;
+    }
+
+    @media (min-width: 640px) and (max-width: 999px) {
+      width: 72px;
+      height: 438px;
+      margin: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      position: static;
+      margin-top: 111px;
+    }
+
+    @media (min-width: 320px) and (max-width: 639px) {
+      width: 62px;
+      height: 233px;
+    }
+
     background: linear-gradient(
         315.75deg,
         rgba(254, 210, 144, 0.7) 30.06%,
@@ -333,6 +736,10 @@
       border: 1px solid $orang;
       border-radius: 50%;
       background-color: $commonWhiteColor;
+      @media (min-width: 320px) and (max-width: 1599px) {
+        width: 52px;
+        height: 52px;
+      }
     }
 
     &-icon-wrapper:hover {
@@ -361,6 +768,45 @@
 
     &-icon-wrapper:hover &-icon-stroke {
       stroke: green;
+    }
+  }
+}
+
+.svg-icon {
+  &-gorilla {
+    @media (min-width: 320px) and (max-width: 1599px) {
+      width: 35.75px;
+      height: 30.55px;
+    }
+  }
+  &-alligator {
+    @media (min-width: 320px) and (max-width: 1599px) {
+      width: 41.6px;
+      height: 19.5px;
+    }
+  }
+  &-panda {
+    @media (min-width: 320px) and (max-width: 1599px) {
+      width: 37.7px;
+      height: 27.3px;
+    }
+  }
+  &-eagle {
+    @media (min-width: 320px) and (max-width: 1599px) {
+      width: 39.65px;
+      height: 35.1px;
+    }
+  }
+  &-sloth {
+    @media (min-width: 320px) and (max-width: 1599px) {
+      width: 34px;
+      height: 33px;
+    }
+  }
+  &-penguin {
+    @media (min-width: 320px) and (max-width: 1599px) {
+      width: 20.24px;
+      height: 37px;
     }
   }
 }

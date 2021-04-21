@@ -988,6 +988,21 @@ li {
   background-size: cover;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1270px) {
+  .donate {
+    background-position: -273px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .donate {
+    height: 287px;
+    padding-bottom: 34px;
+    background-size: 244%;
+    background-position: -230px -37px;
+  }
+}
+
 .animal-info {
   background-color: #FFFFFF;
   width: 100%;
@@ -1018,6 +1033,18 @@ li {
   margin-bottom: 180px;
 }
 
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .animal-info__content {
+    width: 940px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 999px) {
+  .animal-info__content {
+    width: 600px;
+  }
+}
+
 .animal-info__title {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1026,6 +1053,13 @@ li {
   line-height: 120%;
   color: #4b9200;
   margin-bottom: 25px;
+}
+
+@media (min-width: 640px) and (max-width: 1599px) {
+  .animal-info__title {
+    margin-left: 173px;
+    margin-bottom: 21px;
+  }
 }
 
 .animal-info-shortinfo {
@@ -1040,6 +1074,44 @@ li {
           align-items: flex-start;
   border-bottom: 1px solid #767474;
   padding-bottom: 20px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-info-shortinfo {
+    border-color: white;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-info-shortinfo {
+    border-color: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-info-shortinfo__img {
+    width: 455px;
+    height: 458px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-info-shortinfo__img {
+    width: 390px;
+    height: 393px;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-info-shortinfo__img {
+    width: 319px;
+    height: 193px;
+  }
 }
 
 .animal-info-shortinfo__description {
@@ -1063,6 +1135,21 @@ li {
           justify-content: space-between;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-info-shortinfo__description {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-info-shortinfo__description {
+    margin: 0;
+    margin-top: 31px;
+    margin-left: 5px;
+    width: 420px;
+  }
+}
+
 .animal-info-shortinfo__description-text {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1072,12 +1159,40 @@ li {
   color: #ababab;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-info-shortinfo__description-text {
+    font-size: 22px;
+    line-height: 141%;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-info-shortinfo__description-text {
+    font-size: 22px;
+    line-height: 141%;
+  }
+}
+
 .animal-info-shortinfo__description-text-green {
   color: #4b9200;
 }
 
 .animal-info-shortinfo__description .standarPageButon {
   margin-left: 4px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-info-shortinfo__description .standarPageButon {
+    margin-top: 94px;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-info-shortinfo__description .standarPageButon {
+    margin-top: 39px;
+    margin-left: 150px;
+  }
 }
 
 .animal-info-topic-name {
@@ -1131,8 +1246,36 @@ li {
   margin-top: 42px;
 }
 
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-info-diet {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 91px;
+    margin-left: 4px;
+  }
+  .animal-info-diet .animal-info-topic-text {
+    display: block;
+    width: 510px;
+  }
+  .animal-info-diet .animal-info-topic-name {
+    display: block;
+    width: 60px;
+  }
+}
+
 .animal-info-range {
   margin-top: 21px;
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-info-range {
+    margin-top: 2px;
+    margin-left: 3px;
+  }
 }
 
 .animal-info-habitat {
@@ -1141,6 +1284,19 @@ li {
 
 .animal-info-general {
   margin-top: 33px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-info-general .animal-info-topic-name {
+    margin-bottom: 23px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-info-general .animal-info-topic-name {
+    margin-top: 3px;
+    margin-bottom: 21px;
+  }
 }
 
 .animal-info-features {
@@ -1166,6 +1322,20 @@ li {
   left: 0px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .sideStrelitzia-zoos {
+    background-size: 62%;
+    background-position: 0px 88px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .sideStrelitzia-zoos {
+    background-size: 49%;
+    background-position: 0px 119px;
+  }
+}
+
 .sidePalm-zoos {
   background-image: url(../../assets/images/leavFotoZoos.png);
   background-repeat: no-repeat;
@@ -1174,6 +1344,20 @@ li {
   position: absolute;
   bottom: 0px;
   right: 0px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .sidePalm-zoos {
+    background-size: 84%;
+    background-position: 47px 33px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .sidePalm-zoos {
+    background-size: 60%;
+    background-position: 91px 95px;
+  }
 }
 
 .animal-camera {
@@ -1186,6 +1370,18 @@ li {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 138px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-camera {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-camera {
+    margin-bottom: 60px;
+  }
 }
 
 .animal-camera__content {
@@ -1205,6 +1401,23 @@ li {
           flex-direction: column;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-camera__content {
+    width: 940px;
+    margin: 0;
+    margin-top: 20px;
+    padding-left: 162px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-camera__content {
+    width: 600px;
+    margin-top: 56px;
+    padding-left: 109px;
+  }
+}
+
 .animal-camera__title {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1216,6 +1429,20 @@ li {
   margin-left: 82px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-camera__title {
+    margin: 0px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-camera__title {
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+}
+
 .animal-camera__main-video {
   width: 1162px;
   height: 652px;
@@ -1223,10 +1450,41 @@ li {
   margin-left: 81px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-camera__main-video {
+    margin: 0;
+    margin-top: 15px;
+    width: 778px;
+    height: 438px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-camera__main-video {
+    width: 495px;
+    height: 278px;
+    margin: 0;
+  }
+}
+
 .animal-camera__main-video-frame {
   width: 1162px;
   height: 652px;
   margin-left: -1px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-camera__main-video-frame {
+    width: 778px;
+    height: 438px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-camera__main-video-frame {
+    width: 495px;
+    height: 278px;
+  }
 }
 
 .animal-camera__video-selector {
@@ -1240,6 +1498,18 @@ li {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 80px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-camera__video-selector {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-camera__video-selector {
+    margin-top: 20px;
+  }
 }
 
 .animal-camera__video-selector .round-arrow-button_left {
@@ -1267,6 +1537,30 @@ li {
   margin-right: 21px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-camera__video-selector .round-arrow-button_left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    position: relative;
+    top: 30px;
+    left: 29px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-camera__video-selector .round-arrow-button_left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    position: relative;
+    width: 42.81px;
+    height: 42.81px;
+    top: 25px;
+    left: 30px;
+  }
+}
+
 .animal-camera__video-selector .round-arrow-button_right {
   width: 61px;
   height: 61px;
@@ -1292,6 +1586,30 @@ li {
   margin-left: 21px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-camera__video-selector .round-arrow-button_right {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    position: relative;
+    top: -43px;
+    left: -73px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-camera__video-selector .round-arrow-button_right {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    position: relative;
+    width: 42.81px;
+    height: 42.81px;
+    top: -25px;
+    left: -55px;
+  }
+}
+
 .animal-camera__video-selector-videos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1305,8 +1623,44 @@ li {
   width: 1160px;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-camera__video-selector-videos {
+    overflow: hidden;
+    width: 617px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-camera__video-selector-videos {
+    width: 390px;
+  }
+}
+
 .animal-camera__video-selector-video {
   position: relative;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-camera__video-selector-video {
+    width: 293px;
+    height: 210px;
+  }
+  .animal-camera__video-selector-video:nth-child(1), .animal-camera__video-selector-video:nth-child(2) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-camera__video-selector-video {
+    width: 180px;
+    height: 140px;
+  }
+  .animal-camera__video-selector-video:nth-child(1), .animal-camera__video-selector-video:nth-child(2) {
+    display: none;
+  }
 }
 
 .animal-camera__video-selector-video-plug {
@@ -1316,6 +1670,20 @@ li {
   top: 0px;
   background-color: grey;
   opacity: 0.5;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-camera__video-selector-video-plug {
+    width: 293px;
+    height: 210px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-camera__video-selector-video-plug {
+    width: 180px;
+    height: 140px;
+  }
 }
 
 .animal-camera__video-selector-video-plug-live {
@@ -1343,6 +1711,13 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-camera__video-selector-video-plug-live {
+    left: 0px;
+    top: 8px;
+  }
 }
 
 .animal-camera__video-selector-video-plug-cam {
@@ -1374,18 +1749,51 @@ li {
   align-items: center;
 }
 
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-camera__video-selector-video-plug-cam {
+    left: 58px;
+    width: 120px;
+  }
+}
+
 .animal-camera__video-selector-video-frame {
   width: 268px;
   height: 210px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .animal-camera__video-selector-video-frame {
+    width: 293px;
+    height: 210px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 999px) {
+  .animal-camera__video-selector-video-frame {
+    width: 180px;
+    height: 140px;
+  }
 }
 
 .page-content-wrapper {
   position: relative;
 }
 
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .page-content-wrapper {
+    margin: 0px auto;
+  }
+}
+
 .sidebar {
   position: absolute;
   height: 100%;
+}
+
+@media (min-width: 640px) and (max-width: 1599px) {
+  .sidebar {
+    height: 900px;
+  }
 }
 
 .sidebar__content {
@@ -1417,6 +1825,36 @@ li {
           flex-direction: column;
 }
 
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .sidebar__content {
+    width: 72px;
+    height: 438px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 92px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 999px) {
+  .sidebar__content {
+    width: 72px;
+    height: 438px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: static;
+    margin-top: 111px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 639px) {
+  .sidebar__content {
+    width: 62px;
+    height: 233px;
+  }
+}
+
 .sidebar__content-icon-wrapper, .sidebar__content-icon-wrapper-active {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1432,6 +1870,13 @@ li {
   border: 1px solid #F9804B;
   border-radius: 50%;
   background-color: #FFFFFF;
+}
+
+@media (min-width: 320px) and (max-width: 1599px) {
+  .sidebar__content-icon-wrapper, .sidebar__content-icon-wrapper-active {
+    width: 52px;
+    height: 52px;
+  }
 }
 
 .sidebar__content-icon-wrapper:hover {
@@ -1459,4 +1904,46 @@ li {
 
 .sidebar__content-icon-wrapper:hover .sidebar__content-icon-stroke {
   stroke: green;
+}
+
+@media (min-width: 320px) and (max-width: 1599px) {
+  .svg-icon-gorilla {
+    width: 35.75px;
+    height: 30.55px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1599px) {
+  .svg-icon-alligator {
+    width: 41.6px;
+    height: 19.5px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1599px) {
+  .svg-icon-panda {
+    width: 37.7px;
+    height: 27.3px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1599px) {
+  .svg-icon-eagle {
+    width: 39.65px;
+    height: 35.1px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1599px) {
+  .svg-icon-sloth {
+    width: 34px;
+    height: 33px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1599px) {
+  .svg-icon-penguin {
+    width: 20.24px;
+    height: 37px;
+  }
 }
