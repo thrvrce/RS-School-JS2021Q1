@@ -246,6 +246,13 @@ li {
           backdrop-filter: blur(4px);
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .header {
+    z-index: 100;
+    position: relative;
+  }
+}
+
 @media screen and (min-width: 640px) and (max-width: 999px) {
   .header {
     position: fixed;
