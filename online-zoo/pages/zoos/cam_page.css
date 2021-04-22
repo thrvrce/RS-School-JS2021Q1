@@ -250,7 +250,7 @@ li {
   .header {
     position: fixed;
     top: 0px;
-    z-index: 10;
+    z-index: 100;
   }
 }
 
@@ -258,7 +258,7 @@ li {
   .header {
     position: fixed;
     top: 0px;
-    z-index: 10;
+    z-index: 100;
   }
 }
 
@@ -1003,6 +1003,15 @@ li {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .donate {
+    height: 220.45px;
+    padding-bottom: 10px;
+    background-size: 374%;
+    background-position: -232px -30px;
+  }
+}
+
 .animal-info {
   background-color: #FFFFFF;
   width: 100%;
@@ -1045,6 +1054,12 @@ li {
   }
 }
 
+@media (min-width: 320px) and (max-width: 639px) {
+  .animal-info__content {
+    width: 320px;
+  }
+}
+
 .animal-info__title {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1055,10 +1070,26 @@ li {
   margin-bottom: 25px;
 }
 
-@media (min-width: 640px) and (max-width: 1599px) {
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .animal-info__title {
+    margin-left: 173px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 999px) {
   .animal-info__title {
     margin-left: 173px;
     margin-bottom: 21px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 639px) {
+  .animal-info__title {
+    font-size: 24px;
+    line-height: 120%;
+    margin: 0px;
+    margin-left: 94px;
   }
 }
 
@@ -1079,6 +1110,9 @@ li {
 @media screen and (min-width: 1000px) and (max-width: 1599px) {
   .animal-info-shortinfo {
     border-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -1092,10 +1126,36 @@ li {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-info-shortinfo {
+    border-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 10px;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .animal-info-shortinfo__img {
+    width: 422px;
+    height: 421px;
+    background-image: url(../../assets//images/GiantPanda-zoos-description.png);
+    background-size: 101%;
+  }
+}
+
 @media screen and (min-width: 1000px) and (max-width: 1599px) {
   .animal-info-shortinfo__img {
     width: 455px;
     height: 458px;
+    background-image: url(../../assets//images/GiantPanda-zoos-description.png);
+    background-size: 101%;
   }
 }
 
@@ -1104,13 +1164,25 @@ li {
     width: 390px;
     height: 393px;
     margin-left: 4px;
+    background-image: url(../../assets//images/GiantPanda-zoos-description.png);
+    background-size: 101%;
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 639px) {
   .animal-info-shortinfo__img {
+    background-image: url(../../assets//images/GiantPanda-zoos-description.png);
     width: 319px;
     height: 193px;
+    background-size: 101%;
+    /* display: block; */
+    background-color: red;
+    /* z-index: 500; */
+    margin: 0;
+    position: relative;
+    /* left: 125px; */
+    background-position-x: -1px;
+    background-position-y: -37px;
   }
 }
 
@@ -1135,8 +1207,15 @@ li {
           justify-content: space-between;
 }
 
+@media screen and (min-width: 1600px) {
+  .animal-info-shortinfo__description {
+    width: 688px;
+  }
+}
+
 @media screen and (min-width: 1000px) and (max-width: 1599px) {
   .animal-info-shortinfo__description {
+    width: 455px;
     margin-left: 30px;
   }
 }
@@ -1147,6 +1226,15 @@ li {
     margin-top: 31px;
     margin-left: 5px;
     width: 420px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-info-shortinfo__description {
+    width: 300px;
+    margin: 0;
+    /* font-size: 16px; */
+    height: 368px;
   }
 }
 
@@ -1173,6 +1261,16 @@ li {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-info-shortinfo__description-text {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 9px;
+    width: 300px;
+    font-weight: 400;
+  }
+}
+
 .animal-info-shortinfo__description-text-green {
   color: #4b9200;
 }
@@ -1192,6 +1290,12 @@ li {
   .animal-info-shortinfo__description .standarPageButon {
     margin-top: 39px;
     margin-left: 150px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-info-shortinfo__description .standarPageButon {
+    margin-left: 9px;
   }
 }
 
@@ -1267,6 +1371,28 @@ li {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-info-diet {
+    margin-left: 8px;
+    margin-top: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* display: block; */
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .animal-info-diet .animal-info-topic-text {
+    display: block;
+    width: 230px;
+  }
+  .animal-info-diet .animal-info-topic-name {
+    display: block;
+    width: 60px;
+  }
+}
+
 .animal-info-range {
   margin-top: 21px;
 }
@@ -1278,8 +1404,22 @@ li {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-info-range {
+    margin-top: 24px;
+    margin-left: 9px;
+  }
+}
+
 .animal-info-habitat {
   margin-top: 29px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-info-habitat {
+    margin-top: 16px;
+    margin-left: 8px;
+  }
 }
 
 .animal-info-general {
@@ -1296,6 +1436,14 @@ li {
   .animal-info-general .animal-info-topic-name {
     margin-top: 3px;
     margin-bottom: 21px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-info-general {
+    margin-top: 21px;
+    margin-left: 9px;
+    width: 300px;
   }
 }
 
@@ -1336,6 +1484,13 @@ li {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .sideStrelitzia-zoos {
+    background-size: 27%;
+    background-position: 0px 166px;
+  }
+}
+
 .sidePalm-zoos {
   background-image: url(../../assets/images/leavFotoZoos.png);
   background-repeat: no-repeat;
@@ -1360,6 +1515,13 @@ li {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .sidePalm-zoos {
+    background-size: 32%;
+    background-position: 151px 133px;
+  }
+}
+
 .animal-camera {
   background-color: #FFFFFF;
   width: 100%;
@@ -1381,6 +1543,12 @@ li {
 @media screen and (min-width: 640px) and (max-width: 999px) {
   .animal-camera {
     margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-camera {
+    margin-bottom: 63px;
   }
 }
 
@@ -1418,6 +1586,13 @@ li {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-camera__content {
+    width: 300px;
+    margin-top: 56px;
+  }
+}
+
 .animal-camera__title {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1440,6 +1615,14 @@ li {
     font-size: 36px;
     margin: 0;
     margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-camera__title {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 9px;
   }
 }
 
@@ -1467,6 +1650,14 @@ li {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-camera__main-video {
+    width: 299px;
+    height: 168px;
+    margin: 0;
+  }
+}
+
 .animal-camera__main-video-frame {
   width: 1162px;
   height: 652px;
@@ -1484,6 +1675,13 @@ li {
   .animal-camera__main-video-frame {
     width: 495px;
     height: 278px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-camera__main-video-frame {
+    width: 299px;
+    height: 168px;
   }
 }
 
@@ -1509,6 +1707,15 @@ li {
 @media screen and (min-width: 640px) and (max-width: 999px) {
   .animal-camera__video-selector {
     margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-camera__video-selector {
+    width: 189px;
+    height: 146px;
+    margin-top: 20px;
+    margin-left: 82px;
   }
 }
 
@@ -1561,6 +1768,12 @@ li {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-camera__video-selector .round-arrow-button_left {
+    display: none;
+  }
+}
+
 .animal-camera__video-selector .round-arrow-button_right {
   width: 61px;
   height: 61px;
@@ -1610,6 +1823,12 @@ li {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-camera__video-selector .round-arrow-button_right {
+    display: none;
+  }
+}
+
 .animal-camera__video-selector-videos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1639,6 +1858,16 @@ li {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-camera__video-selector-videos {
+    width: 189px;
+    height: 146px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 158px;
+  }
+}
+
 .animal-camera__video-selector-video {
   position: relative;
 }
@@ -1663,6 +1892,13 @@ li {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-camera__video-selector-video {
+    width: 89px;
+    height: 68px;
+  }
+}
+
 .animal-camera__video-selector-video-plug {
   position: absolute;
   width: 268px;
@@ -1683,6 +1919,13 @@ li {
   .animal-camera__video-selector-video-plug {
     width: 180px;
     height: 140px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-camera__video-selector-video-plug {
+    width: 89px;
+    height: 68px;
   }
 }
 
@@ -1717,6 +1960,13 @@ li {
   .animal-camera__video-selector-video-plug-live {
     left: 0px;
     top: 8px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-camera__video-selector-video-plug-live {
+    font-size: 10px;
+    width: 45px;
   }
 }
 
@@ -1756,6 +2006,15 @@ li {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-camera__video-selector-video-plug-cam {
+    top: 14px;
+    left: 9px;
+    font-size: 10px;
+    width: 70px;
+  }
+}
+
 .animal-camera__video-selector-video-frame {
   width: 268px;
   height: 210px;
@@ -1772,6 +2031,13 @@ li {
   .animal-camera__video-selector-video-frame {
     width: 180px;
     height: 140px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .animal-camera__video-selector-video-frame {
+    width: 89px;
+    height: 68px;
   }
 }
 
@@ -1793,6 +2059,14 @@ li {
 @media (min-width: 640px) and (max-width: 1599px) {
   .sidebar {
     height: 900px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 639px) {
+  .sidebar {
+    height: 233px;
+    top: 282px;
+    z-index: 10;
   }
 }
 
@@ -1851,7 +2125,11 @@ li {
 @media (min-width: 320px) and (max-width: 639px) {
   .sidebar__content {
     width: 62px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     height: 233px;
+    position: static;
+    margin-top: 0px;
   }
 }
 
@@ -1876,6 +2154,12 @@ li {
   .sidebar__content-icon-wrapper, .sidebar__content-icon-wrapper-active {
     width: 52px;
     height: 52px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 639px) {
+  .sidebar__content-icon-wrapper[title="Eagle"], .sidebar__content-icon-wrapper[title="Sloth"], .sidebar__content-icon-wrapper[title="Penguin"], .sidebar__content-icon-wrapper-active[title="Eagle"], .sidebar__content-icon-wrapper-active[title="Sloth"], .sidebar__content-icon-wrapper-active[title="Penguin"] {
+    display: none;
   }
 }
 

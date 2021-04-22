@@ -33,6 +33,10 @@
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    height: 220.45px;
+    padding-bottom: 10px;
+    background-size: 374%;
+    background-position: -232px -30px;
   }
 }
 // }
@@ -56,15 +60,28 @@
     @media (min-width: 640px) and (max-width: 999px) {
       width: 600px;
     }
+    @media (min-width: 320px) and (max-width: 639px) {
+      width: 320px;
+    }
   }
 
   &__title {
     @include robotoMedium48120($green);
     margin-bottom: 25px;
 
-    @media (min-width: 640px) and (max-width: 1599px) {
+    @media (min-width: 1000px) and (max-width: 1599px) {
+      margin-left: 173px;
+      margin-bottom: 25px;
+    }
+    @media (min-width: 640px) and (max-width: 999px) {
       margin-left: 173px;
       margin-bottom: 21px;
+    }
+    @media (min-width: 320px) and (max-width: 639px) {
+      font-size: 24px;
+      line-height: 120%;
+      margin: 0px;
+      margin-left: 94px;
     }
   }
 
@@ -75,6 +92,7 @@
 
     @media screen and (min-width: 1000px) and (max-width: 1599px) {
       border-color: white;
+      display: flex;
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
@@ -83,23 +101,49 @@
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      border-color: white;
+      // width: 300px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      padding: 0;
     }
 
     &__img {
+      @media screen and (min-width: 1600px) {
+        width: 422px;
+        height: 421px;
+        background-image: url(../../assets//images/GiantPanda-zoos-description.png);
+        background-size: 101%;
+      }
       @media screen and (min-width: 1000px) and (max-width: 1599px) {
         width: 455px;
         height: 458px;
+        background-image: url(../../assets//images/GiantPanda-zoos-description.png);
+        background-size: 101%;
       }
 
       @media screen and (min-width: 640px) and (max-width: 999px) {
         width: 390px;
         height: 393px;
         margin-left: 4px;
+        background-image: url(../../assets//images/GiantPanda-zoos-description.png);
+        background-size: 101%;
       }
 
       @media screen and (min-width: 320px) and (max-width: 639px) {
+        background-image: url(../../assets//images/GiantPanda-zoos-description.png);
         width: 319px;
         height: 193px;
+        background-size: 101%;
+        /* display: block; */
+        background-color: red;
+        /* z-index: 500; */
+        margin: 0;
+        position: relative;
+        /* left: 125px; */
+        background-position-x: -1px;
+        background-position-y: -37px;
       }
     }
 
@@ -110,7 +154,12 @@
       height: 383px;
       justify-content: space-between;
 
+      @media screen and (min-width: 1600px) {
+        width: 688px;
+      }
+
       @media screen and (min-width: 1000px) and (max-width: 1599px) {
+        width: 455px;
         margin-left: 30px;
       }
 
@@ -122,6 +171,10 @@
       }
 
       @media screen and (min-width: 320px) and (max-width: 639px) {
+        width: 300px;
+        margin: 0;
+        /* font-size: 16px; */
+        height: 368px;
       }
 
       &-text {
@@ -139,6 +192,11 @@
         }
 
         @media screen and (min-width: 320px) and (max-width: 639px) {
+          font-size: 16px;
+          margin-top: 20px;
+          margin-left: 9px;
+          width: 300px;
+          font-weight: 400;
         }
 
         &-green {
@@ -160,6 +218,7 @@
         }
 
         @media screen and (min-width: 320px) and (max-width: 639px) {
+          margin-left: 9px;
         }
       }
     }
@@ -223,6 +282,20 @@
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      & .animal-info-topic-text {
+        display: block;
+        width: 230px;
+      }
+
+      & .animal-info-topic-name {
+        display: block;
+        width: 60px;
+      }
+      margin-left: 8px;
+      margin-top: 40px;
+      display: flex;
+      /* display: block; */
+      align-items: baseline;
     }
   }
 
@@ -235,11 +308,17 @@
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      margin-top: 24px;
+      margin-left: 9px;
     }
   }
 
   &-habitat {
     margin-top: 29px;
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      margin-top: 16px;
+      margin-left: 8px;
+    }
   }
 
   &-general {
@@ -256,6 +335,11 @@
 
       @media screen and (min-width: 320px) and (max-width: 639px) {
       }
+    }
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      margin-top: 21px;
+      margin-left: 9px;
+      width: 300px;
     }
   }
 
@@ -295,6 +379,8 @@
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    background-size: 27%;
+    background-position: 0px 166px;
   }
 }
 
@@ -318,6 +404,8 @@
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    background-size: 32%;
+    background-position: 151px 133px;
   }
 }
 
@@ -334,6 +422,7 @@
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    margin-bottom: 63px;
   }
 
   &__content {
@@ -354,6 +443,8 @@
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 300px;
+      margin-top: 56px;
     }
   }
 
@@ -373,6 +464,9 @@
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      font-size: 24px;
+      margin: 0;
+      margin-bottom: 9px;
     }
   }
 
@@ -396,6 +490,9 @@
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 299px;
+      height: 168px;
+      margin: 0;
     }
 
     &-frame {
@@ -414,6 +511,8 @@
       }
 
       @media screen and (min-width: 320px) and (max-width: 639px) {
+        width: 299px;
+        height: 168px;
       }
     }
   }
@@ -431,6 +530,10 @@
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 189px;
+      height: 146px;
+      margin-top: 20px;
+      margin-left: 82px;
     }
 
     @include roundArrowButtonLeft;
@@ -455,6 +558,7 @@
       }
 
       @media screen and (min-width: 320px) and (max-width: 639px) {
+        display: none;
       }
     }
 
@@ -479,6 +583,7 @@
       }
 
       @media screen and (min-width: 320px) and (max-width: 639px) {
+        display: none;
       }
     }
 
@@ -497,6 +602,10 @@
       }
 
       @media screen and (min-width: 320px) and (max-width: 639px) {
+        width: 189px;
+        height: 146px;
+        flex-wrap: wrap;
+        height: 158px;
       }
     }
 
@@ -529,6 +638,8 @@
       }
 
       @media screen and (min-width: 320px) and (max-width: 639px) {
+        width: 89px;
+        height: 68px;
       }
 
       &-selector-video {
@@ -553,6 +664,8 @@
         }
 
         @media screen and (min-width: 320px) and (max-width: 639px) {
+          width: 89px;
+          height: 68px;
         }
 
         // &::before {
@@ -583,6 +696,8 @@
           }
 
           @media screen and (min-width: 320px) and (max-width: 639px) {
+            font-size: 10px;
+            width: 45px;
           }
         }
 
@@ -620,6 +735,10 @@
           }
 
           @media screen and (min-width: 320px) and (max-width: 639px) {
+            top: 14px;
+            left: 9px;
+            font-size: 10px;
+            width: 70px;
           }
         }
       }
@@ -639,6 +758,8 @@
         }
 
         @media screen and (min-width: 320px) and (max-width: 639px) {
+          width: 89px;
+          height: 68px;
         }
       }
     }
@@ -663,6 +784,9 @@
   }
 
   @media (min-width: 320px) and (max-width: 639px) {
+    height: 233px;
+    top: 282px;
+    z-index: 10;
   }
 
   &__content {
@@ -696,7 +820,11 @@
 
     @media (min-width: 320px) and (max-width: 639px) {
       width: 62px;
+      padding-top: 5px;
+      padding-bottom: 5px;
       height: 233px;
+      position: static;
+      margin-top: 0px;
     }
 
     background: linear-gradient(
@@ -739,6 +867,13 @@
       @media (min-width: 320px) and (max-width: 1599px) {
         width: 52px;
         height: 52px;
+      }
+      @media (min-width: 320px) and (max-width: 639px) {
+        &[title="Eagle"],
+        &[title="Sloth"],
+        &[title="Penguin"] {
+          display: none;
+        }
       }
     }
 
