@@ -10,8 +10,13 @@
 @include standarPageButonNotRound;
 
 @include footer;
-.footer__content{
-  padding-left: 13px;
+.footer__content {
+  @media screen and (min-width: 1000px) and (max-width: 1599px) {
+    padding-left: 13px;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 999px) {
+  }
 }
 
 @mixin watchAnimalText($fontSize) {
@@ -35,9 +40,15 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    height: 373px;
+    background-size: 120%;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    height: 221px;
+    background-size: 120%;
+    background-position-x: center;
+    background-position-y: 34px;
   }
 }
 
@@ -55,9 +66,11 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 639px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 300px;
     }
   }
 
@@ -78,9 +91,20 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      font-size: 54.2894px;
+      line-height: 76%;
+      width: 255.64px;
+      height: 204.38px;
+      top: 82px;
+      right: 16px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 128.13px;
+      height: 102.44px;
+      font-size: 28px;
+      line-height: 75%;
+      top: 75px;
     }
   }
 
@@ -107,9 +131,17 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 236.6px;
+      height: 237.6px;
+      top: 44px;
+      right: 72px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 119.09px;
+      height: 119.09px;
+      top: 56px;
+      right: 28px;
     }
   }
   .wathOnlineButton {
@@ -123,9 +155,13 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      top: 279px;
+      right: 322px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      top: 241px;
+      right: 1px;
     }
   }
 }
@@ -145,9 +181,14 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 600px;
+      margin-top: 60px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 300px;
+      margin: 0;
+      padding-top: 105px;
     }
   }
 
@@ -168,9 +209,11 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      display: none;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      display: none;
     }
   }
 
@@ -193,20 +236,54 @@
     &_48120 {
       @include robotoNorma48120($blackBlue);
       margin-bottom: 23px;
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        margin-left: 4px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        font-size: 24px;
+        line-height: 120%;
+        margin-bottom: 12px;
+      }
     }
 
     &_16130 {
       @include robotoNorma16130($blackBlue);
       margin-bottom: 56px;
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        margin-bottom: 31px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        margin-bottom: 23px;
+      }
     }
 
     &_24120 {
       @include robotoNormal24120($blackBlue);
       margin-bottom: 34px;
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        margin-left: 4px;
+        margin-bottom: 21px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        margin-bottom: 10px;
+      }
     }
 
     &_16140 {
       @include robotoMedium16140($blackBlue);
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        width: 508px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        width: 300px;
+      }
     }
   }
 }
@@ -225,9 +302,23 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    width: 231px;
+    height: 476px;
+    background-size: 70%;
+    right: 0;
+    background-position-x: 100px;
+    top: 0px;
+    background-position-y: -6px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    width: 231px;
+    height: 192px;
+    background-size: 31%;
+    right: 0px;
+    background-position-x: 199px;
+    top: 46px;
+    background-position-y: -6px;
   }
 }
 
@@ -245,9 +336,12 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    margin-top: 34px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    margin-top: 40px;
+    margin-bottom: 60px;
   }
 }
 
@@ -264,9 +358,14 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    width: 600px;
+    position: relative;
+    margin-bottom: 13px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    width: 300px;
+    margin-bottom: 0px;
   }
 
   &__content {
@@ -275,6 +374,18 @@
     flex-wrap: wrap;
     height: 892px;
     padding-right: 2px;
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 600px;
+      height: 849px;
+      position: relative;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 300px;
+      height: 1408px;
+      align-items: stretch;
+    }
   }
 }
 
@@ -294,9 +405,13 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    position: absolute;
+    top: 395px;
+    left: 315px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    display: none;
   }
 }
 
@@ -308,9 +423,13 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    position: absolute;
+    top: 395px;
+    left: 223px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    display: none;
   }
 }
 
@@ -359,9 +478,55 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    width: 285px;
+    height: 332px;
+    &:nth-child(1) {
+      order: 1;
+    }
+    &:nth-child(2) {
+      order: 2;
+    }
+    &:nth-child(3) {
+      order: 3;
+    }
+    &:nth-child(4) {
+      display: none;
+    }
+    &:nth-child(5) {
+      display: none;
+    }
+    &:nth-child(6) {
+      display: none;
+    }
+    &:nth-child(7) {
+      order: 5;
+    }
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    width: 285px;
+    height: 332px;
+    &:nth-child(1) {
+      order: 1;
+    }
+    &:nth-child(2) {
+      order: 2;
+    }
+    &:nth-child(3) {
+      order: 3;
+    }
+    &:nth-child(4) {
+      display: none;
+    }
+    &:nth-child(5) {
+      display: none;
+    }
+    &:nth-child(6) {
+      display: none;
+    }
+    &:nth-child(7) {
+      order: 5;
+    }
   }
 
   &:hover {
@@ -386,9 +551,11 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 285.24px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 285.24px;
     }
   }
   &__image {
@@ -405,9 +572,13 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 285.24px;
+      height: 285.24px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 285.24px;
+      height: 285.24px;
     }
   }
 
@@ -439,9 +610,21 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 269.24px;
+      /* align-items: center; */
+      height: 37px;
+      margin-top: 0px;
+      /* padding-bottom: 28px; */
+      align-items: flex-start;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 269.24px;
+      /* align-items: center; */
+      height: 52px;
+      margin-top: 0px;
+      /* padding-bottom: 28px; */
+      align-items: flex-start;
     }
   }
 
@@ -452,6 +635,15 @@
     &-animal {
       @include robotoNormal16140($black);
       text-transform: uppercase;
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        font-size: 12.4695px;
+        line-height: 140%;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        font-size: 12.4695px;
+        line-height: 140%;
+      }
     }
     &-animal_white {
       @include robotoNormal16140($commonWhiteColor);
@@ -460,6 +652,15 @@
 
     &-area {
       @include robotoLight15120($black);
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        font-size: 11.6901px;
+        line-height: 120%;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        font-size: 11.6901px;
+        line-height: 120%;
+      }
     }
     &-area_white {
       @include robotoLight15120($commonWhiteColor);
@@ -469,10 +670,16 @@
   &__fixed-icon-banana {
     width: 33px;
     height: 36px;
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      transform: scale(0.8);
+    }
   }
   &__fixed-icon-fish {
     width: 44px;
     height: 39px;
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      transform: scale(0.8);
+    }
   }
 }
 
@@ -481,7 +688,6 @@
   @media screen and (min-width: 1000px) and (max-width: 1599px) {
     background-image: url(../../assets/images/strelitziaFoto.png);
     bottom: -100px;
-    right: 0px;
     /* width: 161px; */
     background-size: 65%;
     right: -130px;
@@ -491,9 +697,21 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    width: 161px;
+    background-size: 109%;
+    bottom: -100px;
+    background-position-x: right;
+    background-position-y: bottom;
+    right: 0px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    width: 161px;
+    background-size: 57%;
+    bottom: -60px;
+    background-position-x: 90px;
+    background-position-y: 209px;
+    right: 0px;
   }
 }
 @include sidePalm;
@@ -509,9 +727,21 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    left: 0px;
+    bottom: -101px;
+    background-position-x: -252px;
+    background-position-y: bottom;
+    background-size: 145%;
+    background-image: url(../../assets/images/palmFoto-adaptive.png);
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    left: 0px;
+    bottom: -60px;
+    background-position-x: -81px;
+    background-position-y: bottom;
+    background-size: 53%;
+    background-image: url(../../assets/images/palmFoto-adaptive.png);
   }
 }
 
@@ -547,9 +777,11 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    height: 781px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    height: 1082px;
   }
 
   &__content {
@@ -571,9 +803,18 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      padding: 0px 20px 0px;
+      margin-top: 20px;
+      width: 640px;
+      height: 742px;
+      margin-left: 0;
+    margin-right: 0;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 320px;
+      margin-top: 20px;
+      height: 1042px;
     }
   }
 
@@ -586,9 +827,15 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      font-size: 42px;
+      line-height: 120%;
+      margin-top: 11px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      font-size: 24px;
+      line-height: 120%;
+      margin-top: 20px;
     }
   }
   &__subtitle {
@@ -603,9 +850,17 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      padding-left: 0px;
+      margin-top: 19px;
+      font-size: 22px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      font-size: 18px;
+      line-height: 120%;
+      padding-left: 0px;
+      margin-top: 11px;
+      text-align: center;
     }
   }
   &__aboutcovid {
@@ -621,9 +876,12 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      padding-left: 0px;
+      margin-top: 22px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      display: none;
     }
   }
   &__emergency {
@@ -640,9 +898,13 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      padding-left: 0px;
+      width: 600px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 200px;
+      display: none;
     }
 
     &_underline {
@@ -666,9 +928,13 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      margin-top: 34px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      font-size: 24px;
+      line-height: 120%;
+      margin-top: 23px;
     }
   }
 
@@ -684,9 +950,23 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 600px;
+      margin-top: 18px;
+      padding-right: 12px;
+      position: relative;
+      margin-bottom: 42px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      position: relative;
+      flex-direction: column;
+      width: 200px;
+      margin-top: 21px;
+      align-items: center;
+      height: 714px;
+      justify-content: space-between;
+      /* padding-bottom: 0px; */
+      margin-bottom: 39px;
     }
 
     &-item {
@@ -705,6 +985,12 @@
         background-position: center;
       }
 
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        &:nth-child(1) {
+          margin-bottom: 12px;
+        }
+      }
+
       &-img-pay {
         @include pickAndFeedDiagIcons("../../assets/icons/paywithcard.svg");
       }
@@ -718,18 +1004,77 @@
       }
 
       &-arrow {
-        width: 69px;
-        height: 35px;
-        background-image: url(../../assets/icons/paymentArrow.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        margin-top: 60px;
+        &-1,
+        &-2 {
+          width: 69px;
+          height: 35px;
+          background-image: url(../../assets/icons/paymentArrow.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-top: 60px;
+        }
+
+        @media screen and (min-width: 640px) and (max-width: 999px) {
+          &-1 {
+            width: 90px;
+            height: 35px;
+            background-image: url(../../assets/icons/paymentArrow-green.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: 0px;
+            position: absolute;
+            top: -18px;
+            left: 136px;
+          }
+          &-2 {
+            width: 90px;
+            height: 35px;
+            background-image: url(../../assets/icons/paymentArrow-green.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: 0px;
+            position: absolute;
+            top: -18px;
+            left: 343px;
+          }
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 639px) {
+          &-1 {
+            width: 90px;
+            height: 35px;
+            background-image: url(../../assets/icons/paymentArrow-green.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: 0px;
+            position: absolute;
+            top: 187px;
+            left: 155px;
+            transform: rotate(83deg);
+          }
+          &-2 {
+            width: 90px;
+            height: 35px;
+            background-image: url(../../assets/icons/paymentArrow-green.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: 0px;
+            position: absolute;
+
+            top: 435px;
+            left: 155px;
+            transform: rotate(83deg);
+          }
+        }
       }
 
       &-text {
         @include robotoNormal16140($blackBlue);
         margin-right: auto;
         margin-top: 31px;
+        @media screen and (min-width: 320px) and (max-width: 639px) {
+          margin-top: 10px;
+        }
       }
     }
   }
@@ -755,15 +1100,35 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      margin: 0;
+      width: 600px;
+      height: 667px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 300px;
+      margin-bottom: 0px;
+      height: 580px;
     }
   }
 
   &__title {
     @include robotoNormal36130($blackBlue);
-    margin-top: 101px;
+    margin-top: 141px;
+
+    @media screen and (min-width: 1000px) and (max-width: 1599px) {
+      margin-top: 101px;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      margin-top: 61px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      font-size: 24px;
+      line-height: 120%;
+      margin-top: 31px;
+    }
   }
 
   &__cards {
@@ -777,9 +1142,17 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      flex-direction: column;
+      width: 600px;
+      margin-top: 30px;
+      height: 357px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      flex-direction: column;
+      width: 300px;
+      margin-top: 20px;
+      height: 357px;
     }
   }
   &__card-item-bg {
@@ -819,9 +1192,19 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: none;
+      }
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: none;
+      }
     }
   }
   &__card-item {
@@ -834,6 +1217,25 @@
     border-radius: 20px;
     padding: 15px 15px 19px 16px;
     transform: scale(0.99);
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 600px;
+      height: 109px;
+      padding-left: 10px;
+      padding-bottom: 9px;
+      transform: scaleY(0.95) scaleX(0.99);
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 300px;
+      width: 300px;
+      height: 109px;
+      padding-left: 12px;
+      padding-bottom: 15px;
+      transform: scaleY(0.95) scaleX(0.99);
+      padding-top: 9px;
+    }
+
     &-user-info {
       @include displayFlex(space-between, center);
 
@@ -853,6 +1255,27 @@
       @include robotoLight15120(#767474);
       margin-top: 10px;
       overflow: hidden;
+
+      [data-alternate-text-tablet],
+      [data-alternate-text-mobile] {
+        display: none;
+      }
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        padding-left: 6px;
+
+        [data-alternate-text-tablet] {
+          display: inline;
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+        [data-alternate-text-mobile] {
+          display: block;
+          width: 280px;
+        }
+        padding-left: 4px;
+        margin-top: 12px;
+      }
     }
 
     @media screen and (min-width: 1000px) and (max-width: 1599px) {
@@ -864,9 +1287,12 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 600px;
+      height: 109px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
+      width: 300px;
     }
   }
 }
@@ -902,9 +1328,11 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    display: none;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    display: none;
   }
 }
 
@@ -949,9 +1377,19 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    margin-top: 40px;
+    margin-left: 180px;
+    & > .standarPageButonNotRound {
+      width: 240px;
+    }
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    margin-left: 29px;
+    margin-top: 30px;
+    & > .standarPageButonNotRound {
+      width: 240px;
+    }
   }
 }
 
@@ -963,7 +1401,7 @@
   position: absolute;
   /* left: 0; */
   right: 0px;
-  bottom: -119px;
+  bottom: -182px;
 
   @media screen and (min-width: 1000px) and (max-width: 1599px) {
     background-size: 80%;
@@ -974,8 +1412,18 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    right: 0px;
+    bottom: 0px;
+    background-position-x: 131px;
+    background-position-y: 323px;
+    background-size: 50%;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
+    right: 0px;
+    bottom: 0px;
+    background-position-x: 190px;
+    background-position-y: 391px;
+    background-size: 24%;
   }
 }

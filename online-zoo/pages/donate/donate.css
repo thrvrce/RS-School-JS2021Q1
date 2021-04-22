@@ -1172,6 +1172,14 @@ li {
   border-radius: 20px;
 }
 
+@media screen and (min-width: 1600px) {
+  .donate__content-donation-content {
+    padding-left: 130px;
+    margin-left: 0px;
+    padding-right: 54px;
+  }
+}
+
 @media screen and (min-width: 1000px) and (max-width: 1599px) {
   .donate__content-donation-content {
     margin: 0;
@@ -1422,6 +1430,12 @@ li {
   color: #929699;
   /* Chrome, Safari, Edge, Opera */
   /* Firefox */
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px) {
+  .donate__content-donation-content-another-amount-input {
+    margin-left: 25px;
+  }
 }
 
 @media screen and (min-width: 640px) and (max-width: 999px) {

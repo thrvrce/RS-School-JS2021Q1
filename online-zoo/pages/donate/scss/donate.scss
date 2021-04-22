@@ -164,6 +164,9 @@
       border-radius: 20px;
 
       @media screen and (min-width: 1600px) {
+        padding-left: 130px;
+        margin-left: 0px;
+        padding-right: 54px;
       }
 
       @media screen and (min-width: 1000px) and (max-width: 1599px) {
@@ -345,6 +348,11 @@
         background-position: 247px;
         padding-left: 8px;
         @include robotoNormal16140(#929699);
+        @media screen and (min-width: 1000px) and (max-width: 1599px) {
+
+          margin-left: 25px;
+
+        }
 
         @media screen and (min-width: 640px) and (max-width: 999px) {
           margin-top: 88px;
