@@ -10,8 +10,13 @@
 @include standarPageButonNotRound;
 
 @include footer;
-.footer__content{
-  padding-left: 13px;
+.footer__content {
+  @media screen and (min-width: 1000px) and (max-width: 1599px) {
+    padding-left: 13px;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 999px) {
+  }
 }
 
 @mixin watchAnimalText($fontSize) {
@@ -35,6 +40,8 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    height: 373px;
+    background-size: 120%;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -55,6 +62,7 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 639px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -78,6 +86,12 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      font-size: 54.2894px;
+      line-height: 76%;
+      width: 255.64px;
+      height: 204.38px;
+      top: 82px;
+      right: 16px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -107,6 +121,10 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 236.6px;
+      height: 237.6px;
+      top: 44px;
+      right: 72px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -123,6 +141,8 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      top: 279px;
+      right: 322px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -145,6 +165,8 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 600px;
+      margin-top: 60px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -168,6 +190,7 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      display: none;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -193,20 +216,48 @@
     &_48120 {
       @include robotoNorma48120($blackBlue);
       margin-bottom: 23px;
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        margin-left: 4px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
     }
 
     &_16130 {
       @include robotoNorma16130($blackBlue);
       margin-bottom: 56px;
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        margin-bottom: 31px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
     }
 
     &_24120 {
       @include robotoNormal24120($blackBlue);
       margin-bottom: 34px;
+
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        margin-left: 4px;
+        margin-bottom: 21px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
     }
 
     &_16140 {
       @include robotoMedium16140($blackBlue);
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        width: 508px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
     }
   }
 }
@@ -225,6 +276,13 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    width: 231px;
+    height: 476px;
+    background-size: 70%;
+    right: 0;
+    background-position-x: 100px;
+    top: 0px;
+    background-position-y: -6px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -245,6 +303,7 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    margin-top: 34px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -264,6 +323,9 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    width: 600px;
+    position: relative;
+    margin-bottom: 13px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -275,6 +337,15 @@
     flex-wrap: wrap;
     height: 892px;
     padding-right: 2px;
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 600px;
+      height: 849px;
+      position: relative;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
   }
 }
 
@@ -294,6 +365,9 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    position: absolute;
+    top: 395px;
+    left: 315px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -308,6 +382,9 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    position: absolute;
+    top: 395px;
+    left: 223px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -359,6 +436,29 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    width: 285px;
+    height: 332px;
+    &:nth-child(1) {
+      order: 1;
+    }
+    &:nth-child(2) {
+      order: 2;
+    }
+    &:nth-child(3) {
+      order: 3;
+    }
+    &:nth-child(4) {
+      display: none;
+    }
+    &:nth-child(5) {
+      display: none;
+    }
+    &:nth-child(6) {
+      display: none;
+    }
+    &:nth-child(7) {
+      order: 5;
+    }
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -386,6 +486,7 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 285.24px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -405,6 +506,8 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 285.24px;
+      height: 285.24px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -439,6 +542,12 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 269.24px;
+      /* align-items: center; */
+      height: 37px;
+      margin-top: 0px;
+      /* padding-bottom: 28px; */
+      align-items: flex-start;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -452,6 +561,13 @@
     &-animal {
       @include robotoNormal16140($black);
       text-transform: uppercase;
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        font-size: 12.4695px;
+        line-height: 140%;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
     }
     &-animal_white {
       @include robotoNormal16140($commonWhiteColor);
@@ -460,6 +576,13 @@
 
     &-area {
       @include robotoLight15120($black);
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        font-size: 11.6901px;
+        line-height: 120%;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
     }
     &-area_white {
       @include robotoLight15120($commonWhiteColor);
@@ -481,7 +604,6 @@
   @media screen and (min-width: 1000px) and (max-width: 1599px) {
     background-image: url(../../assets/images/strelitziaFoto.png);
     bottom: -100px;
-    right: 0px;
     /* width: 161px; */
     background-size: 65%;
     right: -130px;
@@ -491,6 +613,12 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    width: 161px;
+    background-size: 109%;
+    bottom: -100px;
+    background-position-x: right;
+    background-position-y: bottom;
+    right: 0px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -509,6 +637,12 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    left: 0px;
+    bottom: -101px;
+    background-position-x: -252px;
+    background-position-y: bottom;
+    background-size: 145%;
+    background-image: url(../../assets/images/palmFoto-adaptive.png);
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -547,6 +681,7 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    height: 781px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -571,6 +706,10 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      padding: 0px 20px 0px;
+      margin-top: 20px;
+      width: 640px;
+      height: 742px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -586,6 +725,9 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      font-size: 42px;
+      line-height: 120%;
+      margin-top: 11px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -603,6 +745,9 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      padding-left: 0px;
+      margin-top: 19px;
+      font-size: 22px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -621,6 +766,8 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      padding-left: 0px;
+      margin-top: 22px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -640,6 +787,8 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      padding-left: 0px;
+      width: 600px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -666,6 +815,7 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      margin-top: 34px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -684,6 +834,11 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 600px;
+      margin-top: 18px;
+      padding-right: 12px;
+      position: relative;
+      margin-bottom: 42px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -718,12 +873,43 @@
       }
 
       &-arrow {
-        width: 69px;
-        height: 35px;
-        background-image: url(../../assets/icons/paymentArrow.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        margin-top: 60px;
+        &-1,
+        &-2 {
+          width: 69px;
+          height: 35px;
+          background-image: url(../../assets/icons/paymentArrow.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-top: 60px;
+        }
+
+        @media screen and (min-width: 640px) and (max-width: 999px) {
+          &-1 {
+            width: 90px;
+            height: 35px;
+            background-image: url(../../assets/icons/paymentArrow-green.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: 0px;
+            position: absolute;
+            top: -18px;
+            left: 136px;
+          }
+          &-2 {
+            width: 90px;
+            height: 35px;
+            background-image: url(../../assets/icons/paymentArrow-green.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: 0px;
+            position: absolute;
+            top: -18px;
+            left: 343px;
+          }
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 639px) {
+        }
       }
 
       &-text {
@@ -755,6 +941,9 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      margin: 0;
+      width: 600px;
+      height: 667px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -764,6 +953,12 @@
   &__title {
     @include robotoNormal36130($blackBlue);
     margin-top: 101px;
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      margin-top: 61px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
   }
 
   &__cards {
@@ -777,6 +972,10 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      flex-direction: column;
+      width: 600px;
+      margin-top: 30px;
+      height: 357px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -819,6 +1018,11 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: none;
+      }
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -834,6 +1038,18 @@
     border-radius: 20px;
     padding: 15px 15px 19px 16px;
     transform: scale(0.99);
+
+    @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 600px;
+      height: 109px;
+      padding-left: 10px;
+      padding-bottom: 9px;
+      transform: scaleY(0.95) scaleX(0.99);
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+    }
+
     &-user-info {
       @include displayFlex(space-between, center);
 
@@ -853,6 +1069,20 @@
       @include robotoLight15120(#767474);
       margin-top: 10px;
       overflow: hidden;
+
+      [data-alternate-text] {
+        display: none;
+      }
+      @media screen and (min-width: 640px) and (max-width: 999px) {
+        padding-left: 6px;
+
+        [data-alternate-text] {
+          display: inline;
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 639px) {
+      }
     }
 
     @media screen and (min-width: 1000px) and (max-width: 1599px) {
@@ -864,6 +1094,8 @@
     }
 
     @media screen and (min-width: 640px) and (max-width: 999px) {
+      width: 600px;
+      height: 109px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -902,6 +1134,7 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    display: none;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -949,6 +1182,11 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    margin-top: 40px;
+    margin-left: 180px;
+    & > .standarPageButonNotRound {
+      width: 240px;
+    }
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -974,6 +1212,11 @@
   }
 
   @media screen and (min-width: 640px) and (max-width: 999px) {
+    right: 0px;
+    bottom: 0px;
+    background-position-x: 131px;
+    background-position-y: 323px;
+    background-size: 50%;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
