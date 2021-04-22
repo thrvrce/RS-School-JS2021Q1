@@ -1079,7 +1079,7 @@ li {
 
 @media (min-width: 1000px) and (max-width: 1599px) {
   .animal-info__title {
-    margin-left: 173px;
+    margin-left: 0px;
     margin-bottom: 25px;
   }
 }
