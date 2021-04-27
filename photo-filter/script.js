@@ -1,6 +1,9 @@
 const filterContainer = document.querySelector('.filters');
 const img = document.querySelector('img');
 const saveButton = document.querySelector('.btn-save');
+const resetButton = document.querySelector('.btn-reset');
+const openFileButton = document.querySelector('.btn-load--input');
+const filterInputCollection = document.querySelectorAll('input[type="range"]');
 
 const setImageFilter = (filter) => {
   const root = document.documentElement;
@@ -26,7 +29,7 @@ saveButton.addEventListener('click', () => {
   const filterValues = {};
   let filtersStrng = '';
 
-  document.querySelectorAll('input[type="range"]').forEach(inputElement => {
+  filterInputCollection.forEach(inputElement => {
     const canvasFilterName = inputElement.name === 'hue' ? 'hue-rotate' : inputElement.name;
     filtersStrng += ` ${canvasFilterName}(${inputElement.value + inputElement.dataset.sizing})`;
   });
@@ -44,3 +47,28 @@ saveButton.addEventListener('click', () => {
   link.click();
   link.delete;
 })
+
+resetButton.addEventListener('click', () => {
+  filterInputCollection.forEach(inputElement => {
+    inputElement.value = inputElement.getAttribute('value');
+    inputElement.dispatchEvent(new Event('input', { bubbles: true }))
+
+  })
+})
+
+openFileButton.addEventListener('change', (event) => {
+  const allowedFileTypes = ['jpg', 'jpeg', 'png', 'gif']
+  const file = event.target.files[0];
+  if (file) {
+    if (!allowedFileTypes.includes(fileType => `image/${fileType}` === file.type)) {
+      alert(`${file.type} не является ${allowedFileTypes.toString()}`)
+    } else {
+      console.log(file)
+      const reader = new FileReader();
+      reader.onload = async () => {
+        img.src = reader.result;
+      }
+      reader.readAsDataURL(file);
+    }
+  }
+});
