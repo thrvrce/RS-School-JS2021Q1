@@ -4,7 +4,16 @@ const saveButton = document.querySelector('.btn-save');
 const resetButton = document.querySelector('.btn-reset');
 const openFileButton = document.querySelector('.btn-load--input');
 const fullScreenleButton = document.querySelector('.fullscreen');
+const nextButton = document.querySelector('.btn-next');
 const filterInputCollection = document.querySelectorAll('input[type="range"]');
+const periodsOfDay = {
+  night: 'night',
+  morning: 'morning',
+  day: 'day',
+  evening: 'evening',
+}
+let lastPeriodOfDay = '';
+let lastUsedImageNumber = 0;
 
 const setImageFilter = (filter) => {
   const root = document.documentElement;
@@ -49,6 +58,21 @@ saveButton.addEventListener('click', () => {
   link.delete;
 })
 
+const getPeriodOfDay = (currentHour) => {
+  if (currentHour >= 0 && currentHour <= 5) {
+    return periodsOfDay.night;
+  }
+  if (currentHour >= 6 && currentHour <= 11) {
+    return periodsOfDay.morning;
+  }
+  if (currentHour >= 12 && currentHour <= 17) {
+    return periodsOfDay.day;
+  }
+  if (currentHour >= 18 && currentHour <= 23) {
+    return periodsOfDay.evening;
+  }
+}
+
 resetButton.addEventListener('click', () => {
   filterInputCollection.forEach(inputElement => {
     inputElement.value = inputElement.getAttribute('value');
@@ -59,10 +83,11 @@ resetButton.addEventListener('click', () => {
 
 openFileButton.addEventListener('change', (event) => {
   const allowedFileTypes = ['jpg', 'jpeg', 'png', 'gif']
-  const file = event.target.files[0];
+  let file = event.target.files[0];
   if (file) {
-    if (!allowedFileTypes.includes(fileType => `image/${fileType}` === file.type)) {
+    if (!allowedFileTypes.includes(file.type.slice('image/'.length))) {
       alert(`${file.type} не является ${allowedFileTypes.toString()}`)
+      file = null;
     } else {
       console.log(file)
       const reader = new FileReader();
@@ -81,4 +106,27 @@ fullScreenleButton.addEventListener('click', () => {
   } else {
     document.exitFullscreen();
   }
+})
+
+
+
+nextButton.addEventListener('click', () => {
+  const curentHour = (new Date()).getHours();
+  const curentPeriodOfDay = getPeriodOfDay(curentHour);
+  if (lastPeriodOfDay) {
+    lastPeriodOfDay = getPeriodOfDay(curentHour);
+  }
+
+  if (lastPeriodOfDay !== curentPeriodOfDay) {
+    lastUsedImageNumber = 0;
+    lastPeriodOfDay = curentPeriodOfDay;
+  }
+
+  lastUsedImageNumber += 1;
+  let imageNumber = lastUsedImageNumber % 20 ? lastUsedImageNumber % 20 : 20;
+  imageNumber = imageNumber < 10 ? `0${imageNumber}` : `${imageNumber}`;
+  const imageURL = ` https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${curentPeriodOfDay}/${imageNumber}.jpg`;
+  console.log(imageNumber);
+  img.setAttribute('crossOrigin', 'anonymous');
+  img.src = imageURL;
 })
