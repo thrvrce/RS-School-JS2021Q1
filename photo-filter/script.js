@@ -118,9 +118,6 @@ fullScreenleButton.addEventListener('click', () => {
 nextButton.addEventListener('click', () => {
   const curentHour = (new Date()).getHours();
   const curentPeriodOfDay = getPeriodOfDay(curentHour);
-  if (lastPeriodOfDay) {
-    lastPeriodOfDay = getPeriodOfDay(curentHour);
-  }
 
   if (lastPeriodOfDay !== curentPeriodOfDay) {
     lastUsedImageNumber = 0;
