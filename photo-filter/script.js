@@ -3,6 +3,7 @@ const img = document.querySelector('img');
 const saveButton = document.querySelector('.btn-save');
 const resetButton = document.querySelector('.btn-reset');
 const openFileButton = document.querySelector('.btn-load--input');
+const fullScreenleButton = document.querySelector('.fullscreen');
 const filterInputCollection = document.querySelectorAll('input[type="range"]');
 
 const setImageFilter = (filter) => {
@@ -72,3 +73,12 @@ openFileButton.addEventListener('change', (event) => {
     }
   }
 });
+
+fullScreenleButton.addEventListener('click', () => {
+
+  if (!document.fullscreenElement) {
+    document.body.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
+})
