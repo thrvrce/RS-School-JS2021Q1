@@ -89,7 +89,6 @@ openFileButton.addEventListener('change', (event) => {
       alert(`${file.type} не является ${allowedFileTypes.toString()}`)
       file = null;
     } else {
-      console.log(file)
       const reader = new FileReader();
       reader.onload = async () => {
         img.src = reader.result;
@@ -126,7 +125,7 @@ nextButton.addEventListener('click', () => {
   let imageNumber = lastUsedImageNumber % 20 ? lastUsedImageNumber % 20 : 20;
   imageNumber = imageNumber < 10 ? `0${imageNumber}` : `${imageNumber}`;
   const imageURL = ` https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${curentPeriodOfDay}/${imageNumber}.jpg`;
-  console.log(imageNumber);
+
   img.setAttribute('crossOrigin', 'anonymous');
   img.src = imageURL;
 })
