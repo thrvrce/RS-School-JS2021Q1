@@ -12,6 +12,7 @@
   <title>photo-filter</title>
 </head>
 <body>
+  <div class="content-wrapper">
   <header class="header">
     <h1 class="header-title">Photo-filter</h1>
   </header>
@@ -49,12 +50,11 @@
         <button class="btn btn-next btn-active">Next picture</button>
         <label class="btn btn-load" for="btnInput">
           Load picture
-          <input class="btn-load--input" id="btnInput" name="upload" type="file" placeholder="Load picture" />
+          <input class="btn-load--input" id="btnInput" name="upload" type="file" accept="image/jpg, image/jpeg, image/png, image/gif" placeholder="Load picture" />
         </label>
         <button class="btn btn-save">Save picture</button>
       </div>
       <img src="assets/img/img.jpg" alt="image" />
-      <canvas></canvas>
     </div>
   </main>
   <footer class="footer">
@@ -66,5 +66,6 @@
     </div>
   </footer>
   <button class="fullscreen openfullscreen"></button>
+</div>
 </body>
 </html>
