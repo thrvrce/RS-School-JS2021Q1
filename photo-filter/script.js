@@ -81,20 +81,26 @@ resetButton.addEventListener('click', () => {
   })
 })
 
-openFileButton.addEventListener('change', (event) => {
+openFileButton.addEventListener('input', (event) => {
+  const clearInputValue = () => event.target.value = '';
   const allowedFileTypes = ['jpg', 'jpeg', 'png', 'gif']
   let file = event.target.files[0];
   if (file) {
     if (!allowedFileTypes.includes(file.type.slice('image/'.length))) {
       alert(`${file.type} не является ${allowedFileTypes.toString()}`)
-      file = null;
+      clearInputValue(event);
     } else {
       const reader = new FileReader();
       reader.onload = async () => {
         img.src = reader.result;
+
+        img.onload = clearInputValue;
+        img.onerror = clearInputValue;
       }
       reader.readAsDataURL(file);
     }
+  } else {
+    clearInputValue();
   }
 });
 
