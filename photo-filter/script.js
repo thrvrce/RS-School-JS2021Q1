@@ -81,21 +81,26 @@ resetButton.addEventListener('click', () => {
   })
 })
 
-openFileButton.addEventListener('change', (event) => {
+openFileButton.addEventListener('input', (event) => {
+  const clearInputValue = () => event.target.value = '';
   const allowedFileTypes = ['jpg', 'jpeg', 'png', 'gif']
   let file = event.target.files[0];
   if (file) {
     if (!allowedFileTypes.includes(file.type.slice('image/'.length))) {
       alert(`${file.type} не является ${allowedFileTypes.toString()}`)
-      file = null;
+      clearInputValue(event);
     } else {
-      console.log(file)
       const reader = new FileReader();
       reader.onload = async () => {
         img.src = reader.result;
+
+        img.onload = clearInputValue;
+        img.onerror = clearInputValue;
       }
       reader.readAsDataURL(file);
     }
+  } else {
+    clearInputValue();
   }
 });
 
@@ -126,7 +131,7 @@ nextButton.addEventListener('click', () => {
   let imageNumber = lastUsedImageNumber % 20 ? lastUsedImageNumber % 20 : 20;
   imageNumber = imageNumber < 10 ? `0${imageNumber}` : `${imageNumber}`;
   const imageURL = ` https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${curentPeriodOfDay}/${imageNumber}.jpg`;
-  console.log(imageNumber);
+
   img.setAttribute('crossOrigin', 'anonymous');
   img.src = imageURL;
 })
