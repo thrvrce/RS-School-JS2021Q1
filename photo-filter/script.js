@@ -41,7 +41,10 @@ saveButton.addEventListener('click', () => {
 
   filterInputCollection.forEach(inputElement => {
     const canvasFilterName = inputElement.name === 'hue' ? 'hue-rotate' : inputElement.name;
-    filtersStrng += ` ${canvasFilterName}(${inputElement.value + inputElement.dataset.sizing})`;
+    const canvasFilterValue = inputElement.name === 'blur'
+      ? inputElement.value  * Number((img.naturalHeight / img.height).toFixed(2))
+      : inputElement.value;
+    filtersStrng += ` ${canvasFilterName}(${canvasFilterValue + inputElement.dataset.sizing})`;
   });
 
   const canvas = document.createElement('canvas');
@@ -118,9 +121,6 @@ fullScreenleButton.addEventListener('click', () => {
 nextButton.addEventListener('click', () => {
   const curentHour = (new Date()).getHours();
   const curentPeriodOfDay = getPeriodOfDay(curentHour);
-  if (lastPeriodOfDay) {
-    lastPeriodOfDay = getPeriodOfDay(curentHour);
-  }
 
   if (lastPeriodOfDay !== curentPeriodOfDay) {
     lastUsedImageNumber = 0;
